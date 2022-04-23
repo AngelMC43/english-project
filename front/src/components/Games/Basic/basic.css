@@ -1,0 +1,48 @@
+.prueba {
+    border: 20px solid rgb(175, 255, 14);
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 50px;
+     justify-content: center;
+     align-items: center;
+     width: 850px;
+     height: 530px;
+     text-align: center;
+     background-image: url("fondobasico.jpg");
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-family: 'Comic Neue', cursive;
+}
+
+.answer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-option {position: sticky;
+width: 300px;
+height: 200px;
+}
+
+.button-push {
+    border: 6px solid rgb(175, 255, 14);
+    border-radius: 15px;
+    background-color: blueviolet;
+    width: 200px;
+    height: 100px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-family: 'Comic Neue', cursive;
+    font-size: 30px
+}
+
+.button-container {
+    border: 2px solid rgb(105, 104, 104);
+    border-radius: 15px;
+}
+
+
+
+.inside-container {
+    border: 3px solid black;
+    border-radius: 20px;
+
+}

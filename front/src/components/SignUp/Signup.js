@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
   const [newUser, setNewUser] = useState({
@@ -9,19 +10,6 @@ export default function SignUp() {
     age: "",
   });
 
-  /*
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(`http://localhost:3001/signup`, {
-        mode: "cors",
-      });
-      const json = await response.json();
-      setUsers(json);
-    }
-    fetchData();
-  }, []);
-*/
-
   const handleChange = (event) => {
     event.preventDefault(); //evento que evita recargar la pagina
     setNewUser({
@@ -30,7 +18,7 @@ export default function SignUp() {
     });
   };
 
-  const submitData = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     async function fetchData() {
@@ -50,30 +38,11 @@ export default function SignUp() {
       });
     }
     fetchData();
-
-    /* console.log("enviando datos..." + users.name + " " + users.surname);
-    async function fetchData() {
-      const response = await fetch(`http://localhost:3001/signup`, {
-        method: "post",
-        mode: "cors",
-        body: JSON.stringify({
-          name: users.name,
-          surname: users.surname,
-          email: users.email,
-          password: users.password,
-          age: users.age,
-        }),
-        headers: { "Content-type": "application/json" },
-      });
-      const json = await response.json();
-      setUsers(json);
-    }
-    fetchData();*/
   };
 
   return (
     <>
-      <form onSubmit={submitData} className="row">
+      <form onSubmit={handleSubmit} className="row center-align">
         <div className="col-12 w-25">
           Name
           <input
@@ -85,11 +54,11 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </div>
-        <div className="col-12 w-25">
+        <div className="col-12 w-25 collection">
           Surname
           <input
             type="text"
-            className="form-control"
+            className="form-control center-align collection-item"
             id="surname"
             placeholder="Write your surname"
             name="surname"
@@ -126,6 +95,7 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </div>
+
         <button type="submit" className="btn btn-primary w-25">
           Sign in
         </button>

@@ -6,6 +6,7 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, "public")));
 
 let connection;
 
@@ -67,23 +68,20 @@ app.post("/login", function (request, response) {
 
   let email = request.body.email;
   let password = request.body.password;
-  let error = "Usuario o password incorrecto";
 
-  if (
-    rows.find((buscar) => buscar.email == email && buscar.password == password)
-  ) {
-    connection.query(
-      `SELECT * from users Where email = "${email}" AND password = "${password}"`,
-      function (err, rows, fields) {
-        if (err) throw err;
-        response.json(rows);
+  connection.query(
+    `SELECT * from users Where email like "${email}" AND password like "${password}"`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      if (rows.length == 0) {
+        response.send({ error: "Usuario no encontardo hulio" });
+      } else {
+        response.json({ name: rows[0].name, surname: rows[0].surname });
         console.log("conexion perfecta");
       }
-    );
-  } else {
-    response.send(error);
-    console.log("Usuario o password incorrecto");
-  }
+    }
+  );
+
   desconectar();
 });
 
@@ -169,16 +167,17 @@ app.get("/allusers", function (request, response) {
 //--------------------PROFILE ID---------------------------
 
 app.get("/profile/:id", function (request, response) {
-  let id = request.params.id;
-
   conectar();
+
+  let id = request.params.id;
+  console.log(request.params);
   connection.query(
-    `SELECT * from users WHERE id = ${id}`,
+    `SELECT * from users WHERE id = "${id}"`,
     function (err, rows, fields) {
       if (err) throw err;
 
       response.json(rows);
-      console.log(rows);
+      console.log(id);
     }
   );
   desconectar();
