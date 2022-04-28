@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import "./login.css";
 
 export default function Login({ handleLogin }) {
-  const [goin, setGoin] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
   const navigate = useNavigate();
   const [user, setUser] = useState({
@@ -68,11 +68,11 @@ export default function Login({ handleLogin }) {
   // }
 
   return (
-    <div className=" d-flex justify-content-center m-0 ">
-      <div className="justify-content-center w-25 bg-light m-5 border ">
-        <form class="form-group ">
-          <h2 className="text-center ">Accede a tu cuenta</h2>
-          <label for="exampleInputEmail1">Username</label>
+    <div className="d-flex justify-content-center">
+      <div className="container-login w-25 ">
+        <form class="  form-group">
+          <h2 className="title-login text-center">Accede a tu cuenta</h2>
+          <label for="exampleInputEmail1">Email</label>
           <input
             onChange={handleChange}
             name="email"
@@ -80,43 +80,49 @@ export default function Login({ handleLogin }) {
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Introduce tu email"
           />
-          <small id="emailHelp" class="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              onChange={handleChange}
+              name="password"
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              placeholder="Y tu password"
+            />
+            {errorMessage && <p> Username or password incorrect!! </p>}
+          </div>{" "}
         </form>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input
-            onChange={handleChange}
-            name="password"
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
-          />
-          {errorMessage && <p> Username or password incorrect!! </p>}
-        </div>
-        <div className="form-check">
+        <div className="">
           <input
             type="checkbox"
             className="form-check-input"
             id="exampleCheck1"
           />
-          <label class="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
         </div>
-
+        <div className="therms-login">
+          {" "}
+          <input
+            class="form-check-input me-1"
+            type="checkbox"
+            value=""
+            aria-label="..."
+          />
+          <Link to="terminos-condiciones">
+            Acepto los términos y condiciones
+          </Link>
+        </div>
         <button
           onClick={handleLogin}
           type="submit"
-          className="btn btn-info w-100 lime accent-4"
+          className="subTitle-login btn z-depth-3 w-100 lime accent-4 text-capitalize"
         >
           Accede
         </button>
-      </div>
+      </div>{" "}
+      <h3>checkbox</h3>
     </div>
   );
 }

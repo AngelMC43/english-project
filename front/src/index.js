@@ -3,24 +3,25 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "materialize-css/dist/css/materialize.min.css";
-import "./index.css";
 
 import App from "./App";
 import RequireAuth from "./components/Login/RequireAuth";
 import Main from "./views/Main/Main";
 import SignUpView from "./views/SignUpView.js";
 import LoginView from "./views/LoginView";
-import IndexMenu from "./views/IndexMenu";
+import IndexMenu from "./views/indexMenu/IndexMenu";
 import ProfileView from "./views/ProfileView";
 import Games from "./views/Games";
-import Basic from "./views/Games-menu/Basic-menu";
-import Intermediate from "./views/Games-menu/Intermediate-menu";
-import Advanced from "./views/Games-menu/Advanced-menu";
+import BasicPanel from "./views/GamesView/BasicPanel";
+import IntermediatePanel from "./views/GamesView/IntermediatePanel";
+import AdvancedPanel from "./views/GamesView/AdvancedPanel";
 import Logina from "./components/Login/Logina";
 import Navbar from "./components/Navbar/Navbar";
-import BasicView from "./views/Games-menu/BasicView";
-import IntermediateView from "./views/Games-menu/IntermediateView";
-import AdvancedView from "./views/Games-menu/AdvancedView";
+import BasicView from "./views/GamesView/BasicView";
+import IntermediateView from "./views/GamesView/IntermediateView";
+import AdvancedView from "./views/GamesView/AdvancedView";
+import About from "./views/About/About";
+import Guide from "./views/Guide/Guide";
 
 import BasicVocabulary from "./components/Games/Basic/BasicVocabulary";
 import BasicGrammar from "./components/Games/Basic/BasicGrammar";
@@ -44,6 +45,9 @@ ReactDOM.render(
         <Route index element={<Main />} />
         <Route path="signup" element={<SignUpView />} />
         <Route path="login" element={<LoginView />} />
+        <Route path="about" element={<About />} />
+        <Route path="guide" element={<Guide />} />
+
         {/*protected routes */}
         <Route element={<RequireAuth />}>
           <Route path="index-menu" element={<IndexMenu />} />

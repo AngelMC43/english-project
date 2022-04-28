@@ -150,6 +150,27 @@ app.get("/showscore/:id", function (request, response) {
   desconectar();
 });
 
+//--------------------------SEND SCORE--------------------------
+
+app.post("/score", function (request, response) {
+  console.log(request.body);
+  conectar();
+
+  let idUser = request.body.idUser;
+  let level = request.body.level;
+  let type = request.body.type;
+  let score = request.body.score;
+
+  connection.query(
+    `INSERT into punctuation (idUser, level, type, score) values (${idUser}, "${level}", "${type}", ${score})`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
 /////////////////////////////////////////////////////////////
 //---------------------------ALL USERS-----------------------
 

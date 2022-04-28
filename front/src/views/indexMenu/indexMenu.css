@@ -1,0 +1,32 @@
+.video-index {
+    border: 0.6vh solid black;
+    border-radius: 3.7vh;
+    width: 45vh;
+    display: block;
+    margin: auto;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10vh;
+}
+
+.title-index {
+    border: 0.6vh solid black;
+    border-radius: 9vh;
+    margin-top: 2vh;
+    margin-left: 35vh;
+    margin-right: 35vh;
+    background-color: white;
+}
+
+.text-index {
+    font-family: 'Atma', cursive;
+    margin-top: 4vh;
+    
+}
+
+.boxes-index {
+    margin-left: 7.5vh;
+    margin-right: 7.5vh;
+    justify-content: space-between;
+}

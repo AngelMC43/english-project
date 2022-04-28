@@ -1,48 +1,264 @@
-.prueba {
-    border: 20px solid rgb(175, 255, 14);
-    border-radius: 40px;
+.main-vocabulary {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 5.5vh;
      justify-content: center;
      align-items: center;
-     width: 850px;
-     height: 530px;
+     width: 140vh;
+     height: 75vh;
      text-align: center;
-     background-image: url("fondobasico.jpg");
-    font-family: 'BIZ UDGothic', sans-serif;
-    font-family: 'Comic Neue', cursive;
+     background-image: url("../../../visual/basic/fondobasico.jpg");
+     font-family: 'Atma', cursive;
 }
 
-.answer {
+.answer-vocabulary {
     display: flex;
     justify-content: space-around;
 }
 
-.img-option {position: sticky;
-width: 300px;
-height: 200px;
+.img-option-vocabulary {
+    position: sticky;
+    width: 40vh;
+    height: 26vh;
 }
 
-.button-push {
-    border: 6px solid rgb(175, 255, 14);
-    border-radius: 15px;
+.button-push-vocabulary {
+   border: 1vh solid rgb(175, 255, 14);
+    border-radius: 2.5vh;
     background-color: blueviolet;
-    width: 200px;
-    height: 100px;
+    width: 28vh;
+    height: 14vh;
     font-family: 'BIZ UDGothic', sans-serif;
     font-family: 'Comic Neue', cursive;
-    font-size: 30px
+    font-size: 5vh
 }
 
-.button-container {
-    border: 2px solid rgb(105, 104, 104);
-    border-radius: 15px;
+.button-container-vocabulary {
+    border: 0.3vh solid rgb(105, 104, 104);
+    border-radius: 2.5vh;
+}
+
+.inside-container-vocabulary {
+    border: 0.5vh solid black;
+    border-radius: 3.3vh;
+}
+
+.button-vocabulary {
+    width: 37vh;
 }
 
 
+/*-----------------------------------------------GRAMMAR---------------------------------------------*/
 
-.inside-container {
-    border: 3px solid black;
-    border-radius: 20px;
+.main-grammar {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 8.2vh;
+     justify-content: center;
+     align-items: center;
+     width: 138vh;
+     height: 75vh;
+     text-align: center;
+     background-image: url("../../../visual/basic/infan.jpg");
+    font-family: 'Atma', cursive;
 
 }
+
+.img-option-grammar {
+    position: sticky;
+    width: 30vh;
+    height: 32vh;
+}
+
+.button-push-grammar {
+    border: 1vh solid rgb(175, 255, 14);
+     border-radius: 2.5vh;
+     background-color: rgb(44, 204, 215);
+     width: 28vh;
+     height: 14vh;
+     font-family: 'Comic Neue', cursive;     
+     font-size: 5vh;
+ }
+
+ .button-container-grammar {
+     display: flex;
+     margin-top: -6vh;
+     justify-content: space-around;
+    border-radius: 2.5vh;
+}
+/*-------------------------------------------QUE VEO-----------------------------------------------*/
+
+.main-match {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 8.2vh;
+     justify-content: center;
+     align-items: center;
+     width: 138vh;
+     height: 75vh;
+     text-align: center;
+     background-image: url("../../../visual/basic/inf.png");
+     font-family: 'Atma', cursive;
+
+}
+
+.inside-container-match {
+    border: 0.5vh solid black;
+    border-radius: 3.3vh;
+    height: 69vh;
+    
+}
+
+.bird-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: -14vh;
+    margin-left: 6.5vh;
+    margin-right: 6.6vh;
+    width: 9vh;
+    height: 9vh;
+}
+
+.title-match {
+    margin-top: 3vh;
+}
+
+.plane-match {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -15vh;
+    width: 10vh;
+    height: 9vh;
+    margin-left: 109vh;
+}
+
+.apple-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 10vh;
+    margin-left: 6.6vh;
+    width: 4.95vh;
+    height: 4.95vh;
+}
+
+.house-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 3.5vh;
+    margin-left: 30vh;
+    width: 14vh;
+    height: 14vh;
+}
+
+.cat-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 2vh;
+    margin-left: 22vh;
+    width: 10vh;
+    height: 10vh;
+}
+
+.car-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 5.8vh;
+    margin-left: 26.4vh;
+    width: 16.5vh;
+    height: 13.2vh;
+    
+}
+
+.parrot-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 5.5vh;
+    margin-right: 1vh;
+    width: 11vh;
+    height: 11vh;
+}
+
+.chicken-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: -6vh;
+    margin-left: 30vh;
+    width: 16.5vh;
+    height: 19.8vh;
+}
+
+.dog-match {
+    cursor: pointer;
+    position: sticky;
+    margin-left: 47vh;
+    width: 11.57vh;
+    height: 11.57vh;
+}
+
+.ball-match {
+    cursor: pointer;
+    position: sticky;
+    margin-top: -6.6vh;
+    width: 4vh;
+    height: 4vh;
+    margin-right: 10vh;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+.final-panel {
+    color: white;
+    font-size: 9.9vh;
+    position: sticky;
+    border: 2.5vh solid rgb(175, 255, 14);
+    background-color: black;
+    border-radius: 7vh;
+    margin: auto;
+    margin-top: -75vh;
+     justify-content: center;
+     align-items: center;
+     width: 139vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     line-height: 12vh
+}
+
+.button-completed {
+    font-family: 'Atma', cursive;
+    font-size: 8vh;
+    width: auto;
+    color: rgb(137, 24, 124);
+}
+
+.confeti {
+    position: absolute;
+    margin-top: -60vh;
+    margin-left: -30vh;
+}
+
+.pass {
+    position: absolute;
+    width: 40vh;
+    margin-top: -30vh;
+    margin-left: 40vh;
+}
+
+.loser {
+    position: absolute;
+    width: 60vh;
+    margin-left: -80vh;
+}
+
+.fail {
+    position: absolute;
+    width: 40vh;
+    margin-top: -35vh;
+    margin-left: 35vh;
+}
+
+

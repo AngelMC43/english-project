@@ -1,0 +1,46 @@
+.main-advanced {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 8.2vh;
+     justify-content: center;
+     align-items: center;
+     width: 140.5vh;
+     height: 87.6vh;
+     text-align: center;
+     background-image: url("fondobasico.jpg");
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-family: 'Comic Neue', cursive;
+}
+
+.answer-vocabulary {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-option-vocabulary {position: sticky;
+width: 49.6vh;
+height: 33vh;
+}
+
+.button-push {
+    border: 1vh solid rgb(175, 255, 14);
+    border-radius: 2.5vh;
+    background-color: blueviolet;
+    width: 33vh;
+    height: 16.5vh;
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-family: 'Comic Neue', cursive;
+    font-size: 5vh
+}
+
+.button-container {
+    border: 0.3vh solid rgb(105, 104, 104);
+    border-radius: 2.5vh;
+}
+
+.inside-container {
+    border: 0.5vh solid black;
+    border-radius: 3.3vh;
+
+}

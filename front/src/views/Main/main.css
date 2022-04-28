@@ -1,16 +1,19 @@
 body {
-    background-image: url("jjjj.jpg");
+    background-image: url("../../visual/main/fondoapp.jpg");
     width: 100%;
-    
-   
 }
 
-video {
-    border: 4px solid black;
-    border-radius: 25px;
-    width: 280px;
-    display:block;
+.video-main {
+    border: 0.6vh solid black;
+    border-radius: 3.7vh;
+    width: 45vh;
+    display: block;
     margin: auto;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 16.5vh;
+}
+
+.title-main {
+    color: black;
+    font-family: 'Atma', cursive;
 }

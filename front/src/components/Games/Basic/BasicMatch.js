@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import "./basic.css";
 
 export default function BasicMatch() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -27,16 +29,78 @@ export default function BasicMatch() {
       console.log(fallo);
     }
   };
-
+  if ((questions.pic_correct = questions.correct)) {
+  }
   return (
     <div>
-      <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
-      <h3 onClick={handleJump}>
-        <button>{questions.length > 0 ? questions[jump].correct : ""}</button>
-        <button>
-          {questions.length > 0 ? questions[jump].incorrect_a : ""}
-        </button>
-      </h3>
+      <div className="main-match ">
+        <div className="inside-container-match">
+          <div>
+            <h1 className="title-match d-flex justify-content-center">
+              {questions.length > 0 ? questions[jump].question : ""}
+            </h1>
+          </div>
+          <div className="d-flex">
+            <img
+              src={questions.length > 0 ? questions[0].pic_correct : ""}
+              onClick={handleJump}
+              className="bird-match"
+            />
+
+            <img
+              src={questions.length > 0 ? questions[1].pic_correct : ""}
+              onClick={handleJump}
+              className="plane-match"
+            />
+          </div>
+          <div className="d-flex justify-content-between">
+            <img
+              src={questions.length > 0 ? questions[2].pic_correct : ""}
+              onClick={handleJump}
+              className="apple-match"
+            />
+            <img
+              src={questions.length > 0 ? questions[3].pic_correct : ""}
+              onClick={handleJump}
+              className="house-match"
+            />
+            <img
+              src={questions.length > 0 ? questions[8].pic_correct : ""}
+              onClick={handleJump}
+              className="parrot-match"
+            />
+          </div>
+          <div className="d-flex">
+            <img
+              src={questions.length > 0 ? questions[5].pic_correct : ""}
+              onClick={handleJump}
+              className="cat-match"
+            />
+            <img
+              src={questions.length > 0 ? questions[4].pic_correct : ""}
+              onClick={handleJump}
+              className="car-match"
+            />
+          </div>
+          <div className="d-flex justify-content-between">
+            <img
+              src={questions.length > 0 ? questions[7].pic_correct : ""}
+              onClick={handleJump}
+              className="dog-match"
+            />
+            <img
+              src={questions.length > 0 ? questions[6].pic_correct : ""}
+              onClick={handleJump}
+              className="chicken-match"
+            />
+            <img
+              src={questions.length > 0 ? questions[9].pic_correct : ""}
+              onClick={handleJump}
+              className="ball-match"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

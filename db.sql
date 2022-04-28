@@ -1,1 +1,4 @@
-SELECT * FROM basic WHERE type = "vocabulary"
+SELECT 
+    *
+FROM
+    project.basic;

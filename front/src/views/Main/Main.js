@@ -1,33 +1,30 @@
 import { Link } from "react-router-dom";
-import Navbar from "../../components/Navbar/Navbar";
 import Otro from "../../Otro";
-import Footer from "../../components/Footer/Footer";
 import "./main.css";
-import video from "../../views/Main/dd.mp4";
+import presentation from "../../visual/main/presentation.mp4";
 
 export default function Main() {
   return (
     <div className="App ">
-      <Navbar />
       <div className="body ">
         <Link
           to="login"
-          className="mr-md-3 btn btn-outline- purple  lighten-2  z-depth-3 mr-3 section"
+          className="button mr-md-3 btn btn-outline- purple lighten-2 z-depth-3 mr-3 section"
         >
-          <i class="material-icons left ">account_circle</i>
+          <i className="material-icons left ">account_circle</i>
           Entra en tu perfil
         </Link>
         <Link
           to="signup"
-          className="btn btn-outline-info  lime accent-4 z-depth-3 section"
+          className="button btn btn-outline-info lime accent-4 z-depth-3 section"
         >
-          <i class="material-icons left ">person_add</i>Registrate
+          <i className="material-icons left ">person_add</i>Registrate
         </Link>
-        <video loop autoPlay muted>
-          <source src={video} type="video/mp4" />
+        <video loop autoPlay muted className="video-main">
+          <source src={presentation} type="video/mp4" />
         </video>
       </div>
-      <Otro />
+      <h1 className="title-main"> The English game</h1>
     </div>
   );
 }
