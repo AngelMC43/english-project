@@ -76,7 +76,13 @@ app.post("/login", function (request, response) {
       if (rows.length == 0) {
         response.send({ error: "Usuario no encontardo hulio" });
       } else {
-        response.json({ name: rows[0].name, surname: rows[0].surname });
+        response.json({
+          name: rows[0].name,
+          surname: rows[0].surname,
+          age: rows[0].age,
+          email: rows[0].email,
+          id: rows[0].id,
+        });
         console.log("conexion perfecta");
       }
     }
@@ -126,7 +132,7 @@ app.delete("/delete/:id", function (request, response) {
 app.get("/showscore", function (request, response) {
   conectar();
   connection.query(
-    `SELECT name, surname, score from users ORDER BY score DESC`,
+    `SELECT * from users ORDER BY score DESC`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);
@@ -273,6 +279,23 @@ app.get("/games/basic/match", function (request, response) {
 
   connection.query(
     `SELECT * FROM basic WHERE type = "match"`,
+    function (err, rows, fields) {
+      if (err) throw err;
+
+      response.json(rows);
+      console.log(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------BASIC CHOOSE----------------------
+
+app.get("/games/basic/choose", function (request, response) {
+  conectar();
+
+  connection.query(
+    `SELECT * FROM basic WHERE type = "choose"`,
     function (err, rows, fields) {
       if (err) throw err;
 
