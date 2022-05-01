@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useLoginContext } from "../../../context/LoginContext";
+
 import "./basic.css";
 
 export default function BasicGrammar() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
+  const { userLogged } = useLoginContext();
 
   useEffect(() => {
     async function fetchData() {
@@ -21,29 +24,54 @@ export default function BasicGrammar() {
     fetchData();
   }, []);
 
-  const handleJump = () => {
-    if (jump < 10) {
-      setJump(jump + 1);
-    } else {
+  const handleScore = (event) => {
+    async function fetchData() {
+      const response = await fetch(`http://localhost:3001/score`, {
+        mode: "cors",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          idUser: userLogged.id,
+          level: "basic",
+          type: "grammar",
+          score: count,
+        }),
+      });
     }
+    fetchData();
   };
+  console.log("count es", count);
+
+  //preguntar como hacer el login para profile y desde ahi buscar el id para poner aqui, id = usePararm()
+  //SOLO ME QUEDA ENLAZAR EL BODY DE idUser, level, type y score con los correspondientes que le envien dicha informacion
+  //PONER EL PREVENT DEFAULT Y STOP PROPAGATION DONDE CORRESPONDA
 
   const handleCount = () => {
     setCount(count + 1);
   };
 
   function handleJoined(e) {
-    e.stopPropagation();
-    e.preventDefault();
-    handleJump();
     handleCount();
+    handleJump();
   }
+
+  const handleJump = (e) => {
+    if (jump < 9) {
+      setJump(jump + 1);
+    } else if (jump === 9) {
+      setJump(jump + 1);
+      setCount(count + 1);
+      handleScore();
+    }
+  };
 
   return (
     <div>
       <div className="main-grammar">
-        <div className="inside-container">
-          <h1 className="">
+        <div className="insideContainer-grammar">
+          <h1 className="titleBG-grammar">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
           <img

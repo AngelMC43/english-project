@@ -1,39 +1,54 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useLoginContext } from "../../context/LoginContext";
+import "./profile.css";
 
 export default function Profile() {
-  const [profile, setProfile] = useState([]);
-  const id = useParams();
+  const { userLogged } = useLoginContext();
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(`http://localhost:3001/profile/${id.id}`, {
-        mode: "cors",
-      });
-      const json = await response.json();
-      console.log("1 esto trae json", json);
-      console.log(id.id);
-      setProfile(json);
-      console.log("2 esto tiene users", profile);
-    }
-    fetchData();
-  }, []);
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const response = await fetch(`http://localhost:3001/profile/${id}`, {
-  //       mode: "cors",
-  //     });
-  //     const json = await response.json();
-  //     console.log("1 esto trae json", json);
-  //     setUsers(json);
-  //     console.log("2 esto tiene users", users);
-  //   }
-  //   fetchData();
-  // }, []);
   return (
-    <div>
-      <h1>Profile site</h1>
-      <h1 className="card-title">{profile.name}</h1>
+    <div className="mainContainer-profile">
+      <h3 className="title ">
+        {userLogged.name} {userLogged.surname}
+      </h3>
+      <div className=" inside-container w-75 ">
+        <div className="card-header">
+          <ul className="nav nav-tabs card-header-tabs">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="true" href="#">
+                Datos
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/login">
+                Puntuación
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">Actualiza</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p className="mt-5">
+            <b>Nombre: </b>
+            {userLogged.name}
+          </p>
+          <p>
+            <b>Apellidos: </b>
+            {userLogged.surname}
+          </p>
+          <p>
+            <b>Email: </b>
+            {userLogged.email}
+          </p>
+          <p>
+            <b>Edad: </b>
+            {userLogged.age}
+          </p>
+          <p>eliminar perfil</p>
+          <p>puntuacion sobre tus juegos</p>
+          <p>puntuacion global por niveles y/o tipos</p>
+        </div>
+      </div>
     </div>
   );
 }

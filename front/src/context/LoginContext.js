@@ -1,8 +1,9 @@
 import { createContext, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginContext = createContext({
   userLogged: null,
-  login: () => {},
+  handleLogin: () => {},
   logout: () => {},
   errorMessage: "",
 });
@@ -12,16 +13,41 @@ export const useLoginContext = () => {
 };
 
 export function LoginContextProvider({ children }) {
-  const [user, setUser] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+    name: "",
+    surname: "",
+    id: "",
+    age: "",
+  });
+  const navigate = useNavigate();
 
-  function login(user) {
-    if (user.email === "pepe@mail.com" && user.password === "1234") {
-      setUser(user);
-      setErrorMessage("");
-    } else {
-      setErrorMessage("El email o la pasword no son correctos");
+  function handleLogin(e, user) {
+    e.preventDefault();
+    async function fetchData() {
+      const response = await fetch(`http://localhost:3001/login`, {
+        mode: "cors",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: user.email,
+          password: user.password,
+        }),
+      });
+      const json = await response.json();
+      if ("error" in json) {
+        setErrorMessage(true);
+      } else {
+        console.log({ json });
+        setUser(json);
+        navigate("/index-menu");
+      }
     }
+    fetchData();
   }
 
   function logout() {
@@ -30,7 +56,7 @@ export function LoginContextProvider({ children }) {
 
   const value = {
     userLogged: user,
-    login,
+    handleLogin,
     logout,
     errorMessage,
   };

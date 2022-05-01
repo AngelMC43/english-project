@@ -8,7 +8,7 @@
      width: 140vh;
      height: 75vh;
      text-align: center;
-     background-image: url("../../../visual/basic/fondobasico.jpg");
+     background-image: url("../../../visual/basic/beach.png");
      font-family: 'Atma', cursive;
 }
 
@@ -21,6 +21,10 @@
     position: sticky;
     width: 40vh;
     height: 26vh;
+    background-color: white;
+    border-radius: 3vh;
+    padding: 1vh;
+    border: 0.2vh solid black;
 }
 
 .button-push-vocabulary {
@@ -40,6 +44,8 @@
 }
 
 .inside-container-vocabulary {
+    position: absolute;
+    width: 134vh;
     border: 0.5vh solid black;
     border-radius: 3.3vh;
 }
@@ -55,21 +61,30 @@
     border: 3vh solid rgb(175, 255, 14);
     border-radius: 6.6vh;
     margin: auto;
-    margin-top: 8.2vh;
+    margin-top: 5.5vh;
      justify-content: center;
      align-items: center;
-     width: 138vh;
+     width: 140vh;
      height: 75vh;
      text-align: center;
-     background-image: url("../../../visual/basic/infan.jpg");
+     background-image: url("../../../visual/basic/mountain.jpg");
     font-family: 'Atma', cursive;
 
+}
+
+.titleBG-grammar {
+    background-color: white;
+    border-radius: 5vh;
 }
 
 .img-option-grammar {
     position: sticky;
     width: 30vh;
     height: 32vh;
+}
+
+.insideContainer-grammar {
+
 }
 
 .button-push-grammar {
@@ -84,7 +99,6 @@
 
  .button-container-grammar {
      display: flex;
-     margin-top: -6vh;
      justify-content: space-around;
     border-radius: 2.5vh;
 }
@@ -94,10 +108,10 @@
     border: 3vh solid rgb(175, 255, 14);
     border-radius: 6.6vh;
     margin: auto;
-    margin-top: 8.2vh;
+    margin-top: 5.5vh;
      justify-content: center;
      align-items: center;
-     width: 138vh;
+     width: 139vh;
      height: 75vh;
      text-align: center;
      background-image: url("../../../visual/basic/inf.png");
@@ -106,10 +120,11 @@
 }
 
 .inside-container-match {
+    position: absolute;
+    width: 133vh;
+    height: 69vh;
     border: 0.5vh solid black;
     border-radius: 3.3vh;
-    height: 69vh;
-    
 }
 
 .bird-match {
@@ -207,7 +222,49 @@
     margin-right: 10vh;
 }
 
-/*--------------------------------------------------------------------------------------------------*/
+/*---------------------------------CHOOSE COORECT-------------------------------------------*/
+.main-choose {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     background-image: url("../../../visual/basic/fondo-choose.jpg");
+     font-family: 'Atma', cursive;
+}
+
+.answer-choose {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-choose {
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    margin-left: -20vh;
+    cursor: pointer;
+    margin-top: 5vh;
+
+}
+
+.inside-container-choose {
+    position: absolute;
+    width: 134vh;
+    height: 69vh;
+    border: 0.5vh solid black;
+    border-radius: 3.3vh;
+}
+
+.button-choose {
+    width: 37vh;
+}
+
+/*-------------------------------FINAL PANEL-------------------------------------------------------------*/
 
 
 .final-panel {

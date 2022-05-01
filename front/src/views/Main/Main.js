@@ -9,14 +9,14 @@ export default function Main() {
       <div className="body ">
         <Link
           to="login"
-          className="button mr-md-3 btn btn-outline- purple lighten-2 z-depth-3 mr-3 section"
+          className="button-main btn btn-outline- purple lighten-2 z-depth-3 mr-3 section"
         >
           <i className="material-icons left ">account_circle</i>
           Entra en tu perfil
         </Link>
         <Link
           to="signup"
-          className="button btn btn-outline-info lime accent-4 z-depth-3 section"
+          className="button-main btn btn-outline- lime accent-4 z-depth-3 section"
         >
           <i className="material-icons left ">person_add</i>Registrate
         </Link>

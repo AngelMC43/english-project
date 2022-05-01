@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import gamesVideo from "../../visual/main/games.mp4";
 import profileVideo from "../../visual/main/profile.mp4";
+import { useLoginContext } from "../../context/LoginContext";
 import "./indexMenu.css";
 
 export default function IndexMenu() {
+  const { id } = useLoginContext();
+
   return (
     <div className="App">
       <div className="title-index">
@@ -15,7 +18,7 @@ export default function IndexMenu() {
             <source src={gamesVideo} type="video/mp4" />
           </video>
         </Link>
-        <Link to="/profile/:id" className="boxes-index">
+        <Link to={`/profile`} className="boxes-index">
           <video loop autoPlay muted className="video-index">
             <source src={profileVideo} type="video/mp4" />
           </video>

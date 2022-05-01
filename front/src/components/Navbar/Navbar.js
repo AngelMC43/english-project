@@ -1,7 +1,21 @@
 import { NavLink } from "react-router-dom";
 import image from "./duo5.jpg";
+import { useState, useEffect, useContext } from "react";
 
 export default function Navbar() {
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(`http://localhost:3001/allusers`, {
+        mode: "cors",
+      });
+      const json = await response.json();
+      setUser(json);
+    }
+    fetchData();
+  }, []);
+  //-----------------------------------------------poner la id para sacar el usuario
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,18 +36,19 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item ">
-                <NavLink className="nav-link" to="guide">
+                <NavLink className="nav-link" to="/guide">
                   Guide
                 </NavLink>
               </li>
               <li className="nav-item ">
-                <NavLink className="nav-link " to="about">
+                <NavLink className="nav-link " to="/about">
                   About
                 </NavLink>
               </li>
             </ul>
           </div>
         </div>
+        {/* <h5>{user[49].name}</h5> */}
       </nav>
       <main className="App"></main>
     </div>

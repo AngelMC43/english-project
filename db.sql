@@ -1,4 +1,1 @@
-SELECT 
-    *
-FROM
-    project.basic;
+SELECT * FROM project.advanced;The truth finally __________ me

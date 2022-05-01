@@ -1,0 +1,29 @@
+
+.mainContainer-profile {
+display: flex;
+margin-top: 10vh;
+margin-left: 57vh;
+height: 70vh;
+background-image: url("../../visual/main/fm.jpg");
+width: 87vh;
+padding-top: 11vh;
+padding-bottom: 5vh;
+border-radius: 3vh;
+}
+
+.title {
+    font-size: xx-large;
+    margin-top: -8vh;
+    color: white;
+    margin-left: 3vh;
+}
+
+.card-profile {
+    margin-left: 58vh;
+}
+
+.inside-container {
+    text-align: start;
+    margin-left: -30vh;
+    background-color: white;
+}

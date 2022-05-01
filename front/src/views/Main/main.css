@@ -17,3 +17,7 @@ body {
     color: black;
     font-family: 'Atma', cursive;
 }
+
+.button-main {
+    width: 35vh;
+}

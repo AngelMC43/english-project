@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "materialize-css/dist/css/materialize.min.css";
+import "materialize-css/dist/js/materialize.min.js";
 
 import App from "./App";
 import RequireAuth from "./components/Login/RequireAuth";
@@ -22,10 +23,12 @@ import IntermediateView from "./views/GamesView/IntermediateView";
 import AdvancedView from "./views/GamesView/AdvancedView";
 import About from "./views/About/About";
 import Guide from "./views/Guide/Guide";
+import Score from "./components/Score/Score";
 
 import BasicVocabulary from "./components/Games/Basic/BasicVocabulary";
 import BasicGrammar from "./components/Games/Basic/BasicGrammar";
 import BasicMatch from "./components/Games/Basic/BasicMatch";
+import BasicChoose from "./components/Games/Basic/BasicChoose";
 
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
@@ -37,7 +40,11 @@ import AdvancedGrammar from "./components/Games/Advanced/AdvancedGrammar";
 import AdvancedVerbs from "./components/Games/Advanced/AdvancedVerbs";
 import AdvancedFinalTest from "./components/Games/Advanced/AdvancedFinalTest";
 
-ReactDOM.render(
+import { createRoot } from "react-dom/client";
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
   <BrowserRouter>
     <Routes>
       {/*public routes */}
@@ -51,12 +58,15 @@ ReactDOM.render(
         {/*protected routes */}
         <Route element={<RequireAuth />}>
           <Route path="index-menu" element={<IndexMenu />} />
-          <Route path="profile/:id" element={<ProfileView />} />
+          <Route path="profile" element={<ProfileView />} />
           <Route path="games" element={<Games />} />
+          <Route path="score" element={<Score />} />
+
           <Route path="games/basic" element={<BasicView />} />
           <Route path="games/basic/vocabulary" element={<BasicVocabulary />} />
           <Route path="games/basic/grammar" element={<BasicGrammar />} />
           <Route path="games/basic/match" element={<BasicMatch />} />
+          <Route path="games/basic/choose" element={<BasicChoose />} />
 
           <Route path="games/intermediate" element={<IntermediateView />} />
           <Route
@@ -91,6 +101,5 @@ ReactDOM.render(
         </Route>
       </Route>
     </Routes>
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );

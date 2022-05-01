@@ -1,0 +1,91 @@
+.main-basicMenu {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     background-color: blueviolet;
+     font-family: 'Atma', cursive;
+}
+
+.title-basicMenu {
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+}
+
+.inside-title {
+    margin-top: -1vh;
+    margin-bottom: -1vh;
+}
+
+.floatSmall-basicMenu {
+    margin-top: 19vh;
+    margin-left: 20vh;
+    position: absolute;
+}
+
+.floatBig-basicMenu {
+    margin-top: 19vh;
+    margin-left: 29.5vh;
+    position: absolute;
+}
+
+.contain-basicMenu {
+  display: flex;
+ margin-top: -0.5vh;
+}
+
+.box-vocabulary-basicMenu {
+    width: 60vh;
+    height: 26vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border: 2px solid black;
+    border-radius: 10vh;
+    background-color: white;
+}
+
+.box-choose-basicMenu {
+    width: 80vh;
+    height: 26vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    border: 2px solid black;
+    border-radius: 10vh;
+    background-color: white;
+
+}
+
+.box-grammar-basicMenu {
+    width: 80vh;
+    height: 26vh;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border: 2px solid black;
+    border-radius: 10vh;
+    background-color: white;
+
+}
+
+.box-match-basicMenu {
+ 
+    width: 60vh;
+    height: 26vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-top: 1vh;
+    border: 2px solid black;
+    border-radius: 10vh;
+    background-color: white;
+}
+
+.card-content-edit  {
+height: 26vh;
+background-color: transparent;
+}
+

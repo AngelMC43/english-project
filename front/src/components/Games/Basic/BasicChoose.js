@@ -3,7 +3,7 @@ import "./basic.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 
-export default function BasicVocabulary() {
+export default function BasicChoose() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
@@ -15,16 +15,12 @@ export default function BasicVocabulary() {
   //   type: "",
   //   score: "",
   // });
-  console.log("count es", count);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        `http://localhost:3001/games/basic/vocabulary`,
-        {
-          mode: "cors",
-        }
-      );
+      const response = await fetch(`http://localhost:3001/games/basic/choose`, {
+        mode: "cors",
+      });
       const json = await response.json();
       setQuestions(json);
     }
@@ -42,28 +38,22 @@ export default function BasicVocabulary() {
         body: JSON.stringify({
           idUser: userLogged.id,
           level: "basic",
-          type: "vocabulary",
+          type: "choose",
           score: count,
         }),
       });
     }
     fetchData();
   };
-  console.log("count es", count);
-
-  //preguntar como hacer el login para profile y desde ahi buscar el id para poner aqui, id = usePararm()
-  //SOLO ME QUEDA ENLAZAR EL BODY DE idUser, level, type y score con los correspondientes que le envien dicha informacion
-  //PONER EL PREVENT DEFAULT Y STOP PROPAGATION DONDE CORRESPONDA
 
   const handleCount = () => {
     setCount(count + 1);
   };
 
   function handleJoined(e) {
-    handleCount();
     handleJump();
+    handleCount();
   }
-
   const handleJump = (e) => {
     if (jump < 9) {
       setJump(jump + 1);
@@ -71,49 +61,42 @@ export default function BasicVocabulary() {
       setJump(jump + 1);
       setCount(count + 1);
       handleScore();
+    } else {
     }
   };
 
-  console.log("count es", count);
+  console.log("ESTO", count);
 
   return (
     <div>
-      <div className="main-vocabulary">
-        <div className="inside-container-vocabulary">
+      <div className="main-choose">
+        <div className="inside-container-choose">
           <h1 className="">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
-          <div className="div">
-            <img
-              src={questions.length > 0 ? questions[jump].pic_correct : ""}
-              className="img-option-vocabulary"
-            />
-          </div>
-          <h3 className="answer-vocabulary">
-            <div className="button-container-vocabulary">
-              <button
-                onClick={handleJoined}
-                className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].correct : ""}
-              </button>
-            </div>
-            <div className="button-container-vocabulary">
-              <button
-                onClick={handleJump}
-                className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].incorrect_a : ""}
-              </button>
 
-              {/* <h1 className="visually-hidden" id="correcto">
+          <h3 className="answer-choose">
+            <div>
+              <img
+                src={questions.length > 0 ? questions[jump].pic_correct : ""}
+                onClick={handleJoined}
+                className="img-choose"
+              />
+            </div>
+            <div>
+              <img
+                src={questions.length > 0 ? questions[jump].pic_incorrect : ""}
+                onClick={handleJump}
+                className="img-choose"
+              />
+            </div>
+            {/* <h1 className="visually-hidden" id="correcto">
                 Correcto
               </h1>
 
               <h1 className="visually-hidden" id="incorrecto">
                 Incorrecto
               </h1> */}
-            </div>
           </h3>
         </div>
       </div>
@@ -145,7 +128,7 @@ export default function BasicVocabulary() {
                 />
               </div>
             )}
-            <Link to="/games/basic/choose" className="button-completed">
+            <Link to="/games/basic/grammar" className="button-completed">
               Next Game
             </Link>
             <br />
