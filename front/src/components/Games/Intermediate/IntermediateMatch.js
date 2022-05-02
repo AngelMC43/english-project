@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 
-export default function IntermediateGrammar() {
+export default function AdvancedVocabulary() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
@@ -11,7 +11,7 @@ export default function IntermediateGrammar() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `http://localhost:3001/games/intermediate/grammar`,
+        `http://localhost:3001/games/advanced/vocabulary`,
         {
           mode: "cors",
         }
@@ -33,7 +33,7 @@ export default function IntermediateGrammar() {
         body: JSON.stringify({
           idUser: userLogged.id,
           level: "intermediate",
-          type: "grammar",
+          type: "match",
           score: count,
         }),
       });
@@ -61,24 +61,21 @@ export default function IntermediateGrammar() {
   };
 
   return (
-    <div className="main-intermediateGrammar">
-      <h1 className="title-intermediateGrammar animate__animated animate__pulse">
-        {questions.length > 0 ? questions[jump].question : ""}
-      </h1>
-      <button
-        onClick={handleJoined}
-        className="button-intermediateGrammar animate__animated animate__pulse"
-      >
+    <div className="main-intermediateMatch">
+      <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
+      <button onClick={handleJoined}>
         {questions.length > 0 ? questions[jump].correct : ""}
       </button>
-      <button
-        onClick={handleJump}
-        className="button-intermediateGrammar animate__animated animate__pulse"
-      >
+      <button onClick={handleJump}>
         {questions.length > 0 ? questions[jump].incorrect_a : ""}
       </button>
-
-      <div onClick={handleJump}>
+      <button onClick={handleJump}>
+        {questions.length > 0 ? questions[jump].incorrect_b : ""}
+      </button>
+      <button onClick={handleJump}>
+        {questions.length > 0 ? questions[jump].incorrect_c : ""}
+      </button>
+      <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-intermediate">
             <h2>Game completed!</h2>
@@ -107,7 +104,7 @@ export default function IntermediateGrammar() {
               </div>
             )}
             <Link
-              to="/games/intermediate/match"
+              to="/games/instermediate/vocabulary"
               className="buttonCompleted-intermediate"
             >
               Next Game

@@ -102,41 +102,41 @@ export default function BasicChoose() {
       </div>
       <div>
         {questions[10] === questions[jump] ? (
-          <div className="final-panel">
+          <div className="finalPanel-basic">
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti"
+                  className="confeti-basic"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass"
+                  className="pass-basic"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail"
+                  className="fail-basic"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser"
+                  className="loser-basic"
                 />
               </div>
             )}
-            <Link to="/games/basic/grammar" className="button-completed">
+            <Link to="/games/basic/grammar" className="buttonCompleted-basic">
               Next Game
             </Link>
             <br />
-            <Link to="/showscore" className="button-completed">
+            <Link to="/showscore" className="buttonCompleted-basic">
               Ranking
             </Link>
             <br />
-            <Link to="/games/basic" className="button-completed">
+            <Link to="/games/basic" className="buttonCompleted-basic">
               Menu
             </Link>
           </div>

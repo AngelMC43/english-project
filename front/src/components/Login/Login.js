@@ -20,7 +20,9 @@ export default function Login() {
     <div className="d-flex justify-content-center">
       <div className="container-login w-25 ">
         <form class="  form-group" onSubmit={(e) => handleLogin(e, login)}>
-          <h2 className="title-login text-center">Accede a tu cuenta</h2>
+          <h2 className="title-login text-center animate__animated animate__bounce">
+            Accede a tu cuenta
+          </h2>
           <label for="exampleInputEmail1">Email</label>
           <input
             onChange={handleChange}

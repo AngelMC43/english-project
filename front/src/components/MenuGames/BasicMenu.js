@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "./basicmenu.css";
 import image from "../../visual/basic/inf.png";
@@ -10,7 +9,9 @@ export default function BasicMenu() {
   return (
     <div>
       <div className="main-basicMenu">
-        <h1 className="title-basicMenu">Basic level categories:</h1>
+        <h1 className="title-basicMenu animate__animated animate__rubberBand">
+          Basic level:
+        </h1>
 
         <div className="contain-basicMenu">
           <div className="row box-vocabulary-basicMenu">

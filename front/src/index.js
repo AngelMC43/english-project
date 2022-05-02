@@ -33,7 +33,7 @@ import BasicChoose from "./components/Games/Basic/BasicChoose";
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
 import IntermediateVerbs from "./components/Games/Intermediate/IntermediateVerbs";
-import IntermediateFinalTest from "./components/Games/Intermediate/IntermediateFinalTest";
+import IntermediateFinalTest from "./components/Games/Intermediate/IntermediateMatch";
 
 import AdvancedVocabulary from "./components/Games/Advanced/AdvancedVocabulary";
 import AdvancedGrammar from "./components/Games/Advanced/AdvancedGrammar";
@@ -83,7 +83,7 @@ root.render(
           />
 
           <Route
-            path="games/intermediate/final-test"
+            path="games/intermediate/match"
             element={<IntermediateFinalTest />}
           />
 
@@ -94,10 +94,7 @@ root.render(
           />
           <Route path="games/advanced/grammar" element={<AdvancedGrammar />} />
           <Route path="games/advanced/verbs" element={<AdvancedVerbs />} />
-          <Route
-            path="games/advanced/final-test"
-            element={<AdvancedFinalTest />}
-          />
+          <Route path="games/advanced/match" element={<AdvancedFinalTest />} />
         </Route>
       </Route>
     </Routes>

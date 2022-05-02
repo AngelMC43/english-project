@@ -49,7 +49,9 @@ export default function SignUp() {
     <div className="d-flex">
       <div className="d-flex justify-content-center">
         <div className="container-signup">
-          <h1 className="title-signup">Únete a nuestro club</h1>
+          <h1 className="title-signup animate__animated animate__bounce">
+            Únete a nuestro club
+          </h1>
           <form onSubmit={handleSubmit} className="row center-align">
             <div className="box-signup col-12">
               Nombre

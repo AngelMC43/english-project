@@ -1,4 +1,4 @@
-.main-basicMenu {
+.main-advancedMenu { 
     border: 3vh solid rgb(175, 255, 14);
     border-radius: 6.6vh;
     margin: auto;
@@ -8,38 +8,38 @@
      width: 140vh;
      height: 75vh;
      text-align: center;
-     background-color: rgb(187, 141, 230);
+     background-color: blueviolet;
      font-family: 'Atma', cursive;
 }
 
-.title-basicMenu {
+.title-advancedMenu {
     margin-top: 0vh;
     margin-bottom: 1vh;
 }
 
-.inside-title {
+.insideTitle-advancedMenu {
     margin-top: -1vh;
     margin-bottom: -1vh;
 }
 
-.floatSmall-basicMenu {
+.floatSmall-advancedMenu {
     margin-top: 19vh;
     margin-left: 20vh;
     position: absolute;
 }
 
-.floatBig-basicMenu {
+.floatBig-advancedMenu {
     margin-top: 19vh;
     margin-left: 29.5vh;
     position: absolute;
 }
 
-.contain-basicMenu {
+.contain-advancedMenu {
   display: flex;
  margin-top: -0.5vh;
 }
 
-.box-vocabulary-basicMenu {
+.box-vocabulary-advancedMenu {
     width: 60vh;
     height: 26vh;
     margin-left: 2vh;
@@ -49,7 +49,7 @@
     background-color: white;
 }
 
-.box-choose-basicMenu {
+.box-choose-advancedMenu {
     width: 80vh;
     height: 26vh;
     margin-right: 2vh;
@@ -60,7 +60,7 @@
 
 }
 
-.box-grammar-basicMenu {
+.box-grammar-advancedMenu {
     width: 80vh;
     height: 26vh;
     margin-top: 1vh;
@@ -72,7 +72,7 @@
 
 }
 
-.box-match-basicMenu {
+.box-match-advancedMenu {
  
     width: 60vh;
     height: 26vh;

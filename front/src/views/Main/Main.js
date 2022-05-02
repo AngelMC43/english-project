@@ -24,7 +24,10 @@ export default function Main() {
           <source src={presentation} type="video/mp4" />
         </video>
       </div>
-      <h1 className="title-main"> The English game</h1>
+      <h1 className="title-main animate__animated animate__delay-1s animate__backInRight">
+        {" "}
+        The English game
+      </h1>
     </div>
   );
 }

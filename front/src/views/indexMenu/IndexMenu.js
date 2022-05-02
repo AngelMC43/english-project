@@ -10,7 +10,9 @@ export default function IndexMenu() {
   return (
     <div className="App">
       <div className="title-index">
-        <h2 className="text-index">Welcome to the world of games</h2>
+        <h2 className="text-index animate__animated animate__rubberBand ">
+          Welcome to the world of games
+        </h2>
       </div>
       <div className="boxes-index d-flex justify-content-center">
         <Link to="/games" className="boxes">

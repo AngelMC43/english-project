@@ -31,6 +31,7 @@
    border: 1vh solid rgb(175, 255, 14);
     border-radius: 2.5vh;
     background-color: blueviolet;
+    background-image: url("../../../visual/basic/fondoMorado.jpg");
     width: 28vh;
     height: 14vh;
     font-family: 'BIZ UDGothic', sans-serif;
@@ -84,7 +85,7 @@
 }
 
 .insideContainer-grammar {
-
+border:1
 }
 
 .button-push-grammar {
@@ -267,7 +268,7 @@
 /*-------------------------------FINAL PANEL-------------------------------------------------------------*/
 
 
-.final-panel {
+.finalPanel-basic {
     color: white;
     font-size: 9.9vh;
     position: sticky;
@@ -285,33 +286,35 @@
      line-height: 12vh
 }
 
-.button-completed {
+.buttonCompleted-basic {
     font-family: 'Atma', cursive;
     font-size: 8vh;
     width: auto;
     color: rgb(137, 24, 124);
 }
 
-.confeti {
+.confeti-basic {
     position: absolute;
     margin-top: -60vh;
-    margin-left: -30vh;
+    margin-left: -50vh;
+    width: 100vh;
+    height: 65vh;
 }
 
-.pass {
+.pass-basic {
     position: absolute;
     width: 40vh;
     margin-top: -30vh;
     margin-left: 40vh;
 }
 
-.loser {
+.loser-basic {
     position: absolute;
     width: 60vh;
     margin-left: -80vh;
 }
 
-.fail {
+.fail-basic {
     position: absolute;
     width: 40vh;
     margin-top: -35vh;

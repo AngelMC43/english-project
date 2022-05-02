@@ -65,14 +65,13 @@ export default function BasicVocabulary() {
   }
 
   const handleJump = (e) => {
-    if (jump < 9) {
-      setJump(jump + 1);
-    } else if (jump === 9) {
-      setJump(jump + 1);
-      setCount(count + 1);
-      handleScore();
-    }
+    setJump(jump + 1);
   };
+
+  function handleEnd() {
+    handleJoined();
+    handleScore();
+  }
 
   console.log("count es", count);
 
@@ -80,7 +79,7 @@ export default function BasicVocabulary() {
     <div>
       <div className="main-vocabulary">
         <div className="inside-container-vocabulary">
-          <h1 className="">
+          <h1 className="animate__animated animate__pulse">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
           <div className="div">
@@ -91,12 +90,21 @@ export default function BasicVocabulary() {
           </div>
           <h3 className="answer-vocabulary">
             <div className="button-container-vocabulary">
-              <button
-                onClick={handleJoined}
-                className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].correct : ""}
-              </button>
+              {questions[9] == questions[jump] ? (
+                <button
+                  onClick={handleEnd}
+                  className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              ) : (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              )}
             </div>
             <div className="button-container-vocabulary">
               <button
@@ -119,43 +127,44 @@ export default function BasicVocabulary() {
       </div>
       <div>
         {questions[10] === questions[jump] ? (
-          <div className="final-panel">
+          <div className="finalPanel-basic">
+            {" "}
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti"
+                  className="confeti-basic animate__animated animate__bounceIn "
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass"
+                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail"
+                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser"
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}
-            <Link to="/games/basic/choose" className="button-completed">
+            <Link to="/games/basic/choose" className="buttonCompleted-basic">
               Next Game
             </Link>
             <br />
-            <Link to="/showscore" className="button-completed">
+            <Link to="/showscore" className="buttonCompleted-basic">
               Ranking
             </Link>
             <br />
-            <Link to="/games/basic" className="button-completed">
+            <Link to="/games/basic" className="buttonCompleted-basic">
               Menu
-            </Link>
+            </Link>{" "}
           </div>
         ) : (
           ""
