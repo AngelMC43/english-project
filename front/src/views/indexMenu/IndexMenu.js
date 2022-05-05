@@ -10,7 +10,7 @@ export default function IndexMenu() {
   return (
     <div className="App">
       <div className="title-index">
-        <h2 className="text-index animate__animated animate__rubberBand ">
+        <h2 className="text-index animate__animated animate__rubberBand">
           Welcome to the world of games
         </h2>
       </div>

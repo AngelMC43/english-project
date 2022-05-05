@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./basicmenu.css";
-import image from "../../visual/basic/inf.png";
+import rabbit from "../../visual/basic/rabbit.gif";
 
 export default function BasicMenu() {
   //const [selectedId, setSelectedId] = useState(null);
@@ -12,11 +12,14 @@ export default function BasicMenu() {
         <h1 className="title-basicMenu animate__animated animate__rubberBand">
           Basic level:
         </h1>
-
+        <img
+          src={rabbit}
+          className="rabbit-basic animate__animated animate__fadeInRightBig animate__delay-1s"
+        />
         <div className="contain-basicMenu">
           <div className="row box-vocabulary-basicMenu">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
                     to="vocabulary"
@@ -49,10 +52,10 @@ export default function BasicMenu() {
           {/* //-------------------------------------------------------choose */}
           <div className="row box-choose-basicMenu">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
-                    to="choose"
+                    to="intro/choose"
                     className="btn-floating floatBig-basicMenu  waves-effect waves-light red"
                   >
                     <i className="material-icons">play_arrow</i>
@@ -84,7 +87,7 @@ export default function BasicMenu() {
         <div className="contain-basicMenu">
           <div className="row box-grammar-basicMenu">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
                     to="grammar"
@@ -118,7 +121,7 @@ export default function BasicMenu() {
           <div className="row box-match-basicMenu">
             <div className="col s12 m6 ">
               <div className="card card-content-edit">
-                <div className="card-image ">
+                <div className="card-image  ">
                   <Link
                     to="match"
                     className="btn-floating floatSmall-basicMenu waves-effect waves-light red"

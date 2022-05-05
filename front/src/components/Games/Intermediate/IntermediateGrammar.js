@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
+import "./intermediate.css";
 
 export default function IntermediateGrammar() {
   const [questions, setQuestions] = useState([]);
@@ -51,34 +52,71 @@ export default function IntermediateGrammar() {
   }
 
   const handleJump = (e) => {
-    if (jump < 9) {
-      setJump(jump + 1);
-    } else if (jump === 9) {
-      setJump(jump + 1);
-      setCount(count + 1);
-      handleScore();
-    }
+    setJump(jump + 1);
   };
+
+  const random = Math.floor(Math.random() * 2);
 
   return (
     <div className="main-intermediateGrammar">
       <h1 className="title-intermediateGrammar animate__animated animate__pulse">
         {questions.length > 0 ? questions[jump].question : ""}
       </h1>
-      <button
-        onClick={handleJoined}
-        className="button-intermediateGrammar animate__animated animate__pulse"
-      >
-        {questions.length > 0 ? questions[jump].correct : ""}
-      </button>
-      <button
-        onClick={handleJump}
-        className="button-intermediateGrammar animate__animated animate__pulse"
-      >
-        {questions.length > 0 ? questions[jump].incorrect_a : ""}
-      </button>
 
-      <div onClick={handleJump}>
+      {random == 0 ? (
+        <div>
+          {questions[10] == questions[jump] ? (
+            <button
+              onClick={handleJoined}
+              className="button-intermediateGrammar animate__animated animate__pulse"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+              {questions[10] ? (count + 1, handleScore()) : ""}
+            </button>
+          ) : (
+            <button
+              onClick={handleJoined}
+              className="button-intermediateGrammar animate__animated animate__pulse"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+            </button>
+          )}
+
+          <button
+            onClick={handleJump}
+            className="button-intermediateGrammar animate__animated animate__pulse"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_a : ""}
+          </button>
+        </div>
+      ) : (
+        <div>
+          <button
+            onClick={handleJump}
+            className="button-intermediateGrammar animate__animated animate__pulse"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_a : ""}
+          </button>
+          {questions[10] == questions[jump] ? (
+            <button
+              onClick={handleJoined}
+              className="button-intermediateGrammar animate__animated animate__pulse"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+              {questions[10] ? (count + 1, handleScore()) : ""}
+            </button>
+          ) : (
+            <button
+              onClick={handleJoined}
+              className="button-intermediateGrammar animate__animated animate__pulse"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+            </button>
+          )}
+        </div>
+      )}
+
+      <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-intermediate">
             <h2>Game completed!</h2>
@@ -127,7 +165,6 @@ export default function IntermediateGrammar() {
         ) : (
           ""
         )}
-        {/* <button onSubmit={handleScore}>score</button> */}
       </div>
     </div>
   );

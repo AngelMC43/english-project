@@ -9,13 +9,6 @@ export default function BasicChoose() {
   const [count, setCount] = useState(0);
   const { userLogged } = useLoginContext();
 
-  // const [newScore, setNewScore] = useState({
-  //   idUser: "",
-  //   level: "",
-  //   type: "",
-  //   score: "",
-  // });
-
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`http://localhost:3001/games/basic/choose`, {
@@ -54,52 +47,76 @@ export default function BasicChoose() {
     handleJump();
     handleCount();
   }
+
   const handleJump = (e) => {
-    if (jump < 9) {
-      setJump(jump + 1);
-    } else if (jump === 9) {
-      setJump(jump + 1);
-      setCount(count + 1);
-      handleScore();
-    } else {
-    }
+    setJump(jump + 1);
   };
 
-  console.log("ESTO", count);
+  const random = Math.floor(Math.random() * 2);
 
   return (
     <div>
       <div className="main-choose">
-        <div className="inside-container-choose">
-          <h1 className="">
+        <div className="insideContainer-choose">
+          <h1 className="titleBG-choose">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
 
-          <h3 className="answer-choose">
-            <div>
-              <img
-                src={questions.length > 0 ? questions[jump].pic_correct : ""}
-                onClick={handleJoined}
-                className="img-choose"
-              />
-            </div>
-            <div>
-              <img
-                src={questions.length > 0 ? questions[jump].pic_incorrect : ""}
+          {random == 0 ? (
+            <div className="button-container-choose">
+              {questions[10] == questions[jump] ? (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
+                </button>
+              ) : (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              )}
+              <button
                 onClick={handleJump}
-                className="img-choose"
-              />
+                className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
+              >
+                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              </button>
             </div>
-            {/* <h1 className="visually-hidden" id="correcto">
-                Correcto
-              </h1>
+          ) : (
+            <div className="button-container-choose">
+              <button
+                onClick={handleJump}
+                className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
+              >
+                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              </button>
 
-              <h1 className="visually-hidden" id="incorrecto">
-                Incorrecto
-              </h1> */}
-          </h3>
+              {questions[10] == questions[jump] ? (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
+                </button>
+              ) : (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
+
       <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-basic">
@@ -109,22 +126,26 @@ export default function BasicChoose() {
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-basic"
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic"
+                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].correct : ""}
+                  className="great-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic"
+                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser-basic"
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}

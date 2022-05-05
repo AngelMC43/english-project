@@ -40,8 +40,10 @@
 }
 
 .button-container-vocabulary {
-    border: 0.3vh solid rgb(105, 104, 104);
     border-radius: 2.5vh;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 4vh;
 }
 
 .inside-container-vocabulary {
@@ -49,6 +51,7 @@
     width: 134vh;
     border: 0.5vh solid black;
     border-radius: 3.3vh;
+    height: 69.2vh;
 }
 
 .button-vocabulary {
@@ -128,6 +131,10 @@ border:1
     border-radius: 3.3vh;
 }
 
+.title-match {
+    margin-top: 3vh;
+}
+
 .bird-match {
     cursor: pointer;
     position: sticky;
@@ -138,9 +145,6 @@ border:1
     height: 9vh;
 }
 
-.title-match {
-    margin-top: 3vh;
-}
 
 .plane-match {
     cursor: pointer;
@@ -321,4 +325,24 @@ border:1
     margin-left: 35vh;
 }
 
+.wellDone-basic {
+    position: absolute;
+    width: 25vh;
+    margin-top: 18vh;
+    margin-left: -65vh;
+}
+
+.goodJob-basic {
+    position: absolute;
+    width: 35vh;
+    margin-top: 18vh;
+    margin-left: -65vh;
+}
+
+.great-basic {
+    position: absolute;
+    width: 35vh;
+    margin-top: 18vh;
+    margin-left: -70vh;
+}
 

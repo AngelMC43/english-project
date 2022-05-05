@@ -42,11 +42,6 @@ export default function BasicGrammar() {
     }
     fetchData();
   };
-  console.log("count es", count);
-
-  //preguntar como hacer el login para profile y desde ahi buscar el id para poner aqui, id = usePararm()
-  //SOLO ME QUEDA ENLAZAR EL BODY DE idUser, level, type y score con los correspondientes que le envien dicha informacion
-  //PONER EL PREVENT DEFAULT Y STOP PROPAGATION DONDE CORRESPONDA
 
   const handleCount = () => {
     setCount(count + 1);
@@ -58,14 +53,10 @@ export default function BasicGrammar() {
   }
 
   const handleJump = (e) => {
-    if (jump < 9) {
-      setJump(jump + 1);
-    } else if (jump === 9) {
-      setJump(jump + 1);
-      setCount(count + 1);
-      handleScore();
-    }
+    setJump(jump + 1);
   };
+
+  const random = Math.floor(Math.random() * 2);
 
   return (
     <div>
@@ -74,28 +65,68 @@ export default function BasicGrammar() {
           <h1 className="titleBG-grammar">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
-          <img
-            src={questions.length > 0 ? questions[jump].pic_correct : ""}
-            className="img-option-grammar"
-          />
-
-          <div className="button-container-grammar">
-            <button
-              onClick={handleJoined}
-              className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
-            >
-              {questions.length > 0 ? questions[jump].correct : ""}
-            </button>
-
-            <button
-              onClick={handleJump}
-              className="button-push-grammar btn btn-info z-depth-3"
-            >
-              {questions.length > 0 ? questions[jump].incorrect_a : ""}
-            </button>
+          <div>
+            <img
+              src={questions.length > 0 ? questions[jump].pic_correct : ""}
+              className="img-option-grammar"
+            />
           </div>
+
+          {random == 0 ? (
+            <div className="button-container-grammar">
+              {questions[10] == questions[jump] ? (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
+                </button>
+              ) : (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              )}
+              <button
+                onClick={handleJump}
+                className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
+              >
+                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              </button>
+            </div>
+          ) : (
+            <div className="button-container-grammar">
+              <button
+                onClick={handleJump}
+                className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
+              >
+                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              </button>
+
+              {questions[10] == questions[jump] ? (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
+                </button>
+              ) : (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-grammar btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
+
       <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-basic">
@@ -105,22 +136,26 @@ export default function BasicGrammar() {
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-basic"
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic"
+                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].correct : ""}
+                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic"
+                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser-basic"
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}
@@ -139,7 +174,6 @@ export default function BasicGrammar() {
         ) : (
           ""
         )}
-        {/* <button onSubmit={handleScore}>score</button> */}
       </div>
     </div>
   );

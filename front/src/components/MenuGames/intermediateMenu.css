@@ -1,5 +1,5 @@
 .main-intermediateMenu { 
-    border: 3vh solid rgb(128, 6, 130);
+    border: 3vh solid rgb(51, 0, 55);
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -8,7 +8,7 @@
      width: 140vh;
      height: 75vh;
      text-align: center;
-     background-color: rgb(213, 125, 196);
+     background-image: url("../../visual/intermediate/main.png");
      font-family: 'Atma', cursive;
 }
 

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import "./intermediate.css";
 import { useLoginContext } from "../../../context/LoginContext";
 
-export default function AdvancedVocabulary() {
+export default function BasicMatch() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
@@ -11,7 +11,7 @@ export default function AdvancedVocabulary() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `http://localhost:3001/games/advanced/vocabulary`,
+        `http://localhost:3001/games/intermediate/match`,
         {
           mode: "cors",
         }
@@ -40,91 +40,83 @@ export default function AdvancedVocabulary() {
     }
     fetchData();
   };
-
-  const handleCount = () => {
-    setCount(count + 1);
-  };
-
-  function handleJoined(e) {
-    handleCount();
-    handleJump();
-  }
-
   const handleJump = (e) => {
-    if (jump < 9) {
+    if (jump < 11) {
+      e.stopPropagation();
+      e.preventDefault();
       setJump(jump + 1);
-    } else if (jump === 9) {
-      setJump(jump + 1);
-      setCount(count + 1);
-      handleScore();
+    } else {
     }
   };
 
   return (
-    <div className="main-intermediateMatch">
-      <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
-      <button onClick={handleJoined}>
-        {questions.length > 0 ? questions[jump].correct : ""}
-      </button>
-      <button onClick={handleJump}>
-        {questions.length > 0 ? questions[jump].incorrect_a : ""}
-      </button>
-      <button onClick={handleJump}>
-        {questions.length > 0 ? questions[jump].incorrect_b : ""}
-      </button>
-      <button onClick={handleJump}>
-        {questions.length > 0 ? questions[jump].incorrect_c : ""}
-      </button>
-      <div>
-        {questions[10] === questions[jump] ? (
-          <div className="finalPanel-intermediate">
-            <h2>Game completed!</h2>
-            <h2>Score: {count}/10 </h2>
-            {count > 4 ? (
-              <div>
-                <img
-                  src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-intermediate"
-                />
-                <img
-                  src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-intermediate"
-                />
-              </div>
-            ) : (
-              <div>
-                <img
-                  src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-intermediate"
-                />
-                <img
-                  src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser-intermediate"
-                />
-              </div>
-            )}
-            <Link
-              to="/games/instermediate/vocabulary"
-              className="buttonCompleted-intermediate"
-            >
-              Next Game
-            </Link>
-            <br />
-            <Link to="/showscore" className="buttonCompleted-intermediate">
-              Ranking
-            </Link>
-            <br />
-            <Link
-              to="/games/intermediate"
-              className="buttonCompleted-intermediate"
-            >
-              Menu
-            </Link>
+    <div>
+      <div className="main-intermediateMatch ">
+        <div className="inside-container-intermediateMatch">
+          <div>
+            <h1 className="title-intermediateMatch d-flex justify-content-center">
+              {questions.length > 0 ? questions[jump].question : ""}
+            </h1>
           </div>
-        ) : (
-          ""
-        )}
-        {/* <button onSubmit={handleScore}>score</button> */}
+          <div className="d-flex">
+            <img
+              src={questions.length > 0 ? questions[0].correct : ""}
+              onClick={handleJump}
+              className="planeInt-intermediateMatch"
+            />
+
+            <img
+              src={questions.length > 0 ? questions[1].correct : ""}
+              onClick={handleJump}
+              className="clock-intermediateMatch"
+            />
+            <img
+              src={questions.length > 0 ? questions[2].correct : ""}
+              onClick={handleJump}
+              className="flag-intermediateMatch"
+            />
+          </div>
+          <div className="d-flex justify-content-between">
+            <img
+              src={questions.length > 0 ? questions[3].correct : ""}
+              onClick={handleJump}
+              className="crash-intermediateMatch"
+            />
+            <img
+              src={questions.length > 0 ? questions[4].correct : ""}
+              onClick={handleJump}
+              className="basket-intermediateMatch"
+            />
+            <img
+              src={questions.length > 0 ? questions[5].correct : ""}
+              onClick={handleJump}
+              className="bus-intermediateMatch"
+            />
+            <img
+              src={questions.length > 0 ? questions[6].correct : ""}
+              onClick={handleJump}
+              className="ligth-intermediateMatch"
+            />
+          </div>
+
+          <div className="d-flex justify-content-between">
+            <img
+              src={questions.length > 0 ? questions[7].correct : ""}
+              onClick={handleJump}
+              className="font-intermediateMatch"
+            />
+            <img
+              src={questions.length > 0 ? questions[8].correct : ""}
+              onClick={handleJump}
+              className="plaque-intermediateMatch"
+            />
+            <img
+              src={questions.length > 0 ? questions[9].correct : ""}
+              onClick={handleJump}
+              className="bench-intermediateMatch"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

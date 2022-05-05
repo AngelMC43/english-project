@@ -52,52 +52,46 @@ export default function IntermediateVocabulary() {
   }
 
   const handleJump = (e) => {
-    if (jump < 9) {
-      setJump(jump + 1);
-    } else if (jump === 9) {
-      setJump(jump + 1);
-      setCount(count + 1);
-      handleScore();
-    }
+    setJump(jump + 1);
   };
-  console.log(count);
+
+  const random = Math.floor(Math.random() * 4);
+  console.log("random", random);
   return (
     <div className="main-intermediateVocabulary">
       <h1 className="title-intermediateVocabulary animate__animated animate__pulse">
         {questions.length > 0 ? questions[jump].question : ""}
       </h1>
-      <div>
+
+      {random == 0 ? (
         <button
           onClick={handleJoined}
           className="button-first-intermediateVocabulary"
         >
           {questions.length > 0 ? questions[jump].correct : ""}
         </button>
-      </div>
-      <div>
+      ) : random == 1 ? (
         <button
           onClick={handleJump}
           className="button-second-intermediateVocabulary"
         >
           {questions.length > 0 ? questions[jump].incorrect_a : ""}
         </button>
-      </div>
-      <div>
+      ) : random == 2 ? (
         <button
           onClick={handleJump}
           className="button-third-intermediateVocabulary"
         >
           {questions.length > 0 ? questions[jump].incorrect_b : ""}
         </button>
-      </div>
-      <div>
+      ) : (
         <button
           onClick={handleJump}
           className="button-forth-intermediateVocabulary"
         >
           {questions.length > 0 ? questions[jump].incorrect_c : ""}
         </button>
-      </div>
+      )}
 
       <div>
         {questions[10] === questions[jump] ? (
@@ -148,7 +142,6 @@ export default function IntermediateVocabulary() {
         ) : (
           ""
         )}
-        {/* <button onSubmit={handleScore}>score</button> */}
       </div>
     </div>
   );

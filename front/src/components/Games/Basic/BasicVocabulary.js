@@ -9,14 +9,6 @@ export default function BasicVocabulary() {
   const [count, setCount] = useState(0);
   const { userLogged } = useLoginContext();
 
-  // const [newScore, setNewScore] = useState({
-  //   idUser: "",
-  //   level: "",
-  //   type: "",
-  //   score: "",
-  // });
-  console.log("count es", count);
-
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
@@ -49,11 +41,6 @@ export default function BasicVocabulary() {
     }
     fetchData();
   };
-  console.log("count es", count);
-
-  //preguntar como hacer el login para profile y desde ahi buscar el id para poner aqui, id = usePararm()
-  //SOLO ME QUEDA ENLAZAR EL BODY DE idUser, level, type y score con los correspondientes que le envien dicha informacion
-  //PONER EL PREVENT DEFAULT Y STOP PROPAGATION DONDE CORRESPONDA
 
   const handleCount = () => {
     setCount(count + 1);
@@ -68,12 +55,7 @@ export default function BasicVocabulary() {
     setJump(jump + 1);
   };
 
-  function handleEnd() {
-    handleJoined();
-    handleScore();
-  }
-
-  console.log("count es", count);
+  const random = Math.floor(Math.random() * 2);
 
   return (
     <div>
@@ -88,14 +70,48 @@ export default function BasicVocabulary() {
               className="img-option-vocabulary"
             />
           </div>
-          <h3 className="answer-vocabulary">
+
+          {random == 0 ? (
             <div className="button-container-vocabulary">
-              {questions[9] == questions[jump] ? (
+              {questions[10] == questions[jump] ? (
                 <button
-                  onClick={handleEnd}
+                  onClick={handleJoined}
                   className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
                 >
                   {questions.length > 0 ? questions[jump].correct : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
+                </button>
+              ) : (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                </button>
+              )}
+              <button
+                onClick={handleJump}
+                className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
+              >
+                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              </button>
+            </div>
+          ) : (
+            <div className="button-container-vocabulary">
+              <button
+                onClick={handleJump}
+                className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
+              >
+                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              </button>
+
+              {questions[10] == questions[jump] ? (
+                <button
+                  onClick={handleJoined}
+                  className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
+                >
+                  {questions.length > 0 ? questions[jump].correct : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
                 </button>
               ) : (
                 <button
@@ -106,23 +122,7 @@ export default function BasicVocabulary() {
                 </button>
               )}
             </div>
-            <div className="button-container-vocabulary">
-              <button
-                onClick={handleJump}
-                className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].incorrect_a : ""}
-              </button>
-
-              {/* <h1 className="visually-hidden" id="correcto">
-                Correcto
-              </h1>
-
-              <h1 className="visually-hidden" id="incorrecto">
-                Incorrecto
-              </h1> */}
-            </div>
-          </h3>
+          )}
         </div>
       </div>
       <div>
@@ -139,7 +139,11 @@ export default function BasicVocabulary() {
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].correct : ""}
+                  className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
@@ -169,7 +173,6 @@ export default function BasicVocabulary() {
         ) : (
           ""
         )}
-        {/* <button onSubmit={handleScore}>score</button> */}
       </div>
     </div>
   );

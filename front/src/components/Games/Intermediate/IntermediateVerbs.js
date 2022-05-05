@@ -63,18 +63,52 @@ export default function IntermediateVocabulary() {
   console.log(count);
   return (
     <div className="main-intermediateVerbs">
-      <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
+      <h1 className="title-intermediateVerbs animate__animated animate__pulse">
+        {questions.length > 0 ? questions[jump].question : ""}
+      </h1>
 
-      <button onClick={handleJoined}>
+      {/* <form>
+        Deporte favorito:
+        <select>
+          <option>{questions.length > 0 ? questions[jump].correct : ""}</option>
+
+          <option>
+            {questions.length > 0 ? questions[jump].incorrect_a : ""}
+          </option>
+
+          <option>
+            {questions.length > 0 ? questions[jump].incorrect_b : ""}
+          </option>
+
+          <option>
+            {questions.length > 0 ? questions[jump].incorrect_c : ""}
+          </option>
+        </select>
+        <input type="submit" />
+      </form> */}
+
+      <button
+        onClick={handleJoined}
+        className="button-intermediateVerbs animate__animated animate__pulse"
+      >
         {questions.length > 0 ? questions[jump].correct : ""}
       </button>
-      <button onClick={handleJump}>
+      <button
+        onClick={handleJump}
+        className="button-intermediateVerbs animate__animated animate__pulse"
+      >
         {questions.length > 0 ? questions[jump].incorrect_a : ""}
       </button>
-      <button onClick={handleJump}>
+      <button
+        onClick={handleJump}
+        className="button-intermediateVerbs animate__animated animate__pulse"
+      >
         {questions.length > 0 ? questions[jump].incorrect_b : ""}
       </button>
-      <button onClick={handleJump}>
+      <button
+        onClick={handleJump}
+        className="button-intermediateVerbs animate__animated animate__pulse"
+      >
         {questions.length > 0 ? questions[jump].incorrect_c : ""}
       </button>
 
@@ -127,7 +161,6 @@ export default function IntermediateVocabulary() {
         ) : (
           ""
         )}
-        {/* <button onSubmit={handleScore}>score</button> */}
       </div>
     </div>
   );

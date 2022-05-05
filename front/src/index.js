@@ -29,6 +29,7 @@ import BasicVocabulary from "./components/Games/Basic/BasicVocabulary";
 import BasicGrammar from "./components/Games/Basic/BasicGrammar";
 import BasicMatch from "./components/Games/Basic/BasicMatch";
 import BasicChoose from "./components/Games/Basic/BasicChoose";
+import IntroBasic from "./components/Games/Basic/Introbasic";
 
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
@@ -67,6 +68,7 @@ root.render(
           <Route path="games/basic/grammar" element={<BasicGrammar />} />
           <Route path="games/basic/match" element={<BasicMatch />} />
           <Route path="games/basic/choose" element={<BasicChoose />} />
+          <Route path="games/basic/intro/choose" element={<IntroBasic />} />
 
           <Route path="games/intermediate" element={<IntermediateView />} />
           <Route

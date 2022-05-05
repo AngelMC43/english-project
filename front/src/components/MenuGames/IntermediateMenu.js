@@ -14,7 +14,7 @@ export default function IntermediateMenu() {
         <div className="contain-intermediateMenu">
           <div className="row box-vocabulary-intermediateMenu">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
                     to="vocabulary"
@@ -47,7 +47,7 @@ export default function IntermediateMenu() {
           {/* //-------------------------------------------------------VERBS */}
           <div className="row box-choose-intermediateMenu">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
                     to="verbs"
@@ -79,10 +79,10 @@ export default function IntermediateMenu() {
           </div>
         </div>
         {/* //-------------------------------------------------------------------------GRAMMAR */}
-        <div className="contain-intermediateMenu">
-          <div className="row box-grammar-intermediateMenu">
+        <div className="contain-intermediateMenu ">
+          <div className="row box-grammar-intermediateMenu ">
             <div className="col s12 m6">
-              <div className="card">
+              <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
                     to="grammar"

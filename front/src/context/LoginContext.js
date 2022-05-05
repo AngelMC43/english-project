@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LoginContext = createContext({
@@ -21,8 +21,17 @@ export function LoginContextProvider({ children }) {
     surname: "",
     id: "",
     age: "",
+    avatar: "",
   });
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem("loggedIn");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      setUser(user);
+    }
+  }, []);
 
   function handleLogin(e, user) {
     e.preventDefault();
@@ -39,6 +48,8 @@ export function LoginContextProvider({ children }) {
         }),
       });
       const json = await response.json();
+
+      window.localStorage.setItem("loggedIn", JSON.stringify(json));
       if ("error" in json) {
         setErrorMessage(true);
       } else {
@@ -52,6 +63,8 @@ export function LoginContextProvider({ children }) {
 
   function logout() {
     setUser(null);
+    window.localStorage.removeItem("loggedIn");
+    navigate("/");
   }
 
   const value = {

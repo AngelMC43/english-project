@@ -1,0 +1,40 @@
+.userNav-navbar {
+    display: contents;
+    justify-content: space-around;
+}
+
+.name-navbar {
+    margin-left: 155vh;
+    font-size: 2.2vh;
+    color: rgb(175, 255, 14);
+    position: absolute;
+    margin-top: 7vh;
+    color: rgb(175, 255, 14)
+}
+
+.surname-navbar {
+    margin-left: 162vh;
+    font-size: 2.2vh;
+    color: rgb(175, 255, 14);
+    position: absolute;
+    margin-top: 7vh;
+    color: rgb(175, 255, 14)
+}
+
+.buttonLog-navbar {
+    width: 5vh;
+    position:absolute;
+    margin-left: -5vh;
+    margin-top: -1vh;
+}
+
+.button-navbar {
+    cursor: pointer
+
+}
+
+.logoCentral {
+    width: 11vh;
+    margin-top: 1vh;
+    margin-left: 54vh;
+}

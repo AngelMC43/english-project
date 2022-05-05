@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useLoginContext } from "../../../context/LoginContext";
 
-export default function AdvancedVerbs() {
+export default function AdvancedGrammar() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
+  const [count, setCount] = useState(0);
+  const { userLogged } = useLoginContext();
 
   useEffect(() => {
     async function fetchData() {
@@ -18,34 +22,52 @@ export default function AdvancedVerbs() {
     fetchData();
   }, []);
 
-  const fallo = "Se han acabado las preguntas";
+  const handleScore = (event) => {
+    async function fetchData() {
+      const response = await fetch(`http://localhost:3001/score`, {
+        mode: "cors",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          idUser: userLogged.id,
+          level: "basic",
+          type: "verbs",
+          score: count,
+        }),
+      });
+    }
+    fetchData();
+  };
+  console.log("count es", count);
+
+  const handleCount = () => {
+    setCount(count + 1);
+  };
+
+  function handleJoined(e) {
+    handleCount();
+    handleJump();
+  }
 
   const handleJump = (e) => {
-    if (jump < 11) {
-      e.stopPropagation();
-      e.preventDefault();
-      setJump(jump + 1);
-    } else {
-      //aqui meter en FINAL PANEL
-      console.log(fallo);
-    }
+    setJump(jump + 1);
   };
 
   return (
-    <div>
-      <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
-      <h3 onClick={handleJump}>
-        <button>{questions.length > 0 ? questions[jump].correct : ""}</button>
-        <button>
-          {questions.length > 0 ? questions[jump].incorrect_a : ""}
+    <div className="main-advancedVerbs">
+      <h1 className="title-advancedVerbs">
+        {questions.length > 0 ? questions[jump].question : ""}
+      </h1>
+      <div className="button-container-advancedVerbs">
+        <button onClick={handleJoined} className="button-left-advancedVerbs">
+          <b> {questions.length > 0 ? questions[jump].correct : ""}</b>
         </button>
-        <button>
-          {questions.length > 0 ? questions[jump].incorrect_b : ""}
+        <button onClick={handleJump} className="button-rigth-advancedVerbs">
+          <b>{questions.length > 0 ? questions[jump].incorrect_a : ""}</b>
         </button>
-        <button>
-          {questions.length > 0 ? questions[jump].incorrect_c : ""}
-        </button>
-      </h3>
+      </div>
     </div>
   );
 }

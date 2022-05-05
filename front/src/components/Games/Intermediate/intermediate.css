@@ -1,7 +1,6 @@
 .main-intermediateVocabulary {
     border: 3vh solid rgb(57, 2, 52);
     background-image: url("../../../visual/intermediate/fondo.png");
-
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -150,9 +149,30 @@
      text-align: center;  
      font-family: 'Atma', cursive;
 }
+
+.title-intermediateVerbs {
+    font-size: 7vh;
+    border: 0.5vh solid black;
+    border-radius: 5vh;
+    background-color: white;
+    margin-top: 0vh;
+}
+
+.button-intermediateVerbs {
+    width: 30vh;
+    height: 6vh;
+    margin-top: -3vh;
+    border-radius: 5vh;
+    font-size: 5vh;
+    font-family: 'Comic Neue', cursive;
+    background-color: white;
+
+}
 /*-------------------------------------------MATCH-----------------------------------------------*/
 
 .main-intermediateMatch {
+    background-image: url("../../../visual/intermediate/fondoMatch.png");
+
     border: 3vh solid rgb(57, 2, 52);
     border-radius: 6.6vh;
     margin: auto;
@@ -164,6 +184,105 @@
      text-align: center;  
      font-family: 'Atma', cursive;
 }
+
+.title-intermediateMatch {
+    margin-top: 3vh;
+    font-size: 5vh;
+}
+
+.font-intermediateMatch {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 7vh;
+    width: 25vh;
+    height: 14vh;
+    margin-left: 32vh;
+}
+
+.planeInt-intermediateMatch {
+    cursor: pointer;
+    position: sticky;
+    margin-top: -6vh;
+    margin-left: 6.6vh;
+    width: 10.95vh;
+    height: 5.95vh;
+}
+
+.bus-intermediateMatch {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 19.5vh;
+    margin-left: 51vh;
+    width: 20vh;
+    position: absolute;
+    height: 10vh;
+}
+
+.ligth-intermediateMatch {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 12vh;
+    margin-left: 80vh;
+    width: 16vh;
+    height: 21vh;
+    position: absolute;
+}
+
+.crash-intermediateMatch {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 1.8vh;
+    margin-left: 0.4vh;
+    width: 17.5vh;
+    height: 16.2vh;
+    
+}
+
+.flag-intermediateMatch {
+    cursor: pointer;
+    position: sticky;
+    margin-top: 8.5vh;
+    margin-left: 14vh;
+    width: 12vh;
+    height: 8vh;
+}
+
+.clock-intermediateMatch {
+    cursor: pointer;
+    position: sticky;
+    margin-top: -1vh;
+    margin-left: 61.5vh;
+    width: 4.5vh;
+    height: 3.8vh;
+}
+
+.bench-intermediateMatch {
+    cursor: pointer;
+    position: absolute;
+    margin-left: -2vh;
+    margin-top: 5vh;
+    width: 20vh;
+    height: 18vh;
+}
+
+.basket-intermediateMatch {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 13.4vh;
+    width: 16vh;
+    height: 16vh;
+    margin-left: 33vh;
+
+}
+
+.plaque-intermediateMatch {
+    cursor: pointer;
+    position: absolute;
+    margin-top: 0.4vh;
+    width: 17vh;
+    height: 20vh;
+    margin-left: 98vh;
+}
 /*-------------------------------------------FINAL PANEL-----------------------------------------------*/
 
 .finalPanel-intermediate {
@@ -174,14 +293,14 @@
     background-color: black;
     border-radius: 7vh;
     margin-left: -3vh;
-    margin-top: -27vh;
-     justify-content: center;
-     align-items: center;
-     width: 140vh;
-     height: 76vh;
-     text-align: center;
-     font-family: 'Atma', cursive;
-     line-height: 12vh
+    margin-top: -20vh;
+    justify-content: center;
+    align-items: center;
+    width: 140vh;
+    height: 76vh;
+    text-align: center;
+    font-family: 'Atma', cursive;
+    line-height: 12vh;
 }
 
 

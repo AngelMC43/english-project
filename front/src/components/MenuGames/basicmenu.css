@@ -85,7 +85,21 @@
 }
 
 .card-content-edit  {
-height: 26vh;
-background-color: transparent;
+    height: 26vh;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0px solid transparent;
 }
 
+.rabbit-basic {
+    width: 23vh;
+    position: absolute;
+    margin-top: -22vh;
+    margin-left: 48vh;
+
+}
+
+.reveal-basic {
+    position: sticky;
+    height: 6vh;
+}

@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
-import image from "./duo5.jpg";
 import { useState, useEffect, useContext } from "react";
+import { useLoginContext } from "../../context/LoginContext";
+import "./navbar.css";
+import logoutImg from "../../visual/main/logout.png";
+import logoWhite from "../../visual/main/logoWhite.png";
 
 export default function Navbar() {
   const [user, setUser] = useState([]);
+  const { userLogged, logout } = useLoginContext();
 
   useEffect(() => {
     async function fetchData() {
@@ -45,7 +49,21 @@ export default function Navbar() {
                   About
                 </NavLink>
               </li>
+              <li className="nav-item ">
+                <img src={logoWhite} className="logoCentral" />
+              </li>
             </ul>
+            {userLogged ? (
+              <div className="userNav-navbar">
+                <p className="name-navbar">{userLogged.name} </p>
+                <p className="surname-navbar"> {userLogged.surname}</p>
+                <a onClick={() => logout()} className="button-navbar">
+                  <img src={logoutImg} className="buttonLog-navbar" />
+                </a>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         {/* <h5>{user[49].name}</h5> */}

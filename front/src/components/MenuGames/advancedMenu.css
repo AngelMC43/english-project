@@ -1,5 +1,5 @@
 .main-advancedMenu { 
-    border: 3vh solid rgb(175, 255, 14);
+    border: 3vh solid rgb(32, 32, 32);
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -8,13 +8,18 @@
      width: 140vh;
      height: 75vh;
      text-align: center;
-     background-color: blueviolet;
+     background-image: url("../../visual/advanced/main.png");
      font-family: 'Atma', cursive;
 }
 
 .title-advancedMenu {
     margin-top: 0vh;
     margin-bottom: 1vh;
+    color:rgb(32, 32, 32)
+}
+
+.title-containerMatch {
+    margin-top: 0vh;
 }
 
 .insideTitle-advancedMenu {
@@ -24,68 +29,48 @@
 
 .floatSmall-advancedMenu {
     margin-top: 19vh;
-    margin-left: 20vh;
+    margin-left: -3vh;
     position: absolute;
 }
 
 .floatBig-advancedMenu {
     margin-top: 19vh;
-    margin-left: 29.5vh;
+    margin-left: -3vh;
     position: absolute;
 }
 
 .contain-advancedMenu {
-  display: flex;
- margin-top: -0.5vh;
+    display: flex;
+    margin-top: -0.5vh;
 }
 
 .box-vocabulary-advancedMenu {
-    width: 60vh;
+    width: 55vh;
     height: 26vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    border: 2px solid black;
-    border-radius: 10vh;
-    background-color: white;
+   
 }
 
 .box-choose-advancedMenu {
-    width: 80vh;
+    width: 85vh;
     height: 26vh;
-    margin-right: 2vh;
-    margin-left: 2vh;
-    border: 2px solid black;
-    border-radius: 10vh;
-    background-color: white;
-
+  
 }
 
 .box-grammar-advancedMenu {
-    width: 80vh;
+    width: 85vh;
     height: 26vh;
-    margin-top: 1vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    border: 2px solid black;
-    border-radius: 10vh;
-    background-color: white;
+    margin-top: 0.5vh;
+    border-bottom-left-radius: 3vh;
+    
 
 }
 
 .box-match-advancedMenu {
- 
-    width: 60vh;
+    width: 55vh;
     height: 26vh;
-    margin-right: 2vh;
-    margin-left: 2vh;
     margin-top: 1vh;
-    border: 2px solid black;
-    border-radius: 10vh;
-    background-color: white;
+    border-end-end-radius: 5vh;
 }
 
-.card-content-edit  {
-height: 26vh;
-background-color: transparent;
-}
+
 

@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./signup.css";
+import { useLoginContext } from "../../context/LoginContext";
 import logo from "../../visual/main/logo4.jpg";
 
 export default function SignUp() {
   const navigate = useNavigate();
+  const { userLogged } = useLoginContext();
+
   const error = "No se han incluido datos";
   const [newUser, setNewUser] = useState({
     name: "",
@@ -12,6 +15,7 @@ export default function SignUp() {
     email: "",
     password: "",
     age: "",
+    avatar: "",
   });
 
   const handleChange = (event) => {
@@ -38,6 +42,7 @@ export default function SignUp() {
           email: newUser.email,
           password: newUser.password,
           age: newUser.age,
+          avatar: newUser.avatar,
         }),
       });
       navigate("/login");
@@ -108,13 +113,14 @@ export default function SignUp() {
                 onChange={handleChange}
               />
             </div>
+            {/* <div>{ser.avatar}</div> */}
             <button
               type="submit"
               className="button-signup btn z-depth-3 lime accent-4 text-capitalize"
             >
               Regístrate
             </button>
-          </form>{" "}
+          </form>
         </div>
       </div>
     </div>
