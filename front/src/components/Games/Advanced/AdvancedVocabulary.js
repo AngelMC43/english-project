@@ -8,14 +8,19 @@ export default function AdvancedVocabulary() {
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
   const { userLogged } = useLoginContext();
+  const [answer, setAnswer] = useState({
+    correct: "",
+  });
 
-  // const [newScore, setNewScore] = useState({
-  //   idUser: "",
-  //   level: "",
-  //   type: "",
-  //   score: "",
-  // });
-  console.log("count es", count);
+  const handleChange = (event) => {
+    event.preventDefault();
+    setAnswer({
+      ...answer,
+      [event.target.name]: event.target.value,
+    });
+    console.log("esto es el event", event.target.name);
+  };
+  console.log("esto es new", answer);
 
   useEffect(() => {
     async function fetchData() {
@@ -56,60 +61,87 @@ export default function AdvancedVocabulary() {
   };
 
   function handleJoined(e) {
+    e.stopPropagation();
+    e.preventDefault();
     handleCount();
-    handleJump();
+    setJump(jump + 1);
   }
 
-  const handleJump = (e) => {
-    setJump(jump + 1);
-  };
+  // const handleJump = (e) => {
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  //   if (jump < 11) {
+  //     setJump(jump + 1);
+  //   } else {
+  //   }
+  // };
+  function handleJump(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    setJump(Math.floor(Math.random() * 11));
+  }
 
-  console.log("count es", count);
-
+  console.log("Esto es jump", jump);
   return (
     <div>
       <div className="main-advancedVocabulary">
         <div className="inside-container-advancedVocabulary">
-          <h1 className="animate__animated animate__pulse">
+          <h1 className="title-advancedVocabulary animate__animated animate__pulse">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
-
-          <h3 className="answer-advancedVocabulary">
-            <div className="button-container-advancedVocabulary">
-              {questions[10] == questions[jump] ? (
-                <button
-                  onClick={handleJoined}
-                  className="button-push-advancedVocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-                >
-                  {questions.length > 0 ? questions[jump].correct : ""}
-                  {questions[10] ? (count + 1, handleScore()) : ""}
+          <div className="box-answer-advanced fw-bold">
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[0].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[1].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[2].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[3].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[4].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[5].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[6].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[7].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[8].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[9].correct : ""}
+            </div>
+          </div>
+          <form>
+            <div>
+              <input
+                type="text"
+                name="correct"
+                className="browser-default imput-advanced"
+                placeholder="WRITE YOUR ANSWER"
+                onChange={handleChange}
+              ></input>
+              {answer.correct !=
+              (questions.length > 0 ? questions[jump].correct : "") ? (
+                <button onClick={handleJump} name="">
+                  next
                 </button>
               ) : (
-                <button
-                  onClick={handleJoined}
-                  className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-                >
-                  {questions.length > 0 ? questions[jump].correct : ""}
+                <button onClick={handleJoined} name="">
+                  next
                 </button>
               )}
             </div>
-            <div className="button-container-advancedVocabulary">
-              <button
-                onClick={handleJump}
-                className="button-push-advancedVocabulary btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].incorrect_a : ""}
-              </button>
-
-              {/* <h1 className="visually-hidden" id="correcto">
-                Correcto
-              </h1>
-
-              <h1 className="visually-hidden" id="incorrecto">
-                Incorrecto
-              </h1> */}
-            </div>
-          </h3>
+          </form>
         </div>
       </div>
       <div>

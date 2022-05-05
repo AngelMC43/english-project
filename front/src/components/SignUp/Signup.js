@@ -75,7 +75,7 @@ export default function SignUp() {
                 type="text"
                 className="form-control"
                 id="surname"
-                placeholder="¿Y tus apellidos?"
+                placeholder="¿Y tus apellidos son?"
                 name="surname"
                 onChange={handleChange}
               />

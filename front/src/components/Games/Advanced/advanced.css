@@ -1,5 +1,5 @@
 .main-advancedVocabulary {
-    border: 3vh solid rgb(175, 255, 14);
+    border: 3vh solid rgb(79, 57, 95);
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -8,53 +8,53 @@
      width: 140vh;
      height: 75vh;
      text-align: center;
-     background-image: url("../../../visual/basic/beach.png");
+     background-image: url("../../../visual/advanced/fondoVocabulary.png");
      font-family: 'Atma', cursive;
+    
 }
 
-.answer-advancedVocabulary {
-    display: flex;
-    justify-content: space-around;
-}
-
-.img-option-advancedVocabulary {
-    position: sticky;
-    width: 40vh;
-    height: 26vh;
+.title-advancedVocabulary {
+    font-size: 7vh;
     background-color: white;
-    border-radius: 3vh;
-    padding: 1vh;
-    border: 0.2vh solid black;
-}
-
-.button-push-advancedVocabulary {
-   border: 1vh solid rgb(175, 255, 14);
-    border-radius: 2.5vh;
-    background-color: blueviolet;
-    background-image: url("../../../visual/basic/fondoMorado.jpg");
-    width: 28vh;
-    height: 14vh;
-    font-family: 'BIZ UDGothic', sans-serif;
-    font-family: 'Comic Neue', cursive;
-    font-size: 5vh
-}
-
-.button-container-advancedVocabulary {
-    border: 0.3vh solid rgb(105, 104, 104);
-    border-radius: 2.5vh;
-}
-
-.inside-container-advancedVocabulary {
-    position: absolute;
-    width: 134vh;
-    height: 69.2vh;
+    border-radius: 8vh;
     border: 0.5vh solid black;
-    border-radius: 3.3vh;
+    padding: 1.5vh;
+ 
+    margin: 2vh;
 }
 
-.button-advancedVocabulary {
-    width: 37vh;
+.box-answer-advanced {
+    display: flex;
+    margin-top: 4vh;
+    font-family: 'Comic Neue', cursive;
+
+
 }
+
+.imput-advanced {
+    border-radius: 5vh;
+    border-color: 1vh solid black;
+    width: 37vh;
+    height: 8vh;
+    margin-top: 23vh;
+    margin-left: -17vh;
+    color: black;
+    background-color: white;
+    position: absolute;
+}
+
+.answer-advanced {
+    border: 0.2vh solid #1e1d1d;
+    border-radius: 4vh;
+    margin: 0.4vh;
+    background-color: white;
+    padding: 0.8vh;
+    width: 14vh;
+    font-size: 3vh;
+}
+
+
+
 
 
 /*-----------------------------------------------GRAMMAR---------------------------------------------*/

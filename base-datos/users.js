@@ -58,9 +58,7 @@ app.post("/signup", function (request, response) {
   desconectar();
 });
 
-//---------------LOGIN-----------------NNNNNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
-//FALTA LA BUSQUEDA Y COMPARACION CON EMAIL PASSWORD EXISTENTE
+//---------------LOGIN-------------------------------------------------------------
 
 app.post("/login", function (request, response) {
   console.log(request.body);

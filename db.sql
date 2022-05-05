@@ -1,1 +1,1 @@
-SELECT * FROM project.advanced;The truth finally __________ me
+SELECT * FROM project.advanced;
