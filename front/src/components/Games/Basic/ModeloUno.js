@@ -3,6 +3,8 @@ import "./basic.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 
+// Esta to pusheado
+
 export default function ModeloUno() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
