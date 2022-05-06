@@ -105,7 +105,7 @@ export default function IntermediateVocabulary() {
       ) : random == 1 ? (
         <div>
           <button
-            onClick={handleJoined}
+            onClick={handleJump}
             className="button-first-intermediateVocabulary"
           >
             {questions.length > 0 ? questions[jump].incorrect_b : ""}
@@ -144,7 +144,7 @@ export default function IntermediateVocabulary() {
       ) : (
         <div>
           <button
-            onClick={handleJoined}
+            onClick={handleJump}
             className="button-first-intermediateVocabulary"
           >
             {questions.length > 0 ? questions[jump].incorrect_c : ""}

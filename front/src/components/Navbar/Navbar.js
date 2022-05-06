@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { useLoginContext } from "../../context/LoginContext";
 import "./navbar.css";
@@ -55,8 +55,9 @@ export default function Navbar() {
             </ul>
             {userLogged ? (
               <div className="userNav-navbar">
-                <p className="name-navbar">{userLogged.name} </p>
-                <p className="surname-navbar"> {userLogged.surname}</p>
+                <Link to={`/profile`} className="name-navbar">
+                  {userLogged.name} {userLogged.surname}
+                </Link>
                 <a onClick={() => logout()} className="button-navbar">
                   <img src={logoutImg} className="buttonLog-navbar" />
                 </a>

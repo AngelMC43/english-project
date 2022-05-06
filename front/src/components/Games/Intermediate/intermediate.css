@@ -138,12 +138,12 @@
 }
 /*-------------------------------------------VERBS-----------------------------------------------*/
 .main-intermediateVerbs {
-    border: 3vh solid rgb(57, 2, 52);
+    border: 3vh solid rgb(114, 7, 106);
+    background-image: url("../../../visual/intermediate/fondoVerbs.png");
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
      justify-content: center;
-     align-items: center;
      width: 140vh;
      height: 75vh;
      text-align: center;  
@@ -152,22 +152,69 @@
 
 .title-intermediateVerbs {
     font-size: 7vh;
+    margin-top: -46vh;
     border: 0.5vh solid black;
     border-radius: 5vh;
     background-color: white;
-    margin-top: 0vh;
+    margin: 3vh;
+    height: 18vh;
+    padding: 1vh;
+
 }
 
-.button-intermediateVerbs {
-    width: 30vh;
-    height: 6vh;
-    margin-top: -3vh;
-    border-radius: 5vh;
-    font-size: 5vh;
+.answerContainer-intermediateVerbs {
+    height: 45vh;
+    text-align: center;
+}
+
+.button-first-intermediateVerbs {
+    background-color: transparent;
+    border: none;
+    font-size: 6vh;
     font-family: 'Comic Neue', cursive;
-    background-color: white;
+    margin-top: 17vh;
+    margin-left: -64vh;
+    width: 31vh;
+    position: absolute;
+    height: 19vh;
+}
+
+.button-second-intermediateVerbs {
+    background-color: transparent;
+    border: none;
+    font-size: 6vh;
+    font-family: 'Comic Neue', cursive;
+    margin-top: 18vh;
+    margin-left: -31vh;
+    position: absolute;
+    width: 31vh;
+    height: 19vh;
 
 }
+
+.button-third-intermediateVerbs {
+    background-color: transparent;
+    border: none;
+    font-size: 6vh;
+    font-family: 'Comic Neue', cursive;
+    margin-top: 114px;
+    margin-left: 2vh;
+    position: absolute;
+    width: 31vh;
+    height: 19vh;
+}
+
+.button-forth-intermediateVerbs {
+    background-color: transparent;
+    border: none;
+    font-size: 6vh;
+    font-family: 'Comic Neue', cursive;
+    margin-top: 17vh;
+    margin-left: 34vh;
+    position: absolute;
+    width: 31vh;
+    height: 19vh;
+    }
 /*-------------------------------------------MATCH-----------------------------------------------*/
 
 .main-intermediateMatch {

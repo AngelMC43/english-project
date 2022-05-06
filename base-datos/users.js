@@ -47,9 +47,10 @@ app.post("/signup", function (request, response) {
   let age = request.body.age;
   let email = request.body.email;
   let password = request.body.password;
+  let avatar = request.body.avatar;
 
   connection.query(
-    `INSERT into users (name, surname, age, email, password) values ("${name}","${surname}", "${age}", "${email}","${password}")`,
+    `INSERT into users (name, surname, age, email, password, avatar) values ("${name}","${surname}", "${age}", "${email}","${password}", "${avatar}")`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);
@@ -369,6 +370,23 @@ app.get("/games/intermediate/verbs", function (request, response) {
   desconectar();
 });
 
+//------------------------INTERMEDIATE MATCH----------------------
+
+app.get("/games/intermediate/match", function (request, response) {
+  conectar();
+
+  connection.query(
+    `SELECT * FROM intermediate WHERE type = "match"`,
+    function (err, rows, fields) {
+      if (err) throw err;
+
+      response.json(rows);
+      console.log(rows);
+    }
+  );
+  desconectar();
+});
+
 //------------------------ADVANCED----------------------
 
 app.get("/games/advanced", function (request, response) {
@@ -424,6 +442,23 @@ app.get("/games/advanced/verbs", function (request, response) {
 
   connection.query(
     `SELECT * FROM advanced WHERE type = "verbs"`,
+    function (err, rows, fields) {
+      if (err) throw err;
+
+      response.json(rows);
+      console.log(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------ADVANCED MATCH----------------------
+
+app.get("/games/advanced/match", function (request, response) {
+  conectar();
+
+  connection.query(
+    `SELECT * FROM advanced WHERE type = "match"`,
     function (err, rows, fields) {
       if (err) throw err;
 
