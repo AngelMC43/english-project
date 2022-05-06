@@ -247,6 +247,15 @@ border:1
     justify-content: space-around;
 }
 
+.img-choose {
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    margin-left: 10vh;
+    cursor: pointer;
+    margin-top: 5vh;
+}
+
 .img-correctChoose {
     position: absolute;
     width: 40vh;

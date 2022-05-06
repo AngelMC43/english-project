@@ -55,8 +55,9 @@ export default function IntermediateVocabulary() {
     setJump(jump + 1);
   };
 
-  const random = Math.floor(Math.random() * 4);
+  const random = Math.floor(Math.random() * 3);
   console.log("random", random);
+  console.log("count", count);
   return (
     <div className="main-intermediateVocabulary">
       <h1 className="title-intermediateVocabulary animate__animated animate__pulse">
@@ -64,33 +65,121 @@ export default function IntermediateVocabulary() {
       </h1>
 
       {random == 0 ? (
-        <button
-          onClick={handleJoined}
-          className="button-first-intermediateVocabulary"
-        >
-          {questions.length > 0 ? questions[jump].correct : ""}
-        </button>
+        <div>
+          {questions[10] == questions[jump] ? (
+            <button
+              onClick={handleJoined}
+              className="button-first-intermediateVocabulary"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+              {questions[10] ? (count + 1, handleScore()) : ""}
+            </button>
+          ) : (
+            <button
+              onClick={handleJoined}
+              className="button-first-intermediateVocabulary"
+            >
+              {" "}
+              {questions.length > 0 ? questions[jump].correct : ""}
+            </button>
+          )}
+          <button
+            onClick={handleJump}
+            className="button-second-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_a : ""}
+          </button>
+          <button
+            onClick={handleJump}
+            className="button-third-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_b : ""}
+          </button>
+          <button
+            onClick={handleJump}
+            className="button-forth-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_c : ""}
+          </button>
+        </div>
       ) : random == 1 ? (
-        <button
-          onClick={handleJump}
-          className="button-second-intermediateVocabulary"
-        >
-          {questions.length > 0 ? questions[jump].incorrect_a : ""}
-        </button>
-      ) : random == 2 ? (
-        <button
-          onClick={handleJump}
-          className="button-third-intermediateVocabulary"
-        >
-          {questions.length > 0 ? questions[jump].incorrect_b : ""}
-        </button>
+        <div>
+          <button
+            onClick={handleJoined}
+            className="button-first-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_b : ""}
+          </button>
+
+          <button
+            onClick={handleJump}
+            className="button-second-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_a : ""}
+          </button>
+          {questions[10] == questions[jump] ? (
+            <button
+              onClick={handleJoined}
+              className="button-third-intermediateVocabulary"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+              {questions[10] ? (count + 1, handleScore()) : ""}
+            </button>
+          ) : (
+            <button
+              onClick={handleJoined}
+              className="button-third-intermediateVocabulary"
+            >
+              {" "}
+              {questions.length > 0 ? questions[jump].correct : ""}
+            </button>
+          )}
+          <button
+            onClick={handleJump}
+            className="button-forth-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_c : ""}
+          </button>
+        </div>
       ) : (
-        <button
-          onClick={handleJump}
-          className="button-forth-intermediateVocabulary"
-        >
-          {questions.length > 0 ? questions[jump].incorrect_c : ""}
-        </button>
+        <div>
+          <button
+            onClick={handleJoined}
+            className="button-first-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_c : ""}
+          </button>
+
+          <button
+            onClick={handleJump}
+            className="button-second-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_a : ""}
+          </button>
+          <button
+            onClick={handleJump}
+            className="button-third-intermediateVocabulary"
+          >
+            {questions.length > 0 ? questions[jump].incorrect_b : ""}
+          </button>
+          {questions[10] == questions[jump] ? (
+            <button
+              onClick={handleJoined}
+              className="button-forth-intermediateVocabulary"
+            >
+              {questions.length > 0 ? questions[jump].correct : ""}
+              {questions[10] ? (count + 1, handleScore()) : ""}
+            </button>
+          ) : (
+            <button
+              onClick={handleJoined}
+              className="button-forth-intermediateVocabulary"
+            >
+              {" "}
+              {questions.length > 0 ? questions[jump].correct : ""}
+            </button>
+          )}
+        </div>
       )}
 
       <div>

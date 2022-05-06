@@ -52,62 +52,71 @@ export default function BasicChoose() {
     setJump(jump + 1);
   };
 
-  const random = Math.floor(Math.random() * 3);
+  const random = Math.floor(Math.random() * 2);
 
   return (
     <div>
       <div className="main-choose">
-        <div className="insideContainer-choose">
-          <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
+        <div className="inside-container-choose">
+          <h1 className="">
+            {questions.length > 0 ? questions[jump].question : ""}
+          </h1>
+
           {random == 0 ? (
             <div className="answer-choose">
               {questions[10] == questions[jump] ? (
-                <button onClick={handleJoined}>
-                  <img
-                    className="img-correctChoose"
-                    src={questions.length > 0 ? questions[jump].correct : ""}
-                  />
+                <div>
                   {questions[10] ? (count + 1, handleScore()) : ""}
-                </button>
-              ) : (
-                <button onClick={handleJoined}>
                   <img
-                    className="img-correctChoose"
                     src={questions.length > 0 ? questions[jump].correct : ""}
+                    onClick={handleJump}
+                    className="img-correctChoose"
                   />
-                </button>
+                </div>
+              ) : (
+                <div>
+                  <img
+                    src={questions.length > 0 ? questions[jump].correct : ""}
+                    onClick={handleJoined}
+                    className="img-correctChoose"
+                  />
+                </div>
               )}
-              <button onClick={handleJump}>
+              <div>
                 <img
-                  className="img-incorrectChoose"
                   src={questions.length > 0 ? questions[jump].incorrect_a : ""}
+                  onClick={handleJump}
+                  className="img-incorrectChoose"
                 />
-              </button>
+              </div>
             </div>
           ) : (
             <div className="answer-choose">
-              <button onClick={handleJump}>
+              <div>
                 <img
-                  className="img-incorrectChoose"
                   src={questions.length > 0 ? questions[jump].incorrect_a : ""}
+                  onClick={handleJump}
+                  className="img-correctChoose"
                 />
-              </button>
-
+              </div>
               {questions[10] == questions[jump] ? (
-                <button onClick={handleJoined}>
-                  <img
-                    className="img-correctChoose"
-                    src={questions.length > 0 ? questions[jump].correct : ""}
-                  />
+                <div>
                   {questions[10] ? (count + 1, handleScore()) : ""}
-                </button>
-              ) : (
-                <button onClick={handleJoined}>
+
                   <img
-                    className="img-correctChoose"
                     src={questions.length > 0 ? questions[jump].correct : ""}
+                    onClick={handleJump}
+                    className="img-incorrectChoose"
                   />
-                </button>
+                </div>
+              ) : (
+                <div>
+                  <img
+                    src={questions.length > 0 ? questions[jump].correct : ""}
+                    onClick={handleJoined}
+                    className="img-incorrectChoose"
+                  />
+                </div>
               )}
             </div>
           )}

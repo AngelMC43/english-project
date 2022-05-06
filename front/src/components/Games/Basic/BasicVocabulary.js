@@ -79,7 +79,7 @@ export default function BasicVocabulary() {
                   className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
                 >
                   {questions.length > 0 ? questions[jump].correct : ""}
-                  {questions[10] ? (setCount(count + 1), handleScore()) : ""}
+                  {questions[10] ? (count + 1, handleScore()) : ""}
                 </button>
               ) : (
                 <button
