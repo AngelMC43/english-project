@@ -52,64 +52,61 @@ export default function BasicChoose() {
     setJump(jump + 1);
   };
 
-  const random = Math.floor(Math.random() * 2);
+  const random = Math.floor(Math.random() * 3);
 
   return (
     <div>
       <div className="main-choose">
         <div className="insideContainer-choose">
-          <h1 className="titleBG-choose">
-            {questions.length > 0 ? questions[jump].question : ""}
-          </h1>
-
+          <h1>{questions.length > 0 ? questions[jump].question : ""}</h1>
           {random == 0 ? (
-            <div className="button-container-choose">
+            <div className="answer-choose">
               {questions[10] == questions[jump] ? (
-                <button
-                  onClick={handleJoined}
-                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
-                >
-                  {questions.length > 0 ? questions[jump].correct : ""}
+                <button onClick={handleJoined}>
+                  <img
+                    className="img-correctChoose"
+                    src={questions.length > 0 ? questions[jump].correct : ""}
+                  />
                   {questions[10] ? (count + 1, handleScore()) : ""}
                 </button>
               ) : (
-                <button
-                  onClick={handleJoined}
-                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
-                >
-                  {questions.length > 0 ? questions[jump].correct : ""}
+                <button onClick={handleJoined}>
+                  <img
+                    className="img-correctChoose"
+                    src={questions.length > 0 ? questions[jump].correct : ""}
+                  />
                 </button>
               )}
-              <button
-                onClick={handleJump}
-                className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+              <button onClick={handleJump}>
+                <img
+                  className="img-incorrectChoose"
+                  src={questions.length > 0 ? questions[jump].incorrect_a : ""}
+                />
               </button>
             </div>
           ) : (
-            <div className="button-container-choose">
-              <button
-                onClick={handleJump}
-                className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
-              >
-                {questions.length > 0 ? questions[jump].incorrect_a : ""}
+            <div className="answer-choose">
+              <button onClick={handleJump}>
+                <img
+                  className="img-incorrectChoose"
+                  src={questions.length > 0 ? questions[jump].incorrect_a : ""}
+                />
               </button>
 
               {questions[10] == questions[jump] ? (
-                <button
-                  onClick={handleJoined}
-                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
-                >
-                  {questions.length > 0 ? questions[jump].correct : ""}
+                <button onClick={handleJoined}>
+                  <img
+                    className="img-correctChoose"
+                    src={questions.length > 0 ? questions[jump].correct : ""}
+                  />
                   {questions[10] ? (count + 1, handleScore()) : ""}
                 </button>
               ) : (
-                <button
-                  onClick={handleJoined}
-                  className="button-push-choose btn btn-outline-primary accent-4 z-depth-3 section"
-                >
-                  {questions.length > 0 ? questions[jump].correct : ""}
+                <button onClick={handleJoined}>
+                  <img
+                    className="img-correctChoose"
+                    src={questions.length > 0 ? questions[jump].correct : ""}
+                  />
                 </button>
               )}
             </div>

@@ -243,15 +243,25 @@ border:1
 }
 
 .answer-choose {
-    display: flex;
+    display: inline;
     justify-content: space-around;
 }
 
-.img-choose {
+.img-correctChoose {
     position: absolute;
     width: 40vh;
     height: 40vh;
-    margin-left: -20vh;
+    margin-left: 10vh;
+    cursor: pointer;
+    margin-top: 5vh;
+
+}
+
+.img-incorrectChoose {
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    margin-left: -46vh;
     cursor: pointer;
     margin-top: 5vh;
 
