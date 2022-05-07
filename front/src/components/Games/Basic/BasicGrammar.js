@@ -140,7 +140,7 @@ export default function BasicGrammar() {
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}
@@ -151,7 +151,7 @@ export default function BasicGrammar() {
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
+                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}

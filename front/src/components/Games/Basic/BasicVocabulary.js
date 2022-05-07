@@ -139,7 +139,7 @@ export default function BasicVocabulary() {
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  className="pass-basic animate__animated animate__backInDown animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}

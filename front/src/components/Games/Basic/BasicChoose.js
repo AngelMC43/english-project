@@ -136,7 +136,7 @@ export default function BasicChoose() {
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  className="pass-basic animate__animated animate__backInUp animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}

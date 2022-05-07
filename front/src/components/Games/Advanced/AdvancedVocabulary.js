@@ -8,12 +8,17 @@ export default function AdvancedVocabulary() {
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
   const { userLogged } = useLoginContext();
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState({
+    correct: "",
+  });
 
   const handleChange = (event) => {
     event.preventDefault();
-    setAnswer(event.target.value);
-    console.log("esto es el event", event.target.value);
+    setAnswer({
+      ...answer,
+      [event.target.name]: event.target.value,
+    });
+    console.log("esto es el event", event.target.name);
   };
   console.log("esto es new", answer);
 
@@ -60,22 +65,14 @@ export default function AdvancedVocabulary() {
     e.preventDefault();
     handleCount();
     setJump(jump + 1);
-    setAnswer("");
+    setAnswer({ correct: " " });
   }
 
-  // const handleJump = (e) => {
-  //   e.stopPropagation();
-  //   e.preventDefault();
-  //   if (jump < 11) {
-  //     setJump(jump + 1);
-  //   } else {
-  //   }
-  // };
   function handleJump(e) {
     e.stopPropagation();
     e.preventDefault();
-    setJump(Math.floor(Math.random() * 11));
-    setAnswer("");
+    setJump(jump + 1);
+    setAnswer({ correct: " " });
   }
 
   console.log("Esto es jump", jump);
@@ -88,34 +85,34 @@ export default function AdvancedVocabulary() {
           </h1>
           <div className="box-answer-advanced fw-bold">
             <div className="answer-advanced">
-              {questions.length > 0 ? questions[0].correct : ""}
+              {questions.length > 0 ? questions[7].correct : ""}
             </div>
             <div className="answer-advanced">
               {questions.length > 0 ? questions[1].correct : ""}
             </div>
             <div className="answer-advanced">
-              {questions.length > 0 ? questions[2].correct : ""}
+              {questions.length > 0 ? questions[8].correct : ""}
             </div>
             <div className="answer-advanced">
               {questions.length > 0 ? questions[3].correct : ""}
             </div>
             <div className="answer-advanced">
-              {questions.length > 0 ? questions[4].correct : ""}
+              {questions.length > 0 ? questions[9].correct : ""}
             </div>
             <div className="answer-advanced">
               {questions.length > 0 ? questions[5].correct : ""}
             </div>
             <div className="answer-advanced">
+              {questions.length > 0 ? questions[0].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[2].correct : ""}
+            </div>
+            <div className="answer-advanced">
+              {questions.length > 0 ? questions[4].correct : ""}
+            </div>
+            <div className="answer-advanced">
               {questions.length > 0 ? questions[6].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[7].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[8].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[9].correct : ""}
             </div>
           </div>
           <form>
@@ -126,7 +123,6 @@ export default function AdvancedVocabulary() {
                 className="browser-default imput-advanced"
                 placeholder="WRITE YOUR ANSWER"
                 onChange={handleChange}
-                value={answer}
               ></input>
               {answer.correct !=
               (questions.length > 0 ? questions[jump].correct : "") ? (

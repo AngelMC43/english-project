@@ -1,5 +1,5 @@
 .main-intermediateMenu { 
-    border: 3vh solid rgb(51, 0, 55);
+    border: 3vh solid rgb(134, 238, 42);
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -20,6 +20,14 @@
 .insideTitle-intermediateMenu {
     margin-top: -1vh;
     margin-bottom: -1vh;
+}
+
+.inside-container-vocabulary {
+    position: absolute;
+    width: 134vh;
+    border: 0.5vh solid black;
+    border-radius: 3.3vh;
+    height: 69.2vh;
 }
 
 .floatSmall-intermediateMenu {

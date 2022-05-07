@@ -55,7 +55,8 @@
     margin-left: -57vh;
     width: 48vh;
     position: absolute;
-
+    background-image: url("../../../visual/intermediate/fondoBotonD.jpg");
+    height: 12vh;
 }
 
 .button-second-intermediateVocabulary {
@@ -64,9 +65,11 @@
     font-size: 9vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 10vh;
-    margin-left: 10vh;
+    margin-left: 17vh;
     position: absolute;
-    width: 48vh;
+    width: 40vh;
+    background-image: url("../../../visual/intermediate/fondoBoton.jpg");
+    height: 12vh;
     }
 
 .button-third-intermediateVocabulary {
@@ -78,6 +81,8 @@
     margin-left: -57vh;
     position: absolute;
     width: 48vh;
+    background-image: url("../../../visual/intermediate/fondoBotonD.jpg");
+    height: 12vh;
     }
 
 .button-forth-intermediateVocabulary {
@@ -86,9 +91,11 @@
     font-size: 9vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 30vh;
-    margin-left: 10vh;
+    margin-left: 17vh;
     position: absolute;
-    width: 48vh;
+    width: 40vh;
+    background-image: url("../../../visual/intermediate/fondoBoton.jpg");
+    height: 12vh;
     }
 
 .inside-container-intermediateVocabulary {
@@ -172,7 +179,7 @@
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
-    margin-top: 17vh;
+    margin-top: 19vh;
     margin-left: -64vh;
     width: 31vh;
     position: absolute;
@@ -184,7 +191,7 @@
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
-    margin-top: 18vh;
+    margin-top: 20vh;
     margin-left: -31vh;
     position: absolute;
     width: 31vh;
@@ -197,7 +204,7 @@
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
-    margin-top: 114px;
+    margin-top: 19vh;
     margin-left: 2vh;
     position: absolute;
     width: 31vh;
@@ -209,7 +216,7 @@
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
-    margin-top: 17vh;
+    margin-top: 20vh;
     margin-left: 34vh;
     position: absolute;
     width: 31vh;
