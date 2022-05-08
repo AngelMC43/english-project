@@ -356,6 +356,18 @@
     line-height: 12vh;
 }
 
+.touch-intermediateVerbs {
+    margin-top: -27vh;
+   
+}
+
+.touch-intermediateMatch {
+    
+    margin-left: 9vh;
+    margin-top: -76vh;
+   
+}
+
 
 .buttonCompleted-intermediate {
     font-family: 'Atma', cursive;

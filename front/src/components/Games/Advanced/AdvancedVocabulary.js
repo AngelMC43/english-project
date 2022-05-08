@@ -152,22 +152,26 @@ export default function AdvancedVocabulary() {
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className=""
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className=""
+                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].correct : ""}
+                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className=""
+                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className=""
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}

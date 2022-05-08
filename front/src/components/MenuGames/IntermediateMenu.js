@@ -9,8 +9,9 @@ export default function IntermediateMenu() {
   return (
     <div>
       <div className="main-intermediateMenu">
-        <div className="inside-container-intermediateVocabulary"></div>
+        <div className="inside-container-intermediate"></div>
         <h1 className="title-intermediateMenu">Intermediate level:</h1>
+        {/* -----------------------VOCABULARY----------------------------- */}
 
         <div className="contain-intermediateMenu">
           <div className="row box-vocabulary-intermediateMenu">
@@ -25,22 +26,17 @@ export default function IntermediateMenu() {
                   </Link>
                 </div>
                 <div className="card-content rounded card-content-edit">
-                  <span className="card-title activator grey-text text-darken-4">
-                    Vocabulary
+                  <span className="card-title activator green-text text-green text-lighten-1 fs-6 text">
+                    How to play{" "}
                     <i className="material-icons right">more_vert</i>
                   </span>
-                  <p>
-                    <a href="#">Play</a>
-                  </p>
+                  <h3 className="title-intermediateMenu">Vocabulary</h3>
                 </div>
                 <div className="card-reveal">
                   <span className="card-title grey-text text-darken-4">
                     How to play<i className="material-icons right">close</i>
                   </span>
-                  <p>
-                    Read the question and answer pushing the correct box to win
-                    points.
-                  </p>
+                  <p>Choose the best option for the sentence proposed</p>
                 </div>
               </div>
             </div>
@@ -58,21 +54,19 @@ export default function IntermediateMenu() {
                   </Link>
                 </div>
                 <div className="card-content card-content-edit">
-                  <span className="card-title activator grey-text text-darken-4">
-                    Verbs
+                  <span className="card-title activator green-text text-green text-lighten-1 fs-6 text">
+                    How to play
                     <i className="material-icons right">more_vert</i>
                   </span>
-                  <p>
-                    <a href="#">Play</a>
-                  </p>
+                  <h3 className="title-intermediateMenu">Verbs</h3>
                 </div>
                 <div className="card-reveal">
                   <span className="card-title grey-text text-darken-4">
                     How to play<i className="material-icons right">close</i>
                   </span>
                   <p>
-                    Match the word in the correct option. You must push on top
-                    of the drawn to select one and win points.
+                    You must choose the rigth word. Verbs can be past, present
+                    or future.
                   </p>
                 </div>
               </div>
@@ -93,21 +87,19 @@ export default function IntermediateMenu() {
                   </Link>
                 </div>
                 <div className="card-content card-content-edit">
-                  <span className="card-title activator grey-text text-darken-4">
-                    Grammar
+                  <span className="card-title activator green-text text-green text-lighten-1 fs-6 text">
+                    How to play
                     <i className="material-icons right">more_vert</i>
                   </span>
-                  <p>
-                    <a href="#">Play</a>
-                  </p>
+                  <h3 className="title-intermediateMenu">Grammar</h3>
                 </div>
                 <div className="card-reveal">
                   <span className="card-title grey-text text-darken-4">
                     How to play<i className="material-icons right">close</i>
                   </span>
                   <p>
-                    We are going to learn "to be" verb. Choose the correct
-                    option pushing the correct box to win points.
+                    We are going to practice prepositions of places, choose the
+                    correct word for each question.
                   </p>
                 </div>
               </div>
@@ -125,21 +117,20 @@ export default function IntermediateMenu() {
                     <i className="material-icons ">play_arrow</i>
                   </Link>
                 </div>
-                <div className="card-content">
-                  <span className="card-title activator grey-text text-darken-4">
-                    Can you find?
+                <div className="card-content ">
+                  <span className="card-title activator green-text text-green text-lighten-1 fs-6 text">
+                    How to play
                     <i className="material-icons right">more_vert</i>
                   </span>
-                  <p>
-                    <a href="#">Play</a>
-                  </p>
+                  <h3 className="title-intermediateMenu">Can you find?</h3>
                 </div>
                 <div className="card-reveal">
                   <span className="card-title grey-text text-darken-4">
                     How to play<i className="material-icons right">close</i>
                   </span>
                   <p>
-                    Match the word on top of the proper drawn to win points.
+                    Here we see a school picture, you must find the required
+                    object.
                   </p>
                 </div>
               </div>

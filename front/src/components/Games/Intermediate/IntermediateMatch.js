@@ -226,7 +226,7 @@ export default function IntermediateMatch() {
       </div>
       <div>
         {questions[10] === questions[jump] ? (
-          <div className="finalPanel-intermediate">
+          <div className="finalPanel-intermediate touch-intermediateMatch">
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (

@@ -1,5 +1,5 @@
 .main-intermediateMenu { 
-    border: 3vh solid rgb(134, 238, 42);
+    border: 3vh solid rgb(80 135 32);
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -17,30 +17,39 @@
     margin-bottom: 1vh;
 }
 
+
 .insideTitle-intermediateMenu {
     margin-top: -1vh;
     margin-bottom: -1vh;
 }
 
-.inside-container-intermediateVocabulary {
+.inside-container-intermediate {
     position: absolute;
-    width: 134vh;
-    border: 0.5vh solid black;
-    border-radius: 3.3vh;
-    height: 69.2vh;
+    width: 135vh;
+    height: 70vh;
+    margin-top: -0.5vh;
+    margin-left: -0.5vh;
+    border: 0.4vh solid black;
+    border-radius: 4vh;
 }
 
 .floatSmall-intermediateMenu {
     margin-top: 19vh;
-    margin-left: 20vh;
+    margin-left: 15vh;
     position: absolute;
 }
 
 .floatBig-intermediateMenu {
     margin-top: 19vh;
-    margin-left: 29.5vh;
+    margin-left: 25vh;
     position: absolute;
 }
+
+.card-content-edit  {
+    height: 26vh;
+    background-color: transparent;
+    margin-top: -1vh;
+    }
 
 .contain-intermediateMenu {
   display: flex;
@@ -92,8 +101,5 @@
     background-color: white;
 }
 
-.card-content-edit  {
-height: 26vh;
-background-color: transparent;
-}
+
 

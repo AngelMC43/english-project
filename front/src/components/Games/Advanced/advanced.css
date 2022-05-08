@@ -5,7 +5,7 @@
     margin-top: 5.5vh;
      justify-content: center;
      align-items: center;
-     width: 140vh;
+     width: 139vh;
      height: 75vh;
      text-align: center;
      background-image: url("../../../visual/advanced/fondoVocabulary.png");
@@ -139,8 +139,7 @@ border:1
      font-size: 5vh;
 }
 /*-------------------------------------------QUE VEO-----------------------------------------------*/
-/* 
-.main-advancedMatch {
+ .main-matchAdvanced {
     border: 3vh solid rgb(175, 255, 14);
     border-radius: 6.6vh;
     margin: auto;
@@ -150,12 +149,12 @@ border:1
      width: 139vh;
      height: 75vh;
      text-align: center;
-     background-image: url("../../../visual/basic/inf.png");
+     background-image: url("../../../visual/advanced/fondoMain.jpg");
      font-family: 'Atma', cursive;
 
 }
 
-.inside-container-advancedMatch {
+.inside-container-matchAdvanced {
     position: absolute;
     width: 133vh;
     height: 69vh;
@@ -163,101 +162,93 @@ border:1
     border-radius: 3.3vh;
 }
 
-.title-advancedMatch {
+.title-matchAdvanced {
+    position: absolute;
     margin-top: 3vh;
+    font-size: 6vh;
 }
 
-.bird-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: -14vh;
+.helicopter-match {
+    position: absolute;
+    margin-top: 14vh;
     margin-left: 6.5vh;
     margin-right: 6.6vh;
-    width: 9vh;
-    height: 9vh;
+    width: 22vh;
+    height: 10vh;
 }
 
 
-.plane-advancedMatch {
-    cursor: pointer;
+.cloud-match {
     position: absolute;
-    margin-top: -15vh;
-    width: 10vh;
-    height: 9vh;
-    margin-left: 109vh;
+    margin-top: 9vh;
+    width: 20vh;
+    height: 14vh;
+    margin-left: 99vh;
 }
 
-.apple-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: 10vh;
-    margin-left: 6.6vh;
+.parachute-match {
+    position: absolute;
+    margin-top: 26vh;
+    margin-left: 70.6vh;
     width: 4.95vh;
     height: 4.95vh;
 }
 
-.house-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: 3.5vh;
-    margin-left: 30vh;
-    width: 14vh;
-    height: 14vh;
+.humming-match {
+    position: absolute;
+    margin-top: 19vh;
+    margin-left: 117vh;
+    width: 10vh;
+    height: 8vh;
 }
 
-.cat-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: 2vh;
-    margin-left: 22vh;
-    width: 10vh;
+.platform-match {
+    position: absolute;
+    margin-top: 28vh;
+    margin-left: 0vh;
+    width: 11vh;
+    height: 9vh;
+}
+
+.boat-match {
+    position: absolute;
+    margin-top: 32vh;
+    margin-left: 24vh;
+    width: 9vh;
     height: 10vh;
 }
 
-.car-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: 5.8vh;
-    margin-left: 26.4vh;
-    width: 16.5vh;
-    height: 13.2vh;
-    
+.barn-match {
+    position: absolute;
+    margin-top: 34vh;
+    margin-left: 76vh;
+    width: 8vh;
+    height: 9vh;
 }
 
-.parrot-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: 5.5vh;
-    margin-right: 1vh;
-    width: 11vh;
-    height: 11vh;
+.bull-match {
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 100vh;
+    width: 9.5vh;
+    height: 5.8vh;
 }
 
-.chicken-advancedMatch {
-    cursor: pointer;
-    position: sticky;
-    margin-top: -6vh;
-    margin-left: 30vh;
-    width: 16.5vh;
-    height: 19.8vh;
+.launch-match {
+    position: absolute;
+    margin-left: 2vh;
+    margin-top: 49vh;
+    width: 14vh;
+    height: 6vh;
 }
 
-.dog-match {
-    cursor: pointer;
-    position: sticky;
-    margin-left: 47vh;
-    width: 11.57vh;
-    height: 11.57vh;
-}
-
-.ball-match {
-    cursor: pointer;
-    position: sticky;
-    margin-top: -6.6vh;
-    width: 4vh;
-    height: 4vh;
-    margin-right: 10vh;
-} */
+.roc-match {
+    position: absolute;
+    margin-top: 53vh;
+    width: 15vh;
+    height: 9vh;
+    margin-left: 19vh;
+} 
 
 /*---------------------------------VERBS-------------------------------------------*/
 .main-advancedVerbs {
@@ -333,8 +324,8 @@ border:1
     border: 2.5vh solid rgb(57, 2, 52);
     background-color: black;
     border-radius: 7vh;
-    margin-left: -3vh;
-    margin-top: -20vh;
+    margin-left: 32vh;
+    margin-top: -76vh;
     justify-content: center;
     align-items: center;
     width: 140vh;

@@ -3,8 +3,6 @@ import { useState } from "react";
 import "./advancedMenu.css";
 
 export default function AdvancedMenu() {
-  //const [selectedId, setSelectedId] = useState(null);
-
   return (
     <div>
       <div className="main-advancedMenu">
@@ -23,21 +21,19 @@ export default function AdvancedMenu() {
                   </Link>
                 </div>
                 <div className="card-content rounded card-content-edit">
-                  <span className="card-title activator grey-text text-darken-4  fs-6 text">
+                  <span className="card-title activator grey-text text-purple text-lighten-1  fs-6 text">
                     How to play{" "}
                     <i className="material-icons right">more_vert</i>
                   </span>
-                  <p>
-                    <h3 className="title-containerMatch">Vocabulary</h3>{" "}
-                  </p>
+                  <h3 className="title-containerAdvancedMatch">Vocabulary</h3>{" "}
                 </div>
                 <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">
+                  <span className="card-title grey-text text-darken-4 purple accent-1">
                     How to play<i className="material-icons right">close</i>
                   </span>
                   <p>
-                    Read the question and answer pushing the correct box to win
-                    points.
+                    Write inside the box the correct answer. You can see all the
+                    options inside.
                   </p>
                 </div>
               </div>
@@ -56,21 +52,23 @@ export default function AdvancedMenu() {
                   </Link>
                 </div>
                 <div className="card-content card-content-edit">
-                  <span className="card-title activator grey-text text-darken-4  fs-6 text">
+                  <span className="card-title activator grey-text text-purple text-lighten-1  fs-6 text">
                     How to play
                     <i className="material-icons right">more_vert</i>
                   </span>
                   <p>
-                    <h3 className="title-containerMatch">Phrasal verbs</h3>
+                    <h3 className="title-containerAdvancedMatchBig">
+                      Phrasal verbs
+                    </h3>
                   </p>
                 </div>
                 <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">
+                  <span className="card-title grey-text text-darken-4 purple accent-1">
                     How to play<i className="material-icons right">close</i>
                   </span>
                   <p>
-                    Match the word in the correct option. You must push on top
-                    of the drawn to select one and win points.
+                    We are goint to learn phrasal verbs. You must push on top of
+                    the box to select one and earn points.
                   </p>
                 </div>
               </div>
@@ -92,22 +90,18 @@ export default function AdvancedMenu() {
                   </Link>
                 </div>
                 <div className="card-content card-content-edit">
-                  <span className="card-title activator grey-text text-darken-4  fs-6 text">
+                  <span className="card-title activator grey-text text-purple text-lighten-1 fs-6 text">
                     How to play
                     <i className="material-icons right">more_vert</i>
                   </span>
-                  <p>
-                    <h3 className="title-containerMatch">Grammar</h3>
-                  </p>
+
+                  <h3 className="title-containerAdvancedMatchBig">Grammar</h3>
                 </div>
                 <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">
+                  <span className="card-title grey-text text-darken-4 purple accent-1">
                     How to play<i className="material-icons right">close</i>
                   </span>
-                  <p>
-                    We are going to learn "to be" verb. Choose the correct
-                    option pushing the correct box to win points.
-                  </p>
+                  <p>Choose the correct option to complete the sentence.</p>
                 </div>
               </div>
             </div>
@@ -127,21 +121,24 @@ export default function AdvancedMenu() {
                     </Link>
                   </div>
                   <div className="card-content card-content-edit">
-                    <span className="card-title activator grey-text text-darken-4 fs-6 text">
+                    <span className="card-title activator grey-text text-purple text-lighten-1 fs-6 text">
                       How to play
                       <i className="material-icons right">more_vert</i>
                     </span>
                     <p>
-                      <h3 className="title-containerMatch">Can you find?</h3>
+                      <h3 className="title-containerAdvancedMatch">
+                        Can you find?
+                      </h3>
                     </p>
                   </div>
                   <div className="card-reveal">
-                    <span className="card-title grey-text text-darken-4">
+                    <span className="card-title grey-text text-darken-4 purple accent-1">
                       How to play<i className="material-icons right">close</i>
                     </span>
                     <p>
-                      We are going to learn "to be" verb. Choose the correct
-                      option pushing the correct box to win points.
+                      We have a picture where you must guess the object
+                      described. Here you won't have cursor point to select,
+                      good luck!
                     </p>
                   </div>
                 </div>

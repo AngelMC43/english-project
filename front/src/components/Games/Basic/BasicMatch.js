@@ -190,13 +190,11 @@ export default function BasicMatch() {
               />
             )}
             {questions[jump] === questions[9] ? (
-              <div>
-                <img
-                  src={questions.length > 0 ? questions[9].pic_correct : ""}
-                  onClick={handleJoined}
-                  className="ball-match"
-                />{" "}
-              </div>
+              <img
+                src={questions.length > 0 ? questions[9].pic_correct : ""}
+                onClick={handleJoined}
+                className="ball-match"
+              />
             ) : (
               <img
                 src={questions.length > 0 ? questions[9].pic_correct : ""}
@@ -215,7 +213,7 @@ export default function BasicMatch() {
 
       <div>
         {questions[10] === questions[jump] ? (
-          <div className="finalPanel-basic">
+          <div className="finalPanel-matchBasic">
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (

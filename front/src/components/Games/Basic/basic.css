@@ -118,7 +118,7 @@ border:1
     margin-top: 5.5vh;
      justify-content: center;
      align-items: center;
-     width: 140vh;
+     width: 139vh;
      height: 75vh;
      text-align: center;
      background-image: url("../../../visual/basic/inf.png");
@@ -318,15 +318,15 @@ border:1
     border: 2.5vh solid rgb(175, 255, 14);
     background-color: black;
     border-radius: 7vh;
-    
-    margin-top: 10vh;
-     justify-content: center;
-     align-items: center;
-     width: 139vh;
-     height: 75vh;
-     text-align: center;
-     font-family: 'Atma', cursive;
-     line-height: 12vh
+    margin-top: -72vh;
+    margin-left: -3vh;
+    justify-content: center;
+    align-items: center;
+    width: 139vh;
+    height: 75vh;
+    text-align: center;
+    font-family: 'Atma', cursive;
+    line-height: 12vh;
 }
 
 .buttonCompleted-basic {

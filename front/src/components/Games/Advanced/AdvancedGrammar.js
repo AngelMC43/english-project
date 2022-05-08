@@ -119,33 +119,32 @@ export default function AdvancedGrammar() {
       <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-advanced">
-            {" "}
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className=" animate__animated animate__bounceIn "
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className=" animate__animated animate__backInDown animate__delay-2s"
+                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}
-                  className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className=" animate__animated animate__zoomInDown animate__delay-1s"
+                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className=" animate__animated animate__jackInTheBox"
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}

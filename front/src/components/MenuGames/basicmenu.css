@@ -8,7 +8,7 @@
      width: 140vh;
      height: 75vh;
      text-align: center;
-     background-color: rgb(187, 141, 230);
+     background-color: rgb(164 111 213);
      font-family: 'Atma', cursive;
 }
 
@@ -24,13 +24,13 @@
 
 .floatSmall-basicMenu {
     margin-top: 19vh;
-    margin-left: 20vh;
+    margin-left: 15vh;
     position: absolute;
 }
 
 .floatBig-basicMenu {
     margin-top: 19vh;
-    margin-left: 29.5vh;
+    margin-left: 25vh;
     position: absolute;
 }
 
@@ -89,6 +89,12 @@
     background-color: transparent;
     box-shadow: none;
     border: 0px solid transparent;
+    margin-top: -1.5vh;
+    
+}
+
+.howto {
+    color: blue;
 }
 
 .rabbit-basic {

@@ -125,26 +125,26 @@ export default function AdvancedVerbs() {
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className=" animate__animated animate__bounceIn "
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className=" animate__animated animate__backInDown animate__delay-2s"
+                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}
-                  className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className=" animate__animated animate__zoomInDown animate__delay-1s"
+                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className=" animate__animated animate__jackInTheBox"
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}

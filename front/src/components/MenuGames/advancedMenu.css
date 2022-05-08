@@ -18,8 +18,25 @@
     color:rgb(32, 32, 32)
 }
 
-.title-containerMatch {
+.title-containerAdvancedMatch {
+    background-image: url("../../visual/advanced/fondoVocabulary.png");
     margin-top: 0vh;
+    width: 47.8vh;
+    border-left-style: dashed;
+    
+    margin-left: 0.3vh;
+    border-top: 0.4vh solid black;
+}
+
+.title-containerAdvancedMatchBig {
+    background-image: url("../../visual/advanced/fondoVocabulary.png");
+    margin-top: 0vh;
+    width: 71.7vh;
+    border-left-style: dashed;
+    border-top: 0.4vh solid black;
+    margin-left: 0.3vh;
+    position: absolute;
+
 }
 
 .insideTitle-advancedMenu {
@@ -28,13 +45,13 @@
 }
 
 .floatSmall-advancedMenu {
-    margin-top: 19vh;
+    margin-top: 17.5vh;
     margin-left: -3vh;
     position: absolute;
 }
 
 .floatBig-advancedMenu {
-    margin-top: 19vh;
+    margin-top: 17.5vh;
     margin-left: -3vh;
     position: absolute;
 }
