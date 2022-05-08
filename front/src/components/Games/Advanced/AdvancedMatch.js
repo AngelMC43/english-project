@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function AdvancedFinalTest() {
+export default function AdvancedMatch() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
 

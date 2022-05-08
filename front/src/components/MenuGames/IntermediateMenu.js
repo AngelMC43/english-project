@@ -9,7 +9,7 @@ export default function IntermediateMenu() {
   return (
     <div>
       <div className="main-intermediateMenu">
-        <div className="inside-container-vocabulary"></div>
+        <div className="inside-container-intermediateVocabulary"></div>
         <h1 className="title-intermediateMenu">Intermediate level:</h1>
 
         <div className="contain-intermediateMenu">

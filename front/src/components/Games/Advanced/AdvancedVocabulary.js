@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./advanced.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
+import arrow from "../../../visual/main/arrow.png";
 
 export default function AdvancedVocabulary() {
   const [questions, setQuestions] = useState([]);
@@ -79,69 +80,72 @@ export default function AdvancedVocabulary() {
   return (
     <div>
       <div className="main-advancedVocabulary">
-        <div className="inside-container-advancedVocabulary">
-          <h1 className="title-advancedVocabulary animate__animated animate__pulse">
-            {questions.length > 0 ? questions[jump].question : ""}
-          </h1>
-          <div className="box-answer-advanced fw-bold">
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[7].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[1].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[8].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[3].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[9].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[5].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[0].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[2].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[4].correct : ""}
-            </div>
-            <div className="answer-advanced">
-              {questions.length > 0 ? questions[6].correct : ""}
-            </div>
+        <h1 className="title-advancedVocabulary animate__animated animate__pulse">
+          {questions.length > 0 ? questions[jump].question : ""}
+        </h1>
+        <div className="box-answer-advancedVocabulary fw-bold">
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[7].correct : ""}
           </div>
-          <form>
-            <div>
-              <input
-                type="text"
-                name="correct"
-                className="browser-default imput-advanced"
-                placeholder="WRITE YOUR ANSWER"
-                onChange={handleChange}
-              ></input>
-              {answer.correct !=
-              (questions.length > 0 ? questions[jump].correct : "") ? (
-                <button onClick={handleJump} name="">
-                  next
-                </button>
-              ) : (
-                <button onClick={handleJoined} name="">
-                  next
-                </button>
-              )}
-            </div>
-          </form>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[1].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[8].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[3].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[9].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[5].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[0].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[2].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[4].correct : ""}
+          </div>
+          <div className="answer-advancedVocabulary">
+            {questions.length > 0 ? questions[6].correct : ""}
+          </div>
+          <div>
+            {questions[10] == questions[jump] ? (
+              <div>{questions[10] ? (count + 1, handleScore()) : ""}</div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
+        <form>
+          <div>
+            <input
+              type="text"
+              name="correct"
+              className="browser-default input-advancedVocabulary"
+              placeholder="WRITE YOUR ANSWER"
+              onChange={handleChange}
+            ></input>
+            {answer.correct !=
+            (questions.length > 0 ? questions[jump].correct : "") ? (
+              <img src={arrow} onClick={handleJump} className="arrowPink" />
+            ) : (
+              <button onClick={handleJoined} name="">
+                next
+              </button>
+            )}
+          </div>
+        </form>
       </div>
+
       <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-advanced">
-            {" "}
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (
@@ -168,7 +172,7 @@ export default function AdvancedVocabulary() {
               </div>
             )}
             <Link
-              to="/games/advanced/choose"
+              to="/games/advanced/verbs"
               className="buttonCompleted-advanced"
             >
               Next Game

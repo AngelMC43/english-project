@@ -135,12 +135,16 @@ export default function IntermediateGrammar() {
             ) : (
               <div>
                 <img
-                  src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-intermediate"
+                  src={questions.length > 0 ? questions[11].correct : ""}
+                  className="wasted-intermediate animate__animated animate__fadeIn animate__delay-1s"
                 />
                 <img
-                  src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser-intermediate"
+                  src={questions.length > 0 ? questions[11].incorrect_a : ""}
+                  className="mission-intermediate animate__animated animate__fadeIn animate__delay-2s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[11].incorrect_b : ""}
+                  className="failed-intermediate animate__animated animate__fadeIn animate__delay-3s"
                 />
               </div>
             )}

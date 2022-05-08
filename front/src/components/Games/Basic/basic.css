@@ -79,6 +79,7 @@
 .titleBG-grammar {
     background-color: white;
     border-radius: 5vh;
+    border: solid black 0.5vh;
 }
 
 .img-option-grammar {
@@ -117,7 +118,7 @@ border:1
     margin-top: 5.5vh;
      justify-content: center;
      align-items: center;
-     width: 139vh;
+     width: 140vh;
      height: 75vh;
      text-align: center;
      background-image: url("../../../visual/basic/inf.png");
@@ -126,8 +127,7 @@ border:1
 }
 
 .inside-container-match {
-    position: absolute;
-    width: 134vh;
+    width: 133vh;
     height: 69vh;
     border: 0.5vh solid black;
     border-radius: 3.3vh;
@@ -311,11 +311,36 @@ border:1
      line-height: 12vh
 }
 
+.finalPanel-matchBasic {
+    color: white;
+    font-size: 9.9vh;
+    position: sticky;
+    border: 2.5vh solid rgb(175, 255, 14);
+    background-color: black;
+    border-radius: 7vh;
+    
+    margin-top: 10vh;
+     justify-content: center;
+     align-items: center;
+     width: 139vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     line-height: 12vh
+}
+
 .buttonCompleted-basic {
     font-family: 'Atma', cursive;
     font-size: 8vh;
     width: auto;
     color: rgb(137, 24, 124);
+}
+
+.buttonCompleted-basicRed {
+    font-family: 'Atma', cursive;
+    font-size: 8vh;
+    width: auto;
+    color: rgb(241, 6, 73);
 }
 
 .confeti-basic {

@@ -3,7 +3,7 @@ import "./basic.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 
-export default function BasicVocabulary() {
+export default function BasicMatch() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
@@ -52,17 +52,11 @@ export default function BasicVocabulary() {
     setJump(jump + 1);
   };
 
-  const handleEnd = (e) => {
-    setJump();
-    setCount();
-    handleScore();
-  };
-
   console.log("count", count);
   console.log("jump", jump);
 
   return (
-    <div className="main-match ">
+    <div className="main-match">
       <div className="inside-container-match">
         <div>
           <h1 className="title-match d-flex justify-content-center">
@@ -222,29 +216,28 @@ export default function BasicVocabulary() {
       <div>
         {questions[10] === questions[jump] ? (
           <div className="finalPanel-basic">
-            {" "}
             <h2>Game completed!</h2>
             <h2>Score: {count}/10 </h2>
             {count > 4 ? (
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-basic animate__animated animate__bounceIn "
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic animate__animated animate__lightSpeedInLeft animate__delay-2s"
+                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}
-                  className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
+                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
@@ -252,8 +245,8 @@ export default function BasicVocabulary() {
                 />
               </div>
             )}
-            <Link to="/games/intermediate" className="buttonCompleted-basic">
-              Next Level
+            <Link to="/games/intermediate" className="buttonCompleted-basicRed">
+              Next Level!
             </Link>
             <br />
             <Link to="/showscore" className="buttonCompleted-basic">
@@ -262,7 +255,7 @@ export default function BasicVocabulary() {
             <br />
             <Link to="/games/basic" className="buttonCompleted-basic">
               Menu
-            </Link>{" "}
+            </Link>
           </div>
         ) : (
           ""

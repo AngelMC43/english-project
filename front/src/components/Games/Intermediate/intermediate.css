@@ -49,7 +49,7 @@
 .button-first-intermediateVocabulary {
     background-color: white;    
     border: none;
-    font-size: 9vh;
+    font-size: 8vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 10vh;
     margin-left: -57vh;
@@ -62,7 +62,7 @@
 .button-second-intermediateVocabulary {
     background-color: white;    
     border: none;
-    font-size: 9vh;
+    font-size: 8vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 10vh;
     margin-left: 17vh;
@@ -75,7 +75,7 @@
 .button-third-intermediateVocabulary {
     background-color: white;    
     border: none;
-    font-size: 9vh;
+    font-size: 8vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 30vh;
     margin-left: -57vh;
@@ -88,7 +88,7 @@
 .button-forth-intermediateVocabulary {
     background-color: white;    
     border: none;
-    font-size: 9vh;
+    font-size: 8vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 30vh;
     margin-left: 17vh;
@@ -226,8 +226,8 @@
 
 .main-intermediateMatch {
     background-image: url("../../../visual/intermediate/fondoMatch.png");
-
     border: 3vh solid rgb(57, 2, 52);
+  
     border-radius: 6.6vh;
     margin: auto;
     margin-top: 5.5vh;
@@ -247,7 +247,7 @@
 .font-intermediateMatch {
     cursor: pointer;
     position: absolute;
-    margin-top: 7vh;
+    margin-top: 41vh;
     width: 25vh;
     height: 14vh;
     margin-left: 32vh;
@@ -255,8 +255,8 @@
 
 .planeInt-intermediateMatch {
     cursor: pointer;
-    position: sticky;
-    margin-top: -6vh;
+    position: absolute;
+    margin-top: -4vh;
     margin-left: 6.6vh;
     width: 10.95vh;
     height: 5.95vh;
@@ -264,8 +264,7 @@
 
 .bus-intermediateMatch {
     cursor: pointer;
-    position: sticky;
-    margin-top: 19.5vh;
+    margin-top: 36vh;
     margin-left: 51vh;
     width: 20vh;
     position: absolute;
@@ -275,7 +274,7 @@
 .ligth-intermediateMatch {
     cursor: pointer;
     position: sticky;
-    margin-top: 12vh;
+    margin-top: 28vh;
     margin-left: 80vh;
     width: 16vh;
     height: 21vh;
@@ -284,8 +283,8 @@
 
 .crash-intermediateMatch {
     cursor: pointer;
-    position: sticky;
-    margin-top: 1.8vh;
+    position: absolute;
+    margin-top: 17.8vh;
     margin-left: 0.4vh;
     width: 17.5vh;
     height: 16.2vh;
@@ -294,18 +293,18 @@
 
 .flag-intermediateMatch {
     cursor: pointer;
-    position: sticky;
+    position: absolute;
     margin-top: 8.5vh;
-    margin-left: 14vh;
+    margin-left: 99vh;
     width: 12vh;
     height: 8vh;
 }
 
 .clock-intermediateMatch {
     cursor: pointer;
-    position: sticky;
+    position: absolute;
     margin-top: -1vh;
-    margin-left: 61.5vh;
+    margin-left: 79vh;
     width: 4.5vh;
     height: 3.8vh;
 }
@@ -314,7 +313,7 @@
     cursor: pointer;
     position: absolute;
     margin-left: -2vh;
-    margin-top: 5vh;
+    margin-top: 40vh;
     width: 20vh;
     height: 18vh;
 }
@@ -322,7 +321,7 @@
 .basket-intermediateMatch {
     cursor: pointer;
     position: absolute;
-    margin-top: 13.4vh;
+    margin-top: 29vh;
     width: 16vh;
     height: 16vh;
     margin-left: 33vh;
@@ -332,7 +331,7 @@
 .plaque-intermediateMatch {
     cursor: pointer;
     position: absolute;
-    margin-top: 0.4vh;
+    margin-top: 35vh;
     width: 17vh;
     height: 20vh;
     margin-left: 98vh;
@@ -340,9 +339,9 @@
 /*-------------------------------------------FINAL PANEL-----------------------------------------------*/
 
 .finalPanel-intermediate {
+    position: absolute;
     color: white;
     font-size: 9.9vh;
-    position: sticky;
     border: 2.5vh solid rgb(57, 2, 52);
     background-color: black;
     border-radius: 7vh;
@@ -378,15 +377,25 @@
     margin-left: 40vh;
 }
 
-.loser-intermediate {
+.failed-intermediate {
+   
     position: absolute;
-    width: 60vh;
-    margin-left: -80vh;
+    width: 28vh;
+    margin-left: -70vh;
+    margin-top: 18vh;
+
 }
 
-.fail-intermediate {
+.wasted-intermediate {
     position: absolute;
     width: 40vh;
-    margin-top: -35vh;
-    margin-left: 35vh;
+    margin-top: -10vh;
+    margin-left: 29vh;
+}
+
+.mission-intermediate {
+    position: absolute;
+    width: 40vh;
+    margin-top: 0vh;
+    margin-left: 29vh;
 }

@@ -32,7 +32,7 @@ export default function AdvancedGrammar() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "basic",
+          level: "advanced",
           type: "grammar",
           score: count,
         }),
@@ -55,18 +55,118 @@ export default function AdvancedGrammar() {
     setJump(jump + 1);
   };
 
+  const random = Math.floor(Math.random() * 2);
+
   return (
-    <div className="main-advancedGrammar">
-      <h1 className="title-advancedGrammar">
-        {questions.length > 0 ? questions[jump].question : ""}
-      </h1>
-      <div className="button-container-advancedGrammar">
-        <button onClick={handleJoined} className="button-left-advancedGrammar">
-          <b> {questions.length > 0 ? questions[jump].correct : ""}</b>
-        </button>
-        <button onClick={handleJump} className="button-rigth-advancedGrammar">
-          <b>{questions.length > 0 ? questions[jump].incorrect_a : ""}</b>
-        </button>
+    <div>
+      <div className="main-advancedGrammar">
+        <h1 className="title-advancedGrammar">
+          {questions.length > 0 ? questions[jump].question : ""}
+        </h1>
+        {random == 0 ? (
+          <div className="insideContainer-advancedGrammar">
+            {questions[10] == questions[jump] ? (
+              <button
+                onClick={handleJoined}
+                className="button-left-advancedGrammar "
+              >
+                <b>{questions.length > 0 ? questions[jump].correct : ""}</b>
+                {questions[10] ? (count + 1, handleScore()) : ""}
+              </button>
+            ) : (
+              <button
+                onClick={handleJoined}
+                className="button-left-advancedGrammar "
+              >
+                <b>{questions.length > 0 ? questions[jump].correct : ""}</b>
+              </button>
+            )}
+            <button
+              onClick={handleJump}
+              className="button-rigth-advancedGrammar "
+            >
+              <b> {questions.length > 0 ? questions[jump].incorrect_a : ""}</b>
+            </button>
+          </div>
+        ) : (
+          <div className="insideContainer-advancedGrammar">
+            <button
+              onClick={handleJump}
+              className="button-left-advancedGrammar "
+            >
+              <b>{questions.length > 0 ? questions[jump].incorrect_a : ""}</b>
+            </button>
+
+            {questions[10] == questions[jump] ? (
+              <button
+                onClick={handleJoined}
+                className="button-rigth-advancedGrammar "
+              >
+                <b>{questions.length > 0 ? questions[jump].correct : ""}</b>
+                {questions[10] ? (count + 1, handleScore()) : ""}
+              </button>
+            ) : (
+              <button
+                onClick={handleJoined}
+                className="button-rigth-advancedGrammar "
+              >
+                <b> {questions.length > 0 ? questions[jump].correct : ""}</b>
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+      <div>
+        {questions[10] === questions[jump] ? (
+          <div className="finalPanel-advanced">
+            {" "}
+            <h2>Game completed!</h2>
+            <h2>Score: {count}/10 </h2>
+            {count > 4 ? (
+              <div>
+                <img
+                  src={questions.length > 0 ? questions[10].pic_correct : ""}
+                  className=" animate__animated animate__bounceIn "
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].pic_incorrect : ""}
+                  className=" animate__animated animate__backInDown animate__delay-2s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].correct : ""}
+                  className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                />
+              </div>
+            ) : (
+              <div>
+                <img
+                  src={questions.length > 0 ? questions[11].pic_correct : ""}
+                  className=" animate__animated animate__zoomInDown animate__delay-1s"
+                />
+                <img
+                  src={questions.length > 0 ? questions[11].pic_incorrect : ""}
+                  className=" animate__animated animate__jackInTheBox"
+                />
+              </div>
+            )}
+            <Link
+              to="/games/advanced/match"
+              className="buttonCompleted-advanced"
+            >
+              Next Game
+            </Link>
+            <br />
+            <Link to="/showscore" className="buttonCompleted-advanced">
+              Ranking
+            </Link>
+            <br />
+            <Link to="/games/advanced" className="buttonCompleted-advanced">
+              Menu
+            </Link>{" "}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

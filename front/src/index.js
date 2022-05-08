@@ -34,12 +34,12 @@ import IntroBasic from "./components/Games/Basic/Introbasic";
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
 import IntermediateVerbs from "./components/Games/Intermediate/IntermediateVerbs";
-import IntermediateFinalTest from "./components/Games/Intermediate/IntermediateMatch";
+import IntermediateMatch from "./components/Games/Intermediate/IntermediateMatch";
 
 import AdvancedVocabulary from "./components/Games/Advanced/AdvancedVocabulary";
 import AdvancedGrammar from "./components/Games/Advanced/AdvancedGrammar";
 import AdvancedVerbs from "./components/Games/Advanced/AdvancedVerbs";
-import AdvancedFinalTest from "./components/Games/Advanced/AdvancedFinalTest";
+import AdvancedMatch from "./components/Games/Advanced/AdvancedMatch";
 
 import { createRoot } from "react-dom/client";
 const rootElement = document.getElementById("root");
@@ -86,7 +86,7 @@ root.render(
 
           <Route
             path="games/intermediate/match"
-            element={<IntermediateFinalTest />}
+            element={<IntermediateMatch />}
           />
 
           <Route path="games/advanced" element={<AdvancedView />} />
@@ -96,7 +96,7 @@ root.render(
           />
           <Route path="games/advanced/grammar" element={<AdvancedGrammar />} />
           <Route path="games/advanced/verbs" element={<AdvancedVerbs />} />
-          <Route path="games/advanced/match" element={<AdvancedFinalTest />} />
+          <Route path="games/advanced/match" element={<AdvancedMatch />} />
         </Route>
       </Route>
     </Routes>

@@ -19,31 +19,31 @@
     border-radius: 8vh;
     border: 0.5vh solid black;
     padding: 1.5vh;
- 
+    position: absolute;
     margin: 2vh;
+    width: 130vh;
 }
 
-.box-answer-advanced {
+.box-answer-advancedVocabulary {
     display: flex;
-    margin-top: 4vh;
+    margin-top: 31vh;
     font-family: 'Comic Neue', cursive;
 
 
 }
 
-.imput-advanced {
+.input-advancedVocabulary {
     border-radius: 5vh;
     border-color: 1vh solid black;
     width: 37vh;
     height: 8vh;
-    margin-top: 23vh;
-    margin-left: -17vh;
+    margin-top: 9.5vh;
+    margin-left: -1vh;
     color: black;
     background-color: white;
-    position: absolute;
 }
 
-.answer-advanced {
+.answer-advancedVocabulary {
     border: 0.2vh solid #1e1d1d;
     border-radius: 4vh;
     margin: 0.4vh;
@@ -53,6 +53,11 @@
     font-size: 3vh;
 }
 
+
+.arrowPink {
+    width: 7vh;
+    cursor: pointer;
+}
 
 
 
@@ -134,8 +139,8 @@ border:1
      font-size: 5vh;
 }
 /*-------------------------------------------QUE VEO-----------------------------------------------*/
-
-.main-match {
+/* 
+.main-advancedMatch {
     border: 3vh solid rgb(175, 255, 14);
     border-radius: 6.6vh;
     margin: auto;
@@ -150,7 +155,7 @@ border:1
 
 }
 
-.inside-container-match {
+.inside-container-advancedMatch {
     position: absolute;
     width: 133vh;
     height: 69vh;
@@ -158,11 +163,11 @@ border:1
     border-radius: 3.3vh;
 }
 
-.title-match {
+.title-advancedMatch {
     margin-top: 3vh;
 }
 
-.bird-match {
+.bird-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: -14vh;
@@ -173,7 +178,7 @@ border:1
 }
 
 
-.plane-match {
+.plane-advancedMatch {
     cursor: pointer;
     position: absolute;
     margin-top: -15vh;
@@ -182,7 +187,7 @@ border:1
     margin-left: 109vh;
 }
 
-.apple-match {
+.apple-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: 10vh;
@@ -191,7 +196,7 @@ border:1
     height: 4.95vh;
 }
 
-.house-match {
+.house-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: 3.5vh;
@@ -200,7 +205,7 @@ border:1
     height: 14vh;
 }
 
-.cat-match {
+.cat-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: 2vh;
@@ -209,7 +214,7 @@ border:1
     height: 10vh;
 }
 
-.car-match {
+.car-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: 5.8vh;
@@ -219,7 +224,7 @@ border:1
     
 }
 
-.parrot-match {
+.parrot-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: 5.5vh;
@@ -228,7 +233,7 @@ border:1
     height: 11vh;
 }
 
-.chicken-match {
+.chicken-advancedMatch {
     cursor: pointer;
     position: sticky;
     margin-top: -6vh;
@@ -252,7 +257,7 @@ border:1
     width: 4vh;
     height: 4vh;
     margin-right: 10vh;
-}
+} */
 
 /*---------------------------------VERBS-------------------------------------------*/
 .main-advancedVerbs {
@@ -290,27 +295,13 @@ border:1
     height: 32vh;
 }
 
-.insideContainer-advancedVerbs {
-border:1
-}
 
-.button-push-advancedVerbs {
-    background-color: transparent;
-    border: transparent;
-    margin-top: 20vh;
-    position: absolute;
-
-     width: 30vh;
-     height: 14vh;
-     font-family: 'Comic Neue', cursive;     
-     font-size: 5vh;
- }
 
  .button-left-advancedVerbs {
     background-color: transparent;
     border: transparent;
     position: absolute;
-    margin-top: 42vh;
+    margin-top: 43.5vh;
     margin-left: -43vh;
      width: 30vh;
      height: 14vh;
@@ -323,7 +314,7 @@ border:1
     background-color: transparent;
     position: absolute;
     border: transparent;
-    margin-top: 42vh;
+    margin-top: 43.5vh;
      margin-left:13vh ;
      width: 30vh;
      height: 14vh;
@@ -332,4 +323,54 @@ border:1
      color: white;
 }
 
+
+/*-------------------------------------------FINAL PANEL-----------------------------------------------*/
+
+.finalPanel-advanced {
+    position: absolute;
+    color: white;
+    font-size: 9.9vh;
+    border: 2.5vh solid rgb(57, 2, 52);
+    background-color: black;
+    border-radius: 7vh;
+    margin-left: -3vh;
+    margin-top: -20vh;
+    justify-content: center;
+    align-items: center;
+    width: 140vh;
+    height: 76vh;
+    text-align: center;
+    font-family: 'Atma', cursive;
+    line-height: 12vh;
+}
+
+
+.buttonCompleted-advanced {
+    font-family: 'Atma', cursive;
+    font-size: 8vh;
+    width: auto;
+    color: rgb(137, 24, 124);
+}
+
+.confeti-advanced {
+    position: absolute;
+    margin-top: -60vh;
+    margin-left: -30vh;
+}
+
+.pass-advanced {
+    position: absolute;
+    width: 40vh;
+    margin-top: -30vh;
+    margin-left: 40vh;
+}
+
+.failed-advanced {
+   
+    position: absolute;
+    width: 28vh;
+    margin-left: -70vh;
+    margin-top: 18vh;
+
+}
 
