@@ -127,7 +127,7 @@ export default function AdvancedMenu() {
                     </span>
                     <p>
                       <h3 className="title-containerAdvancedMatch">
-                        Can you find?
+                        Guess what
                       </h3>
                     </p>
                   </div>

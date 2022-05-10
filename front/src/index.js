@@ -23,13 +23,16 @@ import IntermediateView from "./views/GamesView/IntermediateView";
 import AdvancedView from "./views/GamesView/AdvancedView";
 import About from "./views/About/About";
 import Guide from "./views/Guide/Guide";
-import Score from "./components/Score/Score";
+import ShowScore from "./components/Score/ShowScore";
 
 import BasicVocabulary from "./components/Games/Basic/BasicVocabulary";
 import BasicGrammar from "./components/Games/Basic/BasicGrammar";
 import BasicMatch from "./components/Games/Basic/BasicMatch";
 import BasicChoose from "./components/Games/Basic/BasicChoose";
-import IntroBasic from "./components/Games/Basic/Introbasic";
+import IntroVocabulary from "./components/Games/Basic/IntroVocabulary";
+import IntroGrammar from "./components/Games/Basic/IntroGrammar";
+import IntroChoose from "./components/Games/Basic/IntroChoose";
+import IntroMatch from "./components/Games/Basic/IntroMatch";
 
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
@@ -61,14 +64,20 @@ root.render(
           <Route path="index-menu" element={<IndexMenu />} />
           <Route path="profile" element={<ProfileView />} />
           <Route path="games" element={<Games />} />
-          <Route path="score" element={<Score />} />
+          <Route path="showscore" element={<ShowScore />} />
 
           <Route path="games/basic" element={<BasicView />} />
           <Route path="games/basic/vocabulary" element={<BasicVocabulary />} />
           <Route path="games/basic/grammar" element={<BasicGrammar />} />
           <Route path="games/basic/match" element={<BasicMatch />} />
           <Route path="games/basic/choose" element={<BasicChoose />} />
-          <Route path="games/basic/intro/choose" element={<IntroBasic />} />
+          <Route
+            path="games/basic/intro/vocabulary"
+            element={<IntroVocabulary />}
+          />
+          <Route path="games/basic/intro/grammar" element={<IntroGrammar />} />
+          <Route path="games/basic/intro/choose" element={<IntroChoose />} />
+          <Route path="games/basic/intro/match" element={<IntroMatch />} />
 
           <Route path="games/intermediate" element={<IntermediateView />} />
           <Route

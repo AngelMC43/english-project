@@ -133,11 +133,19 @@ export default function AdvancedVocabulary() {
             ></input>
             {answer.correct !=
             (questions.length > 0 ? questions[jump].correct : "") ? (
-              <img src={arrow} onClick={handleJump} className="arrowPink" />
+              <img
+                src={arrow}
+                onClick={handleJump}
+                className="arrowPink"
+                value={answer}
+              />
             ) : (
-              <button onClick={handleJoined} name="">
-                next
-              </button>
+              <img
+                src={arrow}
+                onClick={handleJoined}
+                className="arrowPink"
+                value={answer}
+              />
             )}
           </div>
         </form>

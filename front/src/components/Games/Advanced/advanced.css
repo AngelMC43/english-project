@@ -138,117 +138,7 @@ border:1
      font-family: 'Comic Neue', cursive;     
      font-size: 5vh;
 }
-/*-------------------------------------------QUE VEO-----------------------------------------------*/
- .main-matchAdvanced {
-    border: 3vh solid rgb(175, 255, 14);
-    border-radius: 6.6vh;
-    margin: auto;
-    margin-top: 5.5vh;
-     justify-content: center;
-     align-items: center;
-     width: 139vh;
-     height: 75vh;
-     text-align: center;
-     background-image: url("../../../visual/advanced/fondoMain.jpg");
-     font-family: 'Atma', cursive;
 
-}
-
-.inside-container-matchAdvanced {
-    position: absolute;
-    width: 133vh;
-    height: 69vh;
-    border: 0.5vh solid black;
-    border-radius: 3.3vh;
-}
-
-.title-matchAdvanced {
-    position: absolute;
-    margin-top: 3vh;
-    font-size: 6vh;
-}
-
-.helicopter-match {
-    position: absolute;
-    margin-top: 14vh;
-    margin-left: 6.5vh;
-    margin-right: 6.6vh;
-    width: 22vh;
-    height: 10vh;
-}
-
-
-.cloud-match {
-    position: absolute;
-    margin-top: 9vh;
-    width: 20vh;
-    height: 14vh;
-    margin-left: 99vh;
-}
-
-.parachute-match {
-    position: absolute;
-    margin-top: 26vh;
-    margin-left: 70.6vh;
-    width: 4.95vh;
-    height: 4.95vh;
-}
-
-.humming-match {
-    position: absolute;
-    margin-top: 19vh;
-    margin-left: 117vh;
-    width: 10vh;
-    height: 8vh;
-}
-
-.platform-match {
-    position: absolute;
-    margin-top: 28vh;
-    margin-left: 0vh;
-    width: 11vh;
-    height: 9vh;
-}
-
-.boat-match {
-    position: absolute;
-    margin-top: 32vh;
-    margin-left: 24vh;
-    width: 9vh;
-    height: 10vh;
-}
-
-.barn-match {
-    position: absolute;
-    margin-top: 34vh;
-    margin-left: 76vh;
-    width: 8vh;
-    height: 9vh;
-}
-
-.bull-match {
-    position: absolute;
-    margin-top: 50vh;
-    margin-left: 100vh;
-    width: 9.5vh;
-    height: 5.8vh;
-}
-
-.launch-match {
-    position: absolute;
-    margin-left: 2vh;
-    margin-top: 49vh;
-    width: 14vh;
-    height: 6vh;
-}
-
-.roc-match {
-    position: absolute;
-    margin-top: 53vh;
-    width: 15vh;
-    height: 9vh;
-    margin-left: 19vh;
-} 
 
 /*---------------------------------VERBS-------------------------------------------*/
 .main-advancedVerbs {
@@ -315,6 +205,125 @@ border:1
 }
 
 
+/*-------------------------------------------MATCH-----------------------------------------------*/
+.main-matchAdvanced {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 139vh;
+     height: 75vh;
+     text-align: center;
+     background-image: url("../../../visual/advanced/fondoMain.png");
+     font-family: 'Atma', cursive;
+
+}
+
+.inside-container-matchAdvanced {
+    position: absolute;
+    width: 133vh;
+    height: 69vh;
+    border: 0.5vh solid black;
+    border-radius: 3.3vh;
+}
+
+.title-matchAdvanced {
+    border-radius: 5vh;
+    font-size: 6vh;
+    margin-top: 4vh;
+    position: absolute;
+    width: 132vh;
+    margin-left: 1vh;
+    margin-top: 1vh;
+    margin-right: 1vh;
+}
+
+.helicopter-match {
+    position: absolute;
+    margin-top: 14vh;
+    margin-left: 6.5vh;
+    margin-right: 6.6vh;
+    width: 22vh;
+    height: 10vh;
+}
+
+
+.cloud-match {
+    position: absolute;
+    margin-top: 13vh;
+    width: 20vh;
+    height: 14vh;
+    margin-left: 86vh;
+}
+
+.parachute-match {
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 70.6vh;
+    width: 4.95vh;
+    height: 4.95vh;
+}
+
+.humming-match {
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 119vh;
+    width: 8vh;
+    height: 7vh;
+}
+
+.platform-match {
+    position: absolute;
+    margin-top: 28vh;
+    margin-left: 0vh;
+    width: 11vh;
+    height: 9vh;
+}
+
+.boat-match {
+    position: absolute;
+    margin-top: 32vh;
+    margin-left: 24vh;
+    width: 9vh;
+    height: 10vh;
+}
+
+.barn-match {
+    position: absolute;
+    margin-top: 34vh;
+    margin-left: 76vh;
+    width: 8vh;
+    height: 9vh;
+}
+
+.bull-match {
+    position: absolute;
+    margin-top: 49vh;
+    margin-left: 103vh;
+    width: 11.5vh;
+    height: 7.8vh;
+}
+
+.launch-match {
+    position: absolute;
+    margin-left: 2vh;
+    margin-top: 49vh;
+    width: 14vh;
+    height: 6vh;
+}
+
+.roc-match {
+    position: absolute;
+    margin-top: 54vh;
+    width: 12vh;
+    height: 6vh;
+    margin-left: 19vh;
+
+} 
+
+
 /*-------------------------------------------FINAL PANEL-----------------------------------------------*/
 
 .finalPanel-advanced {
@@ -335,12 +344,37 @@ border:1
     line-height: 12vh;
 }
 
+.finalPanel-matchAdvanced {
+    position: absolute;
+    color: white;
+    font-size: 9.9vh;
+    border: 2.5vh solid rgb(57, 2, 52);
+    background-color: black;
+    border-radius: 7vh;
+    margin-left: -3vh;
+    margin-top: -4vh;
+    justify-content: center;
+    align-items: center;
+    width: 140vh;
+    height: 76vh;
+    text-align: center;
+    font-family: 'Atma', cursive;
+    line-height: 12vh;
+}
+
 
 .buttonCompleted-advanced {
     font-family: 'Atma', cursive;
     font-size: 8vh;
     width: auto;
     color: rgb(137, 24, 124);
+}
+
+.buttonCompleted-basicRed {
+    font-family: 'Atma', cursive;
+    font-size: 8vh;
+    width: auto;
+    color: rgb(241, 6, 73);
 }
 
 .confeti-advanced {
@@ -362,6 +396,5 @@ border:1
     width: 28vh;
     margin-left: -70vh;
     margin-top: 18vh;
-
 }
 

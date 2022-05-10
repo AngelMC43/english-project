@@ -1,0 +1,47 @@
+.container-score {
+    border: 0.9vh solid black;
+    border-radius: 4vh;
+    width: 120vh;
+    margin-left: 40vh;
+    margin-right: 1.5vh;
+    margin-top: 5vh;
+    border-radius: 3vh;
+    padding: 1vh;
+    position: relative;
+    background-image: url("../../visual/main/notwo.jpg");
+    /* background-color: rgb(219 217 219) */
+}
+
+.logo-score {
+    border:  solid black;
+    border-radius: 1vh;
+    margin-left: 6vh;
+    margin-right: 1.5vh;
+    display: flex;
+    width: 16.6vh;
+    height: 16.6vh;
+}
+
+.title-nameScore {
+    font-family: 'Atma', cursive;
+}
+
+
+
+.subtitle-optScore {
+    font-family: 'Comic Neue', cursive;     
+}
+
+.title-score {
+    font-family: 'Atma', cursive;
+    text-align: center;
+    background-color: white;
+    border-radius: 9vh;
+    font-size: 12vh;
+    border: 0.7vh solid black;
+    width: 52vh;
+    padding-top: 2vh;
+    margin: auto;
+    margin-top: 3vh;
+}
+

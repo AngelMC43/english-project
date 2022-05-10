@@ -128,10 +128,63 @@ app.delete("/delete/:id", function (request, response) {
 });
 
 //------------------------ALL RANKING SCORE------------------------------
+app.get("/showscore/uno", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE INTERMEDIATE VOCABULARIO------------------------------
 app.get("/showscore", function (request, response) {
   conectar();
   connection.query(
-    `SELECT * from users ORDER BY score DESC`,
+    `SELECT u.name, u.surname, avatar, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" AND p.type="choose" ORDER BY score DESC limit 5
+    `,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE INTERMEDIATE GRAMMAR------------------------------
+app.get("/showscore", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE INTERMEDIATE VERBS------------------------------
+app.get("/showscore", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE INTERMEDIATE MATCH------------------------------
+app.get("/showscore", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);

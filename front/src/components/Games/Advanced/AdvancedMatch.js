@@ -224,40 +224,40 @@ export default function BasicMatch() {
               <div>
                 <img
                   src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-Advanced animate__animated animate__bounceIn"
+                  className="confeti-basic animate__animated animate__bounceIn"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-Advanced animate__animated animate__fadeInUpBig animate__delay-2s"
+                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
                 />
                 <img
                   src={questions.length > 0 ? questions[10].correct : ""}
-                  className="wellDone-Advanced animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
                 />
               </div>
             ) : (
               <div>
                 <img
                   src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-Advanced animate__animated animate__fadeInRightBig animate__delay-1s"
+                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
                 />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser-Advanced animate__animated animate__jackInTheBox"
+                  className="loser-basic animate__animated animate__jackInTheBox"
                 />
               </div>
             )}
             <Link to="/" className="buttonCompleted-basicRed">
-              Congratulation!
+              Congratulation!!!
             </Link>
             <br />
-            <Link to="/showscore" className="buttonCompleted-basic">
+            <Link to="/showscore" className="buttonCompleted-advanced">
               Ranking
             </Link>
             <br />
-            <Link to="/games/basic" className="buttonCompleted-basic">
+            <Link to="/games/advanced" className="buttonCompleted-advanced">
               Menu
-            </Link>
+            </Link>{" "}
           </div>
         ) : (
           ""

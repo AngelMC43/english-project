@@ -1,4 +1,4 @@
-import Score from "../Score/Score";
+import Score from "../Score/ShowScore";
 import IndexMenu from "../../views/indexMenu/IndexMenu";
 
 export default function FinalPanel() {

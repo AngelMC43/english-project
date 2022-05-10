@@ -1,9 +1,9 @@
-import intro from "../../../visual/basic/introBasicChoose.mp4";
+import introBasicVocabulary from "../../../visual/basic/introBasicVocabulary.mp4";
 import { Link } from "react-router-dom";
 import "./introbasic.css";
 import start from "../../../visual/basic/start.png";
 
-export default function IntroBasic() {
+export default function IntroVocabulary() {
   return (
     <div className="mainIntro-choose">
       <Link to="/games/basic/choose">
@@ -15,7 +15,7 @@ export default function IntroBasic() {
           Start
         </h4>
         <video autoPlay muted className="videoIntro-choose">
-          <source src={intro} type="video/mp4" />
+          <source src={introBasicVocabulary} type="video/mp4" />
         </video>
       </Link>
     </div>
