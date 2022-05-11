@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 import arrow from "../../../visual/main/arrow.png";
 
+const initialAnswerValue = {
+  correct: "",
+};
+
 export default function AdvancedVocabulary() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
   const { userLogged } = useLoginContext();
-  const [answer, setAnswer] = useState({
-    correct: "",
-  });
-
+  const [answer, setAnswer] = useState(initialAnswerValue);
+  console.log({ questions });
   const handleChange = (event) => {
     event.preventDefault();
     setAnswer({
@@ -47,8 +49,8 @@ export default function AdvancedVocabulary() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "advanced",
-          type: "vocabulary",
+          level: "Advanced",
+          type: "Vocabulary",
           score: count,
         }),
       });
@@ -62,18 +64,16 @@ export default function AdvancedVocabulary() {
   };
 
   function handleJoined(e) {
-    e.stopPropagation();
     e.preventDefault();
     handleCount();
     setJump(jump + 1);
-    setAnswer({ correct: " " });
+    setAnswer(initialAnswerValue);
   }
 
   function handleJump(e) {
-    e.stopPropagation();
     e.preventDefault();
     setJump(jump + 1);
-    setAnswer({ correct: " " });
+    setAnswer(initialAnswerValue);
   }
 
   console.log("Esto es jump", jump);
@@ -130,78 +130,76 @@ export default function AdvancedVocabulary() {
               className="browser-default input-advancedVocabulary"
               placeholder="WRITE YOUR ANSWER"
               onChange={handleChange}
+              value={answer.correct}
             ></input>
             {answer.correct !=
             (questions.length > 0 ? questions[jump].correct : "") ? (
-              <img
-                src={arrow}
-                onClick={handleJump}
-                className="arrowPink"
-                value={answer}
-              />
+              <img src={arrow} onClick={handleJump} className="arrowPink" />
             ) : (
-              <img
-                src={arrow}
-                onClick={handleJoined}
-                className="arrowPink"
-                value={answer}
-              />
+              <img src={arrow} onClick={handleJoined} className="arrowPink" />
             )}
           </div>
         </form>
       </div>
-
-      <div>
-        {questions[10] === questions[jump] ? (
-          <div className="finalPanel-advanced">
-            <h2>Game completed!</h2>
-            <h2>Score: {count}/10 </h2>
-            {count > 4 ? (
-              <div>
-                <img
-                  src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-basic animate__animated animate__bounceIn"
-                />
-                <img
-                  src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
-                />
-                <img
-                  src={questions.length > 0 ? questions[10].correct : ""}
-                  className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
-                />
-              </div>
-            ) : (
-              <div>
-                <img
-                  src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
-                />
-                <img
-                  src={questions.length > 0 ? questions[11].pic_incorrect : ""}
-                  className="loser-basic animate__animated animate__jackInTheBox"
-                />
-              </div>
-            )}
-            <Link
-              to="/games/advanced/verbs"
-              className="buttonCompleted-advanced"
-            >
-              Next Game
-            </Link>
-            <br />
-            <Link to="/showscore" className="buttonCompleted-advanced">
-              Ranking
-            </Link>
-            <br />
-            <Link to="/games/advanced" className="buttonCompleted-advanced">
-              Menu
-            </Link>{" "}
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
+      {questions === [] ? (
+        <></>
+      ) : (
+        <div>
+          {questions[10] === questions[jump] ? (
+            <div className="finalPanel-advanced">
+              <h2>Game completed!</h2>
+              <h2>Score: {count}/10 </h2>
+              {count > 4 ? (
+                <div>
+                  <img
+                    src={questions.length > 0 ? questions[10].pic_correct : ""}
+                    className="confeti-basic animate__animated animate__bounceIn"
+                  />
+                  <img
+                    src={
+                      questions.length > 0 ? questions[10].pic_incorrect : ""
+                    }
+                    className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
+                  />
+                  <img
+                    src={questions.length > 0 ? questions[10].correct : ""}
+                    className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                  />
+                </div>
+              ) : (
+                <div>
+                  <img
+                    src={questions.length > 0 ? questions[11].pic_correct : ""}
+                    className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
+                  />
+                  <img
+                    src={
+                      questions.length > 0 ? questions[11].pic_incorrect : ""
+                    }
+                    className="loser-basic animate__animated animate__jackInTheBox"
+                  />
+                </div>
+              )}
+              <Link
+                to="/games/advanced/verbs"
+                className="buttonCompleted-advanced"
+              >
+                Next Game
+              </Link>
+              <br />
+              <Link to="/showscore" className="buttonCompleted-advanced">
+                Ranking
+              </Link>
+              <br />
+              <Link to="/games/advanced" className="buttonCompleted-advanced">
+                Menu
+              </Link>{" "}
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+      )}
     </div>
   );
 }

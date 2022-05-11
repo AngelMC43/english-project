@@ -1,0 +1,119 @@
+.container-score {
+    border: 0.9vh solid black;
+    border-top-left-radius: 8vh;
+    border-top-right-radius: 8vh;
+    
+    width: 120vh;
+    margin-left: 40vh;
+    margin-right: 1.5vh;
+    margin-top: 5vh;
+   
+    padding: 1vh;
+    position: relative;
+    background-image: url("../../visual/main/fm.jpg");
+}
+
+.buttonRank-score {
+color: black;
+}
+
+.logo-score {
+    border:  solid black;
+    border-radius: 1vh;
+    margin-left: 6vh;
+    margin-right: 1.5vh;
+    display: flex;
+    width: 16.6vh;
+    height: 16.6vh;
+}
+
+.title-nameScore {
+    font-family: 'Atma', cursive;
+}
+
+.introTitle-score {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Atma', cursive;
+    font-size: 4.5vh;
+    margin-left: 1.5vh;
+    width: 100%;
+    text-align: center;
+}
+
+.rankInt {
+    border: 0.5vh solid black;
+    border-top-left-radius: 6vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: black;
+    padding: 4vh;
+    width: 56vh;
+    margin-left: -3vh;
+    background-color: rgb(175, 255, 14);
+
+}
+
+
+.rankAdv {
+    border: 0.5vh solid black;
+    border-top-right-radius: 6vh;
+    padding: 4vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: black;
+    width: 56vh;
+    background-color: rgb(175, 255, 14);
+
+}
+
+.classInt {
+    display: grid;
+    border: 0.5vh solid black;
+    border-bottom-right-radius: 6vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  
+    padding: 4vh;
+    width: 56vh;
+    margin-left: -3vh;
+    background-image: url("../../visual/main/noonea.jpg");
+    font-size: 3vh;
+    padding-top: 2.6vh;
+    height: 21vh;
+    line-height: 3.5vh;;
+
+}
+
+.classAdv {
+    display: grid;
+    border: 0.5vh solid black;
+    border-bottom-left-radius: 6vh;
+    padding: 4vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 56vh;
+    background-image: url("../../visual/main/noonea.jpg");
+    font-size: 3vh;
+    padding-top: 2.6vh;
+    height: 21vh;
+    line-height: 3.5vh;
+}
+
+.subtitle-optScore {
+    font-family: 'Comic Neue', cursive;     
+}
+
+.title-score {
+    font-family: 'Atma', cursive;
+    text-align: center;
+    background-color: white;
+    border-radius: 9vh;
+    font-size: 12vh;
+    border: 0.7vh solid black;
+    width: 52vh;
+    padding-top: 2vh;
+    margin: auto;
+    margin-top: 3vh;
+}
+

@@ -81,6 +81,7 @@ app.post("/login", function (request, response) {
           age: rows[0].age,
           email: rows[0].email,
           id: rows[0].id,
+          avatar: rows[0].avatar,
         });
         console.log("conexion perfecta");
       }
@@ -131,7 +132,7 @@ app.delete("/delete/:id", function (request, response) {
 app.get("/showscore/uno", function (request, response) {
   conectar();
   connection.query(
-    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    `SELECT * FROM punctuation JOIN users ORDER BY score DESC`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);
@@ -141,10 +142,10 @@ app.get("/showscore/uno", function (request, response) {
 });
 
 //------------------------SCORE INTERMEDIATE VOCABULARIO------------------------------
-app.get("/showscore", function (request, response) {
+app.get("/showscore/intermediate-vocabulary", function (request, response) {
   conectar();
   connection.query(
-    `SELECT u.name, u.surname, avatar, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" AND p.type="choose" ORDER BY score DESC limit 5
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="Intermediate" AND p.type="vocabulary" ORDER BY score DESC limit 5
     `,
     function (err, rows, fields) {
       if (err) throw err;
@@ -155,10 +156,10 @@ app.get("/showscore", function (request, response) {
 });
 
 //------------------------SCORE INTERMEDIATE GRAMMAR------------------------------
-app.get("/showscore", function (request, response) {
+app.get("/showscore/intermediate-grammar", function (request, response) {
   conectar();
   connection.query(
-    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="intermediate" AND p.type="grammar" ORDER BY score DESC limit 5`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);
@@ -168,10 +169,10 @@ app.get("/showscore", function (request, response) {
 });
 
 //------------------------SCORE INTERMEDIATE VERBS------------------------------
-app.get("/showscore", function (request, response) {
+app.get("/showscore/intermediate-verbs", function (request, response) {
   conectar();
   connection.query(
-    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="intermediate" AND p.type="verbs" ORDER BY score DESC limit 5`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);
@@ -181,10 +182,62 @@ app.get("/showscore", function (request, response) {
 });
 
 //------------------------SCORE INTERMEDIATE MATCH------------------------------
-app.get("/showscore", function (request, response) {
+app.get("/showscore/intermediate-match", function (request, response) {
   conectar();
   connection.query(
-    `SELECT u.name, u.surname, p.level, p.type , p.score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="basic" ORDER BY score DESC`,
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="intermediate" AND p.type="can you find?" ORDER BY score DESC limit 5`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE ADVANCED VOCABULARY------------------------------
+app.get("/showscore/advanced-vocabulary", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="advanced" AND p.type="vocabulary" ORDER BY score DESC limit 5`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE ADVANCED GRAMMAR------------------------------
+app.get("/showscore/advanced-grammar", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="advanced" AND p.type="grammar" ORDER BY score DESC limit 5`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE ADVANCED VERBS------------------------------
+app.get("/showscore/advanced-verbs", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="advanced" AND p.type="phrasal verbs" ORDER BY score DESC limit 5`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      response.json(rows);
+    }
+  );
+  desconectar();
+});
+
+//------------------------SCORE ADVANCED MATCH------------------------------
+app.get("/showscore/advanced-match", function (request, response) {
+  conectar();
+  connection.query(
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="advanced" AND p.type="guess what" ORDER BY score DESC limit 5`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);

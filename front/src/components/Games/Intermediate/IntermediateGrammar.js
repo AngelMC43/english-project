@@ -33,8 +33,8 @@ export default function IntermediateGrammar() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "intermediate",
-          type: "grammar",
+          level: "Intermediate",
+          type: "Grammar",
           score: count,
         }),
       });

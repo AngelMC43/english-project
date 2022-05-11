@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./introbasic.css";
 import start from "../../../visual/basic/start.png";
 
-export default function IntroGrammar() {
+export default function IntroBasicGrammar() {
   return (
     <div className="mainIntro-choose">
       <Link to="/games/basic/grammar">

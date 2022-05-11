@@ -1,5 +1,6 @@
 import { useLoginContext } from "../../context/LoginContext";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./showScore.css";
 
 export default function ShowScore() {
@@ -20,29 +21,45 @@ export default function ShowScore() {
   return (
     <div className="align-text-center">
       <h1 className="title-score">SCORE</h1>
-
-      <div className="container-score">
-        {mark.map((item) => (
-          <div key={item.id}>
-            <ul className="collection">
-              <li className="collection-item avatar">
-                <img src={item.avatar} className="circle" />
-                <h6 className="title-nameScore">
-                  {item.name} {item.surname}
-                </h6>
-                <h7 className="subtitle-optScore">
-                  <b>
-                    {item.level} {item.type}
-                  </b>
-                </h7>
-                <h5 className="title-nameScore">{item.score}</h5>
-                <a href="#!" className="secondary-content">
-                  <i className="material-icons">grade</i>
-                </a>
-              </li>
-            </ul>
+      <div className="mainContainer-score">
+        <div className="introTitle-score">
+          <div className="rankInt">Ranking Intermediate</div>
+          <div className="rankAdv">Ranking Advanced</div>
+        </div>
+        <div className="introTitle-score">
+          <div className="classInt">
+            <Link className="buttonRank-score" to="intermediate-vocabulary">
+              Vocabulary
+            </Link>
+            <Link className="buttonRank-score" to="intermediate-verbs">
+              Verbs
+            </Link>
+            <Link className="buttonRank-score" to="intermediate-grammar">
+              Grammar
+            </Link>
+            <Link className="buttonRank-score" to="intermediate-match">
+              Can you see?
+            </Link>
           </div>
-        ))}
+
+          <div className="classAdv">
+            <Link className="buttonRank-score" to="advanced-vocabulary">
+              Vocabulary
+            </Link>
+            <Link className="buttonRank-score" to="advanced-verbs">
+              Verbs
+            </Link>
+            <Link className="buttonRank-score" to="advanced-grammar">
+              Grammar
+            </Link>
+            <Link className="buttonRank-score" to="advanced-match">
+              Can you see?
+            </Link>
+          </div>
+        </div>
+        <div>
+          <h2 className="h2Choose-score">Choose one categorie</h2>
+        </div>
       </div>
     </div>
   );

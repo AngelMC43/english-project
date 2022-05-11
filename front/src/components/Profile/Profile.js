@@ -4,27 +4,35 @@ import { Link } from "react-router-dom";
 
 export default function Profile() {
   const { userLogged } = useLoginContext();
-
+  console.log(userLogged);
   return (
     <div className="mainContainer-profile">
       <h3 className="title ">
-        {userLogged.name} {userLogged.surname}
+        {userLogged.name} {userLogged.surname}{" "}
       </h3>
+      <div>
+        {" "}
+        <img src={userLogged.avatar} className="circle" />
+      </div>
+
+      <h1 className="avaPic">hola</h1>
       <div className=" inside-container w-75 ">
         <div className="card-header ">
           <ul className="nav nav-tabs card-header-tabs">
             <li className="nav-item ">
               <a className="nav-link active " aria-current="true" href="#">
-                Datos
+                <b>Datos</b>
               </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/puntuacion">
-                Puntuación
+              <Link to="/showscore" className="nav-link  ">
+                <b>Score</b>
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Actualiza</a>
+              <a className="nav-link">
+                <b>Actualizar</b>
+              </a>
             </li>
           </ul>
         </div>

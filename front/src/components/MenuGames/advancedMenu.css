@@ -19,11 +19,11 @@
 }
 
 .title-containerAdvancedMatch {
-    background: linear-gradient(24deg, rgb(173 54 145), #997697);   
+    background: linear-gradient(24deg, rgb(173 54 145), #c2a6b9);   
     margin-top: 0vh;
     width: 47.8vh;
     border-left-style: dashed;   
-    margin-left: 0.3vh;
+    margin-left: 0.6vh;
     border-top: 0.4vh solid black;
 }
 
@@ -32,9 +32,9 @@
     width: 71.7vh;
     border-left-style: dashed;
     border-top: 0.4vh solid black;
-    margin-left: 0.3vh;
+    margin-left: 0.6vh;
     position: absolute;
-    background: linear-gradient(24deg, rgb(173 54 145), #997697);
+    background: linear-gradient(24deg, rgb(173 54 145), #c2a6b9);
 
 }
 

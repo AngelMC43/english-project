@@ -32,8 +32,8 @@ export default function AdvancedGrammar() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "advanced",
-          type: "grammar",
+          level: "Advanced",
+          type: "Grammar",
           score: count,
         }),
       });

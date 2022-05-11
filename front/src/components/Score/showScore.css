@@ -1,16 +1,31 @@
-.container-score {
+.mainContainer-score {
     border: 0.9vh solid black;
     border-radius: 4vh;
     width: 120vh;
     margin-left: 40vh;
     margin-right: 1.5vh;
     margin-top: 5vh;
-    border-radius: 3vh;
+    border-radius: 8vh;
     padding: 1vh;
+    height: 60vh;
     position: relative;
-    background-image: url("../../visual/main/notwo.jpg");
-    /* background-color: rgb(219 217 219) */
+    background-image: url("../../visual/main/fm.jpg");
+  
 }
+
+.h2Choose-score {
+    border: 0.5vh solid black;
+    padding: 2vh;
+    margin-top: 1vh;
+    border-bottom-left-radius: 6vh;
+    border-bottom-right-radius: 6vh;
+    background-color: white;
+    font-family: 'Atma', cursive;
+    text-align: center;
+
+
+}
+
 
 .logo-score {
     border:  solid black;

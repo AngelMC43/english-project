@@ -33,8 +33,8 @@ export default function IntermediateVerbs() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "intermediate",
-          type: "verbs",
+          level: "Intermediate",
+          type: "Verbs",
           score: count,
         }),
       });

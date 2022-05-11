@@ -35,9 +35,17 @@ export default function Main() {
         >
           <i className="material-icons left ">person_add</i>Registrate
         </Link>
-        <video loop autoPlay muted className="video-main">
-          <source src={presentation} type="video/mp4" />
-        </video>
+        {userLogged ? (
+          <Link to="index-menu">
+            <video loop autoPlay muted className="video-main">
+              <source src={presentation} type="video/mp4" />
+            </video>
+          </Link>
+        ) : (
+          <video loop autoPlay muted className="video-main">
+            <source src={presentation} type="video/mp4" />
+          </video>
+        )}
       </div>
       <h1 className="title-main animate__animated animate__delay-1s animate__backInRight">
         {" "}

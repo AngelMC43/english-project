@@ -33,8 +33,8 @@ export default function AdvancedVerbs() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "advanced",
-          type: "verbs",
+          level: "Advanced",
+          type: "Phrasal verbs",
           score: count,
         }),
       });

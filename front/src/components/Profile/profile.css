@@ -2,18 +2,17 @@
 .mainContainer-profile {
     display: flex;
     margin-top: 10vh;
-    margin-left: 57vh;
+    margin-left: 43vh;
     height: 70vh;
     background-image: url("../../visual/main/fm.jpg");
-    width: 87vh;
+    width: 116vh;
     padding-top: 11vh;
     padding-bottom: 5vh;
     border-radius: 3vh;
     background-position: left;
     position: relative;
-   font-family: 'Comic Neue', cursive;
+    font-family: 'Comic Neue', cursive;
 }
-
 .bold {
     text-decoration:dashed ;
 }
@@ -24,6 +23,10 @@
     margin-left: 3vh;
     font-family: 'Atma', cursive;
     color:black;
+}
+
+.avaPic {
+    
 }
 
 .card-profile {
@@ -46,14 +49,14 @@
 }
 
 .button-profile {
-    width: 87vh;
-    margin-left: -2.5vh;
-    height: 9vh;
+    width: 116vh;
+    margin-left: 7.5vh;
+    height: 10vh;
     border-bottom-left-radius: 2vh;
     border-bottom-right-radius: 2vh;
     margin-top: -3vh;
     background-color: rgb(175, 255, 14);
-    padding-top: 3vh;
+    padding-top: 4vh;
     font-family: 'Atma', cursive;
     font-size: 3vh;
     color: black;

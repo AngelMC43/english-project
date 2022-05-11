@@ -1,12 +1,12 @@
-import intro from "../../../visual/basic/introBasicMatch.mp4";
+import intro from "../../../visual/basic/introBasicVocabulary.mp4";
 import { Link } from "react-router-dom";
 import "./introbasic.css";
 import start from "../../../visual/basic/start.png";
 
-export default function IntroMatch() {
+export default function IntroBasicVocabulary() {
   return (
-    <div className="mainIntro-choose">
-      <Link to="/games/basic/match">
+    <div className="introBasicVocabulary">
+      <Link to="/games/basic/vocabulary">
         <img
           src={start}
           className="imageIntro-choose animate__animated animate__backInLeft animate__delay-3s"

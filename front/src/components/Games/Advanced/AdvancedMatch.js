@@ -33,8 +33,8 @@ export default function BasicMatch() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "advanced",
-          type: "match",
+          level: "Advanced",
+          type: "Guess what",
           score: count,
         }),
       });

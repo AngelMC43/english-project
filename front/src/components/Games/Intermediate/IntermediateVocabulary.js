@@ -33,8 +33,8 @@ export default function IntermediateVocabulary() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "intermediate",
-          type: "vocabulary",
+          level: "Intermediate",
+          type: "Vocabulary",
           score: count,
         }),
       });

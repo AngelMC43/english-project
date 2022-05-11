@@ -30,8 +30,8 @@ export default function BasicChoose() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "basic",
-          type: "choose",
+          level: "Basic",
+          type: "Choose the correct",
           score: count,
         }),
       });

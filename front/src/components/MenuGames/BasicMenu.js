@@ -22,7 +22,7 @@ export default function BasicMenu() {
               <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
-                    to="intro/vocabulary"
+                    to="intro-vocabulary"
                     className="btn-floating floatSmall-basicMenu  waves-effect waves-light red"
                   >
                     <i className="material-icons">play_arrow</i>
@@ -53,7 +53,7 @@ export default function BasicMenu() {
               <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
-                    to="intro/choose"
+                    to="intro-choose"
                     className="btn-floating floatBig-basicMenu  waves-effect waves-light red"
                   >
                     <i className="material-icons">play_arrow</i>
@@ -87,7 +87,7 @@ export default function BasicMenu() {
               <div className="card card-content-edit">
                 <div className="card-image ">
                   <Link
-                    to="intro/grammar"
+                    to="intro-grammar"
                     className="btn-floating floatBig-basicMenu  waves-effect waves-light red"
                   >
                     <i className="material-icons">play_arrow</i>
@@ -118,7 +118,7 @@ export default function BasicMenu() {
               <div className="card card-content-edit">
                 <div className="card-image  ">
                   <Link
-                    to="intro/match"
+                    to="intro-match"
                     className="btn-floating floatSmall-basicMenu waves-effect waves-light red"
                   >
                     <i className="material-icons ">play_arrow</i>

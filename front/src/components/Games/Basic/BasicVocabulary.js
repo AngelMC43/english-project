@@ -33,8 +33,8 @@ export default function BasicVocabulary() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "basic",
-          type: "vocabulary",
+          level: "Basic",
+          type: "Vocabulary",
           score: count,
         }),
       });

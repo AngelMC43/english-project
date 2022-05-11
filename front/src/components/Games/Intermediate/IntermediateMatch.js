@@ -33,8 +33,8 @@ export default function IntermediateMatch() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "intermediate",
-          type: "match",
+          level: "Intermediate",
+          type: "Can you find?",
           score: count,
         }),
       });

@@ -1,11 +1,11 @@
 .video-index {
     border: 0.6vh solid black;
     border-radius: 3.7vh;
-    width: 45vh;
+    width: 42vh;
     display: block;
     margin: auto;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 10vh;
     margin-left: 10vh;
 }
@@ -30,3 +30,17 @@
     margin-right: 7.5vh;
     justify-content: space-between;
 }
+
+.boxRanking-index {
+    height: 11vh;
+    border-radius: 3vh;
+    margin-right: 7.5vh;
+    width: 34vh;
+    margin-left: 10vh;
+    margin-top: -6vh;
+    border: 0.6vh solid black;
+}
+
+
+
+

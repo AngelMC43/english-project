@@ -34,8 +34,8 @@ export default function BasicGrammar() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "basic",
-          type: "grammar",
+          level: "Basic",
+          type: "Grammar",
           score: count,
         }),
       });

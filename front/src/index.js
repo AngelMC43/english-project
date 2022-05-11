@@ -29,20 +29,30 @@ import BasicVocabulary from "./components/Games/Basic/BasicVocabulary";
 import BasicGrammar from "./components/Games/Basic/BasicGrammar";
 import BasicMatch from "./components/Games/Basic/BasicMatch";
 import BasicChoose from "./components/Games/Basic/BasicChoose";
-import IntroVocabulary from "./components/Games/Basic/IntroVocabulary";
-import IntroGrammar from "./components/Games/Basic/IntroGrammar";
-import IntroChoose from "./components/Games/Basic/IntroChoose";
-import IntroMatch from "./components/Games/Basic/IntroMatch";
+import IntroBasicVocabulary from "./components/Games/Basic/IntroBasicVocabulary";
+import IntroBasicGrammar from "./components/Games/Basic/IntroBasicGrammar";
+import IntroBasicChoose from "./components/Games/Basic/IntroBasicChoose";
+import IntroBasicMatch from "./components/Games/Basic/IntroBasicMatch";
 
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
 import IntermediateVerbs from "./components/Games/Intermediate/IntermediateVerbs";
 import IntermediateMatch from "./components/Games/Intermediate/IntermediateMatch";
 
+import ScoreIntVocabulary from "./components/Punctuation/ScoreIntVocabulary";
+import ScoreIntVerbs from "./components/Punctuation/ScoreIntVerbs";
+import ScoreIntGrammar from "./components/Punctuation/ScoreIntGrammar";
+import ScoreIntMatch from "./components/Punctuation/ScoreIntMatch";
+
 import AdvancedVocabulary from "./components/Games/Advanced/AdvancedVocabulary";
 import AdvancedGrammar from "./components/Games/Advanced/AdvancedGrammar";
 import AdvancedVerbs from "./components/Games/Advanced/AdvancedVerbs";
 import AdvancedMatch from "./components/Games/Advanced/AdvancedMatch";
+
+import ScoreAdvVocabulary from "./components/Punctuation/ScoreAdvVocabulary";
+import ScoreAdvVerbs from "./components/Punctuation/ScoreAdvVerbs";
+import ScoreAdvGrammar from "./components/Punctuation/ScoreAdvGrammar";
+import ScoreAdvMatch from "./components/Punctuation/ScoreAdvMatch";
 
 import { createRoot } from "react-dom/client";
 const rootElement = document.getElementById("root");
@@ -66,19 +76,29 @@ root.render(
           <Route path="games" element={<Games />} />
           <Route path="showscore" element={<ShowScore />} />
 
+          {/* ------------------------GAMES BASIC -------------------------------------------- */}
           <Route path="games/basic" element={<BasicView />} />
           <Route path="games/basic/vocabulary" element={<BasicVocabulary />} />
           <Route path="games/basic/grammar" element={<BasicGrammar />} />
           <Route path="games/basic/match" element={<BasicMatch />} />
           <Route path="games/basic/choose" element={<BasicChoose />} />
-          <Route
-            path="games/basic/intro/vocabulary"
-            element={<IntroVocabulary />}
-          />
-          <Route path="games/basic/intro/grammar" element={<IntroGrammar />} />
-          <Route path="games/basic/intro/choose" element={<IntroChoose />} />
-          <Route path="games/basic/intro/match" element={<IntroMatch />} />
 
+          {/* ------------------------INTRO BASIC-------------------------------------------- */}
+          <Route
+            path="games/basic/intro-vocabulary"
+            element={<IntroBasicVocabulary />}
+          />
+          <Route
+            path="games/basic/intro-grammar"
+            element={<IntroBasicGrammar />}
+          />
+          <Route
+            path="games/basic/intro-choose"
+            element={<IntroBasicChoose />}
+          />
+          <Route path="games/basic/intro-match" element={<IntroBasicMatch />} />
+
+          {/* ------------------------GAMES INTERMEDIATE-------------------------------------------- */}
           <Route path="games/intermediate" element={<IntermediateView />} />
           <Route
             path="games/intermediate/vocabulary"
@@ -98,6 +118,29 @@ root.render(
             element={<IntermediateMatch />}
           />
 
+          {/* ------------------------SCORE INTERMEDIATE-------------------------------------------- */}
+          <Route
+            path="showscore/intermediate-vocabulary"
+            element={<ScoreIntVocabulary />}
+          />
+
+          <Route
+            path="showscore/intermediate-verbs"
+            element={<ScoreIntVerbs />}
+          />
+
+          <Route
+            path="showscore/intermediate-grammar"
+            element={<ScoreIntGrammar />}
+          />
+
+          <Route
+            path="showscore/intermediate-match"
+            element={<ScoreIntMatch />}
+          />
+
+          {/* ------------------------GAMES ADVANCED-------------------------------------------- */}
+
           <Route path="games/advanced" element={<AdvancedView />} />
           <Route
             path="games/advanced/vocabulary"
@@ -106,6 +149,21 @@ root.render(
           <Route path="games/advanced/grammar" element={<AdvancedGrammar />} />
           <Route path="games/advanced/verbs" element={<AdvancedVerbs />} />
           <Route path="games/advanced/match" element={<AdvancedMatch />} />
+
+          {/* ------------------------SCORE ADVANCED-------------------------------------------- */}
+          <Route
+            path="showscore/advanced-vocabulary"
+            element={<ScoreAdvVocabulary />}
+          />
+
+          <Route path="showscore/advanced-verbs" element={<ScoreAdvVerbs />} />
+
+          <Route
+            path="showscore/advanced-grammar"
+            element={<ScoreAdvGrammar />}
+          />
+
+          <Route path="showscore/advanced-match" element={<ScoreAdvMatch />} />
         </Route>
       </Route>
     </Routes>

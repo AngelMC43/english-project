@@ -30,8 +30,8 @@ export default function BasicMatch() {
         },
         body: JSON.stringify({
           idUser: userLogged.id,
-          level: "basic",
-          type: "match",
+          level: "Basic",
+          type: "Can you see it?",
           score: count,
         }),
       });

@@ -160,7 +160,7 @@ border:1
 .apple-match {
     cursor: pointer;
     position: sticky;
-    margin-top: 10vh;
+    margin-top: 9vh;
     margin-left: 6.6vh;
     width: 4.95vh;
     height: 4.95vh;
@@ -169,7 +169,7 @@ border:1
 .house-match {
     cursor: pointer;
     position: sticky;
-    margin-top: 3.5vh;
+    margin-top: 2.5vh;
     margin-left: 30vh;
     width: 14vh;
     height: 14vh;
@@ -178,7 +178,7 @@ border:1
 .cat-match {
     cursor: pointer;
     position: sticky;
-    margin-top: 2vh;
+    margin-top: 1.5vh;
     margin-left: 22vh;
     width: 10vh;
     height: 10vh;
@@ -187,8 +187,8 @@ border:1
 .car-match {
     cursor: pointer;
     position: sticky;
-    margin-top: 5.8vh;
-    margin-left: 26.4vh;
+    margin-top: 4.5vh;
+    margin-left: 26vh;
     width: 16.5vh;
     height: 13.2vh;
     
@@ -198,7 +198,7 @@ border:1
     cursor: pointer;
     position: sticky;
     margin-top: 5.5vh;
-    margin-right: 1vh;
+    margin-right: 0vh;
     width: 11vh;
     height: 11vh;
 }
@@ -226,7 +226,7 @@ border:1
     margin-top: -6.6vh;
     width: 4vh;
     height: 4vh;
-    margin-right: 10vh;
+    margin-right: 9vh;
 }
 
 /*---------------------------------CHOOSE COORECT-------------------------------------------*/
@@ -260,8 +260,8 @@ border:1
 
 .img-correctChoose {
     position: absolute;
-    width: 40vh;
-    height: 40vh;
+    width: 37vh;
+    height: 37vh;
     margin-left: 10vh;
     cursor: pointer;
     margin-top: 5vh;
@@ -270,8 +270,8 @@ border:1
 
 .img-incorrectChoose {
     position: absolute;
-    width: 40vh;
-    height: 40vh;
+    width: 37vh;
+    height: 37vh;
     margin-left: -46vh;
     cursor: pointer;
     margin-top: 5vh;
