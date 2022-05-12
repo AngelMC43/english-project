@@ -158,9 +158,21 @@ export default function BasicVocabulary() {
                 />
               </div>
             )}
-            <Link to="/games/basic/choose" className="buttonCompleted-basic">
-              Next Game
-            </Link>
+            {count < 5 ? (
+              <Link
+                to="/games/basic/intro-vocabulary"
+                className="buttonCompleted-basic"
+              >
+                Try again
+              </Link>
+            ) : (
+              <Link
+                to="/games/basic/intro-choose"
+                className="buttonCompleted-basic"
+              >
+                Next Game
+              </Link>
+            )}
             <br />
             <Link to="/showscore" className="buttonCompleted-basic">
               Ranking
@@ -168,7 +180,7 @@ export default function BasicVocabulary() {
             <br />
             <Link to="/games/basic" className="buttonCompleted-basic">
               Menu
-            </Link>{" "}
+            </Link>
           </div>
         ) : (
           ""

@@ -243,9 +243,21 @@ export default function BasicMatch() {
                 />
               </div>
             )}
-            <Link to="/games/intermediate" className="buttonCompleted-basicRed">
-              Next Level!
-            </Link>
+            {count < 5 ? (
+              <Link
+                to="/games/basic/intro-match"
+                className="buttonCompleted-basic"
+              >
+                Try again
+              </Link>
+            ) : (
+              <Link
+                to="/games/next-intermediate"
+                className="buttonCompleted-basicRed"
+              >
+                Next Level
+              </Link>
+            )}
             <br />
             <Link to="/showscore" className="buttonCompleted-basic">
               Ranking

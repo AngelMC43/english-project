@@ -27,13 +27,6 @@ export default function IndexMenu() {
           </video>
         </Link>
       </div>
-      <div>
-        <Link to={`/showscore`}>
-          <video loop autoPlay muted className="boxRanking-index">
-            <source src={rankingVideo} type="video/mp4" />
-          </video>
-        </Link>
-      </div>
     </div>
   );
 }

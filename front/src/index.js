@@ -34,6 +34,7 @@ import IntroBasicGrammar from "./components/Games/Basic/IntroBasicGrammar";
 import IntroBasicChoose from "./components/Games/Basic/IntroBasicChoose";
 import IntroBasicMatch from "./components/Games/Basic/IntroBasicMatch";
 
+import NextIntermediate from "./components/Games/Intermediate/NextIntermediate";
 import IntermediateVocabulary from "./components/Games/Intermediate/IntermediateVocabulary";
 import IntermediateGrammar from "./components/Games/Intermediate/IntermediateGrammar";
 import IntermediateVerbs from "./components/Games/Intermediate/IntermediateVerbs";
@@ -44,6 +45,7 @@ import ScoreIntVerbs from "./components/Punctuation/ScoreIntVerbs";
 import ScoreIntGrammar from "./components/Punctuation/ScoreIntGrammar";
 import ScoreIntMatch from "./components/Punctuation/ScoreIntMatch";
 
+import NextAdvanced from "./components/Games/Advanced/NextAdvanced";
 import AdvancedVocabulary from "./components/Games/Advanced/AdvancedVocabulary";
 import AdvancedGrammar from "./components/Games/Advanced/AdvancedGrammar";
 import AdvancedVerbs from "./components/Games/Advanced/AdvancedVerbs";
@@ -98,6 +100,11 @@ root.render(
           />
           <Route path="games/basic/intro-match" element={<IntroBasicMatch />} />
 
+          <Route
+            path="games/next-intermediate"
+            element={<NextIntermediate />}
+          />
+
           {/* ------------------------GAMES INTERMEDIATE-------------------------------------------- */}
           <Route path="games/intermediate" element={<IntermediateView />} />
           <Route
@@ -138,6 +145,7 @@ root.render(
             path="showscore/intermediate-match"
             element={<ScoreIntMatch />}
           />
+          <Route path="games/basic/next-advanced" element={<NextAdvanced />} />
 
           {/* ------------------------GAMES ADVANCED-------------------------------------------- */}
 

@@ -148,12 +148,21 @@ export default function AdvancedVerbs() {
                 />
               </div>
             )}
-            <Link
-              to="/games/advanced/grammar"
-              className="buttonCompleted-advanced"
-            >
-              Next Game
-            </Link>
+            {count < 5 ? (
+              <Link
+                to="/games/advanced/verbs"
+                className="buttonCompleted-basic"
+              >
+                Try again
+              </Link>
+            ) : (
+              <Link
+                to="/games/advanced/grammar"
+                className="buttonCompleted-basic"
+              >
+                Next Game
+              </Link>
+            )}
             <br />
             <Link to="/showscore" className="buttonCompleted-advanced">
               Ranking

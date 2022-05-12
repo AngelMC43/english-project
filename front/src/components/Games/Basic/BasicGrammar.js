@@ -159,9 +159,21 @@ export default function BasicGrammar() {
                 />
               </div>
             )}
-            <Link to="/games/basic/match" className="buttonCompleted-basic">
-              Next Game
-            </Link>
+            {count < 5 ? (
+              <Link
+                to="/games/basic/intro-grammar"
+                className="buttonCompleted-basic"
+              >
+                Try again
+              </Link>
+            ) : (
+              <Link
+                to="/games/basic/intro-match"
+                className="buttonCompleted-basic"
+              >
+                Next Game
+              </Link>
+            )}
             <br />
             <Link to="/showscore" className="buttonCompleted-basic">
               Ranking

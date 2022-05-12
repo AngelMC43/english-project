@@ -1,21 +1,16 @@
-.logo-guide {
-    border:  solid black;
-    border-radius: 1vh;
-    margin-left: 6vh;
-    margin-right: 1.5vh;
-    display: flex;
-    width: 16.6vh;
-    height: 16.6vh;
-    
-}
-
 .title-guide {
     font-family: 'Atma', cursive;
     text-align: center;
+    background-color: black;
+    border-radius: 4vh;
+    color: white;
+    width: 69vh;
+    padding: 1vh;
+    margin-left: 38vh;
 }
 
 .container-guide {
-    border: 0.6vh solid black;
+    border: 1.5vh solid black;
     border-radius: 3vh;
     width: 150vh;
     margin-left: 25vh;
@@ -23,6 +18,107 @@
     margin-top: 5vh;
     border-radius: 3vh;
     position:relative;
-    height: 72vh;
+    background-color: rgb(207 151 204);
+    
+}
+
+.box-bases {
+    border-bottom: 1vh solid black;
+    border-top: 1vh solid black;
+    padding: 3vh;
+    border-radius: 14vh;
+    background-color: rgba(255, 255, 255);
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+.box-basic {
+    border-bottom: 1vh solid black;
+    border-top: 1vh solid black;
+    border-right: 0.5vh solid black;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    width: 72vh;
+    border-radius: 7vh;
+    padding: 5vh;
     background-color: rgba(255, 255, 255);
 }
+
+.box-intermediate {
+    border-top: 1vh solid black;
+    border-bottom: 1vh solid black;
+    border-left: 0.5vh solid black;
+    margin-top: 2vh;
+  
+    margin-left: 2vh;
+    margin-right: 2vh;
+    width: 72vh;
+    border-radius: 7vh;
+    padding: 5vh;
+    background-color: rgba(255, 255, 255);
+}
+
+.box-advanced {
+    border-top: 1vh solid black;
+    margin-top: 2vh;
+    border-radius: 24vh;
+    padding: 5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-bottom: 1vh solid black;
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+
+.green-letter {
+    color: rgb(175, 255, 14)
+}
+    
+.purple-letter {
+    color: rgb(251, 14, 255)
+}
+
+.font-guide {
+    font-family: 'Atma', cursive;
+    font-size: 5vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+}
+
+.font-guideHorizont {
+    font-family: 'Atma', cursive;
+    font-size: 5vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+    text-align: center;
+    width: 44vh;
+    margin-left: 47vh;
+}
+
+.font-paragraph {
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    text-align: justify;
+}
+
+.font-paragraphBases {
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    padding-bottom: 10vh;
+    padding-left: 16vh;
+    padding-right: 16vh;
+    text-align: justify;
+}
+
+.font-subtitlesGuide {
+    font-family: 'Atma', cursive;
+    font-size: 2.2vh;
+
+}
+
+

@@ -20,10 +20,18 @@
 
 .titleMain-footer {
     color:rgb(175, 255, 14);
-    margin-right: 9vh;
+    margin-right: 6vh;
 }
 
-
+.titleLogo-footer {
+    font-family: 'Atma', cursive;
+    text-align: center;
+    width: 50vh;
+    margin-top: 0vh;
+    margin-left: -18vh;
+    position: absolute;
+    color: white;
+}
 
 .pic-footer {
  width: 5.3vh;

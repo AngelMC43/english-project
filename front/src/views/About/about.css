@@ -1,3 +1,16 @@
+.container-about {
+    border: 1.5vh solid black;
+    border-radius: 3vh;
+    width: 150vh;
+    margin-left: 25vh;
+    margin-right: 1.5vh;
+    margin-top: 5vh;
+    border-radius: 3vh;
+    position:relative;
+    background-color: rgb(235 211 234);
+}
+
+
 .logo-about {
     border:  solid black;
     border-radius: 1vh;
@@ -12,17 +25,104 @@
 .title-about {
     font-family: 'Atma', cursive;
     text-align: center;
+    border: 0.5vh solid black;
+    border-radius: 7vh;
+    width: 50vh;
+    margin-left: 50vh;
+    color: white;
+    background-color: black;
 }
 
-.container-about {
-    border: 0.6vh solid black;
-    border-radius: 3vh;
-    width: 150vh;
-    margin-left: 25vh;
-    margin-right: 1.5vh;
-    margin-top: 5vh;
-    border-radius: 3vh;
-    position:relative;
-    height: 72vh;
-    background-color: rgba(255, 255, 255);
+.paragraph {
+    font-family: 'Comic Neue', cursive;     
+    font-weight: bold;
+    margin-left: 2vh;
+    margin-right: 2vh;
+
+    text-align: justify;
 }
+
+.paragraphHead-about {
+    font-family: 'Atma', cursive;
+    background-color: black;
+    color: white;
+    margin-top: 0vh;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+    padding-top: 2vh;
+    padding-left: 4vh;
+}
+
+.boxRetos-about {
+    border-bottom: 1vh solid black;
+    margin: 8vh;
+    margin-right: 70vh;
+    border-radius: 4vh;
+    background-color: white;
+}
+
+.boxAccesibilidad-about {
+    border-bottom: 1vh solid black;
+    margin: 8vh;
+    margin-left: 70vh;
+    border-radius: 4vh;
+    background-color: white;
+}
+
+.boxMetodos-about {
+    border-bottom: 1vh solid black;
+    margin: 8vh;
+    margin-right: 70vh;
+    border-radius: 4vh;
+    background-color: white;
+}
+
+.boxEquipo-about {
+    border-bottom: 1vh solid black;
+    margin: 8vh;
+    margin-left: 70vh;
+    border-radius: 4vh;
+    background-color: white;
+}
+
+
+
+.green-letter {
+color: rgb(175, 255, 14)
+}
+
+.purple-letter {
+color: rgb(251, 14, 255)
+}
+
+
+.reto-about {
+    width: 48vh;
+    margin-left: 79vh;
+    margin-top: -10vh;
+    position: absolute;
+}
+
+.accesibilidad-about {
+    width: 48vh;
+    margin-left: -57vh;
+    margin-top: 1vh;
+    position: absolute;
+}
+
+
+.metodos-about {
+    width: 38vh;
+    margin-left: 83vh;
+    margin-top: 3vh;
+    position: absolute;
+}
+
+
+.equipo-about {
+    width: 25vh;
+    margin-left: -48vh;
+    margin-top: -4vh;
+    position: absolute;
+}
+

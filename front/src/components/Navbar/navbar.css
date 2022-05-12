@@ -3,13 +3,22 @@
     justify-content: space-around;
 }
 
+.titleLogo-navbar {
+    font-family: 'Atma', cursive;
+    text-align: center;
+    border-radius: 7vh;
+    width: 14vh;
+    margin-left: -1vh;
+    color: white;
+  
+}
+
 .name-navbar {
-    margin-left: 155vh;
+    margin-left: 157vh;
     font-size: 2.2vh;
     color: rgb(175, 255, 14);
     position: absolute;
     margin-top: 5vh;
-    color: rgb(175, 255, 14)
 }
 
 .surname-navbar {
@@ -18,7 +27,6 @@
     color: rgb(175, 255, 14);
     position: absolute;
     margin-top: 5vh;
-    color: rgb(175, 255, 14)
 }
 
 .buttonLog-navbar {
@@ -36,5 +44,5 @@
 .logoCentral {
     width: 11vh;
     margin-top: 1vh;
-    margin-left: 54vh;
+    margin-left: 42.5vh;
 }

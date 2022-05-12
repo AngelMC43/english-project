@@ -19,15 +19,14 @@ export default function Navbar() {
     }
     fetchData();
   }, []);
-  //-----------------------------------------------poner la id para sacar el usuario
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <NavLink className="navbar-brand purple-text text-lighten-3" to="#">
-            AngeLingo
-          </NavLink>
-
+          <h6 className="titleLogo-navbar">
+            <span className="purple-letter">A</span>nge
+            <span className="green-letter">L</span>ingo
+          </h6>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 purple-text text-lighten-2">
               <li className="nav-item lime accent-4">
@@ -45,8 +44,13 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item ">
-                <NavLink className="nav-link " to="/about">
-                  About
+                <NavLink className="nav-link " to="/showscore">
+                  Ranking
+                </NavLink>
+              </li>
+              <li className="nav-item ">
+                <NavLink className="nav-link" to="/games">
+                  Juegos
                 </NavLink>
               </li>
               <li className="nav-item ">
@@ -67,7 +71,6 @@ export default function Navbar() {
             )}
           </div>
         </div>
-        {/* <h5>{user[49].name}</h5> */}
       </nav>
       <main className="App"></main>
     </div>

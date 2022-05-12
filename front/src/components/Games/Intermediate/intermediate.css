@@ -411,3 +411,19 @@
     margin-top: 0vh;
     margin-left: 29vh;
 }
+
+.nextFirst-intermediate{
+    color: rgb(241, 6, 73);
+    width: 60vh;
+    margin-left: 70vh;
+    font-size: 12vh;
+    margin-top: 40vh;
+
+}
+
+.nextSecond-intermediate{
+    color: rgb(175, 255, 14);
+    margin-top: 55vh;
+    font-size: 14vh;
+    margin-left: 43vh;
+}

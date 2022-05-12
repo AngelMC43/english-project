@@ -62,12 +62,18 @@ export default function Footer() {
                     Contacto{" "}
                   </Link>
                 </li>
+
+                <li>
+                  <Link to="about" className="color-footer">
+                    Sobre nosotros{" "}
+                  </Link>
+                </li>
                 <br />
                 <li>
-                  <p className="color-footer">
-                    C/ Wichita s/n <br />
-                    Málaga
-                  </p>
+                  <h4 className="titleLogo-footer">
+                    <span className="purple-letter">A</span>nge
+                    <span className="green-letter">L</span>ingo
+                  </h4>
                 </li>
               </ul>
             </div>

@@ -148,12 +148,21 @@ export default function IntermediateGrammar() {
                 />
               </div>
             )}
-            <Link
-              to="/games/intermediate/match"
-              className="buttonCompleted-intermediate"
-            >
-              Next Game
-            </Link>
+            {count < 5 ? (
+              <Link
+                to="/games/intermediate/grammar"
+                className="buttonCompleted-basic"
+              >
+                Try again
+              </Link>
+            ) : (
+              <Link
+                to="/games/intermediate/match"
+                className="buttonCompleted-basic"
+              >
+                Next Game
+              </Link>
+            )}
             <br />
             <Link to="/showscore" className="buttonCompleted-intermediate">
               Ranking

@@ -215,12 +215,21 @@ export default function IntermediateVerbs() {
                 />
               </div>
             )}
-            <Link
-              to="/games/intermediate/grammar"
-              className="buttonCompleted-intermediate"
-            >
-              Next Game
-            </Link>
+            {count < 5 ? (
+              <Link
+                to="/games/intermediate/verbs"
+                className="buttonCompleted-basic"
+              >
+                Try again
+              </Link>
+            ) : (
+              <Link
+                to="/games/intermediate/grammar"
+                className="buttonCompleted-basic"
+              >
+                Next Game
+              </Link>
+            )}
             <br />
             <Link to="/showscore" className="buttonCompleted-intermediate">
               Ranking
