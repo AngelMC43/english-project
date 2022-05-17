@@ -182,14 +182,14 @@ export default function AdvancedVocabulary() {
               )}
               {count < 5 ? (
                 <Link
-                  to="/games/advanced/vocabulary"
+                  to="/games/advanced/intro-vocabulary"
                   className="buttonCompleted-basic"
                 >
                   Try again
                 </Link>
               ) : (
                 <Link
-                  to="/games/advanced/verbs"
+                  to="/games/advanced/intro-verbs"
                   className="buttonCompleted-basic"
                 >
                   Next Game

@@ -1,0 +1,19 @@
+.title-link {
+    font-family: 'Atma', cursive;
+    border: 0.5vh solid black;
+    background-color: white;
+    width: 40vh;
+    border-radius: 7vh;
+    text-align: center;
+
+    margin-left: 76vh;
+
+}
+
+.container-link {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+}

@@ -15,11 +15,12 @@
 }
 
 .subTitle-login {
-    
     font-family: 'Atma', cursive;
     color: black;
-    
-
+    font-family: 'Atma', cursive;
+    color: black;
+    height: 14vh;
+    font-size: 5vh;
 }
 
 .therms-login {

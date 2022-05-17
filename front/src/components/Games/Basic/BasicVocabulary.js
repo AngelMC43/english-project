@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import "./basic.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
+import correcto from "../../../visual/main/correcto.mp3";
+import incorrecto from "../../../visual/main/incorrecto.mp3";
 
 export default function BasicVocabulary() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
   const [count, setCount] = useState(0);
   const { userLogged } = useLoginContext();
+  const [sound, setSound] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -49,10 +52,12 @@ export default function BasicVocabulary() {
   function handleJoined(e) {
     handleCount();
     handleJump();
+    setSound(correcto);
   }
 
   const handleJump = (e) => {
     setJump(jump + 1);
+    setSound(incorrecto);
   };
 
   const random = Math.floor(Math.random() * 2);
@@ -87,6 +92,12 @@ export default function BasicVocabulary() {
                   className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
                 >
                   {questions.length > 0 ? questions[jump].correct : ""}
+                  {/* <audio
+                    src={correcto}
+                    className="visually-hidden"
+                    controls
+                    autoPlay
+                  /> */}
                 </button>
               )}
               <button
@@ -94,6 +105,12 @@ export default function BasicVocabulary() {
                 className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
               >
                 {questions.length > 0 ? questions[jump].incorrect_a : ""}
+                {/* <audio
+                  src={incorrecto}
+                  className="visually-hidden"
+                  controls
+                  autoPlay
+                /> */}
               </button>
             </div>
           ) : (
@@ -103,6 +120,12 @@ export default function BasicVocabulary() {
                 className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
               >
                 {questions.length > 0 ? questions[jump].incorrect_a : ""}
+                {/* <audio
+                  src={incorrecto}
+                  className="visually-hidden"
+                  controls
+                  autoPlay
+                /> */}
               </button>
 
               {questions[10] == questions[jump] ? (
@@ -118,6 +141,12 @@ export default function BasicVocabulary() {
                   onClick={handleJoined}
                   className="button-push-vocabulary btn btn-outline-primary accent-4 z-depth-3 section"
                 >
+                  {/* <audio
+                    src={correcto}
+                    className="visually-hidden"
+                    controls
+                    autoPlay
+                  /> */}
                   {questions.length > 0 ? questions[jump].correct : ""}
                 </button>
               )}
@@ -148,10 +177,6 @@ export default function BasicVocabulary() {
               </div>
             ) : (
               <div>
-                <img
-                  src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
-                />
                 <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
                   className="loser-basic animate__animated animate__jackInTheBox"

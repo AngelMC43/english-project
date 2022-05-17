@@ -1,0 +1,76 @@
+.container-contacto {
+    border: 1.5vh solid black;
+    border-radius: 3vh;
+    width: 150vh;
+    margin-left: 25vh;
+    margin-right: 1.5vh;
+    margin-top: 5vh;
+    border-radius: 3vh;
+    position:relative;
+    background-color: rgb(235 211 234);
+    padding: 7vh;
+
+}
+
+.subTitle-contact {
+    font-family: 'Comic Neue', cursive;
+}
+
+.title-contacto {
+    font-family: 'Atma', cursive;
+    text-align: center;
+    border: 0.5vh solid black;
+    border-radius: 7vh;
+    width: 50vh;
+    margin-left: 74vh;
+    color: white;
+    background-color: black;
+}
+
+.p-contact {
+    border: 0.3vh solid black;
+    width: 40vh;
+    padding: 7vh;
+    border-radius: 4vh;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    background-color: white;
+}
+
+.inside-contact {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3vh;
+    margin-top: 5vh;
+}
+
+.phone-pic {
+    width: 7vh;
+    margin-top: -27.5vh;
+    position: absolute;
+    border-radius: 2vh;
+    margin-left: 21vh;
+}
+
+.email-pic {
+    width: 10vh;
+        border-radius: 2vh;
+        position: absolute;
+        margin-top: -23vh;
+        margin-left: 20vh;
+}
+
+.sede-pic {
+    width: 26vh;
+    position: absolute;
+    border-radius: 2vh;
+    margin-top: 5vh;
+}
+
+.mapp-pic {
+    width: 8vh;
+    position: absolute;
+    border-radius: 2vh;
+    margin-left: 23vh;
+    margin-top: -16vh;
+}

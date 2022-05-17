@@ -1,0 +1,24 @@
+.container-mapa {
+    border: 1.5vh solid black;
+    border-radius: 3vh;
+    width: 150vh;
+    margin-left: 25vh;
+    margin-right: 1.5vh;
+    margin-top: 5vh;
+    border-radius: 3vh;
+    position:relative;
+    
+}
+
+.title-mapa {
+    font-family: 'Atma', cursive;
+    text-align: center;
+    border: 1vh solid white;
+    border-radius: 7vh;
+    width: 70vh;
+    margin-left: 62vh;
+    margin-top: 11vh;
+    color: white;
+    background-color: black;
+    padding: 4vh;
+}

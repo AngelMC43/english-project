@@ -12,7 +12,8 @@ export default function About() {
 
           <div className="box-bases">
             <p className="font-guideHorizont">
-              <span className="purple-letter">B</span>ases
+              <span className="purple-letter">B</span>ase
+              <span className="green-letter">s</span>
             </p>
             <p className="font-paragraphBases">
               Encontraremos tres niveles de juegos con cuatro juegos diferentes
@@ -128,7 +129,6 @@ export default function About() {
               En el último nivel nos encontramos con ejercicios algo más
               complejos, donde tenemos un nivel de 2º de Bachillerato.
               <br />
-              <br />
             </p>
             <p className="font-paragraph">
               <span className="font-subtitlesGuide">Vocabulary</span> <br />
@@ -138,7 +138,6 @@ export default function About() {
               es correcta y escribirla en el recuadro de mas abajo y pulsar en
               la flecha para saltar a la siguiente pregunta.
             </p>
-            <br />
             <p className="font-paragraph">
               <span className="font-subtitlesGuide">Phrasal verbs</span>
               <br />

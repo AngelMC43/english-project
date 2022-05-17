@@ -12,16 +12,15 @@ export default function Profile() {
       </h3>
       <div>
         {" "}
-        <img src={userLogged.avatar} className="circle" />
+        <img src={userLogged.avatar} className="circle avaPic" />
       </div>
 
-      <h1 className="avaPic">hola</h1>
       <div className=" inside-container w-75 ">
         <div className="card-header ">
           <ul className="nav nav-tabs card-header-tabs">
             <li className="nav-item ">
               <a className="nav-link active " aria-current="true" href="#">
-                <b>Datos</b>
+                <b>Perfil</b>
               </a>
             </li>
             <li className="nav-item">
@@ -30,9 +29,9 @@ export default function Profile() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <Link to="/upload-user" className="nav-link  ">
                 <b>Actualizar</b>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -26,7 +26,10 @@
 }
 
 .avaPic {
-    
+    margin-left: 66vh;
+    width: 13vh;
+    margin-top: -7vh;
+    position: absolute;
 }
 
 .card-profile {
@@ -40,6 +43,8 @@
     position: absolute;
     border-right: groove;
     border-radius: 3vh;
+    height: 50vh;
+
     
 }
 

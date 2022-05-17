@@ -258,13 +258,16 @@ export default function IntermediateMatch() {
             )}
             {count < 5 ? (
               <Link
-                to="/games/intermediate/match"
+                to="/games/intermediate/intro-match"
                 className="buttonCompleted-intermediate"
               >
                 Try again
               </Link>
             ) : (
-              <Link to="/games/advanced" className="buttonCompleted-basicRed">
+              <Link
+                to="/games/next-advanced"
+                className="buttonCompleted-basicRed"
+              >
                 Next Level
               </Link>
             )}

@@ -216,14 +216,14 @@ export default function IntermediateVocabulary() {
             )}
             {count < 5 ? (
               <Link
-                to="/games/intermediate/vocabulary"
+                to="/games/intermediate/intro-vocabulary"
                 className="buttonCompleted-basic"
               >
                 Try again
               </Link>
             ) : (
               <Link
-                to="/games/intermediate/verbs"
+                to="/games/intermediate/intro-verbs"
                 className="buttonCompleted-basic"
               >
                 Next Game

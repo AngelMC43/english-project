@@ -1,6 +1,5 @@
 import Profile from "../components/Profile/Profile";
 import { Link } from "react-router-dom";
-import Dxs from "./../components/Profile/Dxs";
 
 export default function ProfileView() {
   return (

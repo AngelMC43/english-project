@@ -1,0 +1,120 @@
+
+/* -------------------INTRO VOCABULARY--------------------------------------------- */
+.introBasicVocabulary {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     background-clip: url("../../../visual/basic/introBasicVocabulary.mp4");
+}
+/* -------------------INTRO CHOOSE--------------------------------------------- */
+
+
+.mainIntro-choose {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     background-clip: url("../../../visual/basic/introBasicChoose.mp4");
+}
+
+.videoIntro-choose {
+    height: 78vh;
+    margin-left: -0.5vh;
+    width: 135vh;
+    margin-top: -5vh;
+    border: 2vh solid black;
+    border-radius: 7vh;
+}
+
+.imageIntro-choose {
+    height: 22vh;
+    margin-left: 90vh;
+    width: 40vh;
+    margin-top: -1vh;
+    position: absolute;
+}
+
+.titleIntro-choose {
+    position: absolute;
+    margin-left: 105vh;
+    margin-top: 6.5vh;
+    color: rgb(48, 35, 35)
+}
+
+/* -------------------INTRO GRAMMAR--------------------------------------------- */
+.mainIntro-grammar {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     background-clip: url("../../../visual/basic/introBasicChoose.mp4");
+}
+
+/* -------------------INTRO MATCH--------------------------------------------- */
+.mainIntro-match {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     background-clip: url("../../../visual/basic/introBasicChoose.mp4");
+}
+
+/* ------------------------------------------------------------------- */
+
+.mainIntroNext {
+    border: 3vh solid rgb(175, 255, 14);
+    border-radius: 6.6vh;
+    margin: auto;
+    margin-top: 5.5vh;
+     justify-content: center;
+     align-items: center;
+     width: 140vh;
+     height: 75vh;
+     text-align: center;
+     font-family: 'Atma', cursive;
+     
+}
+
+.nextFirst-intermediate{
+    color: rgb(241, 6, 73);
+    width: 60vh;
+    margin-left: 70vh;
+    font-size: 12vh;
+    margin-top: 40vh;
+    height: 22vh;
+    position: absolute;
+}
+
+.nextSecond-intermediate{
+    color: rgb(175, 255, 14);
+    margin-top: 55vh;
+    font-size: 14vh;
+    margin-left: 43vh;
+    position: absolute;
+
+}

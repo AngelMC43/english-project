@@ -40,7 +40,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item ">
                 <NavLink className="nav-link" to="/guide">
-                  Guide
+                  Guía
                 </NavLink>
               </li>
               <li className="nav-item ">
@@ -48,11 +48,15 @@ export default function Navbar() {
                   Ranking
                 </NavLink>
               </li>
-              <li className="nav-item ">
-                <NavLink className="nav-link" to="/games">
-                  Juegos
-                </NavLink>
-              </li>
+              {userLogged ? (
+                <li className="nav-item posAbsolute">
+                  <NavLink className="nav-link" to="/games">
+                    Juegos
+                  </NavLink>
+                </li>
+              ) : (
+                ""
+              )}
               <li className="nav-item ">
                 <img src={logoWhite} className="logoCentral" />
               </li>

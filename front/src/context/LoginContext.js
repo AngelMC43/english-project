@@ -15,13 +15,13 @@ export const useLoginContext = () => {
 export function LoginContextProvider({ children }) {
   const [errorMessage, setErrorMessage] = useState("");
   const [user, setUser] = useState({
+    avatar: "",
     email: "",
     password: "",
     name: "",
     surname: "",
     id: "",
     age: "",
-    avatar: "",
   });
   const navigate = useNavigate();
 
@@ -62,6 +62,7 @@ export function LoginContextProvider({ children }) {
   }
 
   function logout() {
+    console.log("fn de logout");
     setUser(null);
     window.localStorage.removeItem("loggedIn");
     navigate("/");

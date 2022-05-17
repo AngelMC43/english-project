@@ -249,7 +249,7 @@ export default function BasicMatch() {
             )}
             {count < 5 ? (
               <Link
-                to="/games/advanced/match"
+                to="/games/advanced/intro-match"
                 className="buttonCompleted-basic"
               >
                 Try again

@@ -116,6 +116,7 @@ app.post("/upload", (request, response) => {
 
 app.delete("/delete/:id", function (request, response) {
   conectar();
+  console.log(request.params);
   let id = request.params.id;
 
   connection.query(
@@ -247,12 +248,14 @@ app.get("/showscore/advanced-match", function (request, response) {
 });
 
 //-----------------------SCORE BY ID------------------------
-app.get("/showscore/:id", function (request, response) {
+app.get("/my-score/:id", function (request, response) {
   conectar();
   let id = request.params.id;
 
   connection.query(
-    `SELECT name, surname, score from users WHERE id= "${id}"`,
+    // `SELECT name, surname from users WHERE id= "${id}"`,
+    `SELECT * FROM users u JOIN punctuation p ON u.id = p.idUser WHERE p.level="advanced" AND p.type="guess what" ORDER BY score DESC limit 5`,
+
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);

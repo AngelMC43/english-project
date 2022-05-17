@@ -41,8 +41,14 @@
 
 }
 
+.posAbsolute {
+    position: absolute;
+    margin-left: 24vh;
+}
+
 .logoCentral {
     width: 11vh;
     margin-top: 1vh;
-    margin-left: 42.5vh;
+    margin-left: 52.5vh;
+    position: sticky;
 }

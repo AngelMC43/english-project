@@ -116,7 +116,7 @@ export default function SignUp() {
             {/* <div>{ser.avatar}</div> */}
             <button
               type="submit"
-              className="button-signup btn z-depth-3 lime accent-4 text-capitalize"
+              className="buttonBig-signup btn z-depth-3 lime accent-4 text-capitalize"
             >
               Regístrate
             </button>

@@ -146,10 +146,6 @@ export default function BasicChoose() {
             ) : (
               <div>
                 <img
-                  src={questions.length > 0 ? questions[11].pic_correct : ""}
-                  className="fail-basic animate__animated animate__zoomInDown animate__delay-1s"
-                />
-                <img
                   src={questions.length > 0 ? questions[11].pic_incorrect : ""}
                   className="loser-basic animate__animated animate__jackInTheBox"
                 />

@@ -217,14 +217,14 @@ export default function IntermediateVerbs() {
             )}
             {count < 5 ? (
               <Link
-                to="/games/intermediate/verbs"
+                to="/games/intermediate/intro-verbs"
                 className="buttonCompleted-basic"
               >
                 Try again
               </Link>
             ) : (
               <Link
-                to="/games/intermediate/grammar"
+                to="/games/intermediate/intro-grammar"
                 className="buttonCompleted-basic"
               >
                 Next Game

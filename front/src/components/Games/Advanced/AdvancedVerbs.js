@@ -150,14 +150,14 @@ export default function AdvancedVerbs() {
             )}
             {count < 5 ? (
               <Link
-                to="/games/advanced/verbs"
+                to="/games/advanced/intro-verbs"
                 className="buttonCompleted-basic"
               >
                 Try again
               </Link>
             ) : (
               <Link
-                to="/games/advanced/grammar"
+                to="/games/advanced/intro-grammar"
                 className="buttonCompleted-basic"
               >
                 Next Game

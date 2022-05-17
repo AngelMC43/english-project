@@ -1,22 +1,25 @@
-// import next from "../../../visual/intermediate/nextAdvanced.mp4";
+import next from "../../../visual/advanced/nextAdvanced.mp4";
 import { Link } from "react-router-dom";
-// import "./introbasic.css";
-import start from "../../../visual/basic/start.png";
+import "./introAdvanced.css";
+import image from "../../../visual/advanced/moon.png";
 
 export default function NextAdvanced() {
   return (
-    <div className="mainIntro-choose">
+    <div className="mainIntroNext">
       <Link to="/games/advanced">
+        <h1 className="nextFirst-advanced animate__animated animate__backInLeft animate__delay-3s">
+          Next Level
+        </h1>
+        <h2 className="nextSecond-advanced animate__animated animate__backInLeft animate__delay-4s">
+          Advanced
+        </h2>
         <img
-          src={start}
-          className="imageIntro-choose animate__animated animate__backInLeft animate__delay-3s"
-        />{" "}
-        <h4 className="titleIntro-choose animate__animated animate__backInLeft animate__delay-3s">
-          Start
-        </h4>
-        {/* <video autoPlay muted className="videoIntro-choose">
+          src={image}
+          className="moon animate__animated animate__wobble animate__delay-1s"
+        />
+        <video autoPlay muted className="videoIntro-choose">
           <source src={next} type="video/mp4" />
-        </video> */}
+        </video>
       </Link>
     </div>
   );

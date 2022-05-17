@@ -150,14 +150,14 @@ export default function AdvancedGrammar() {
             )}
             {count < 5 ? (
               <Link
-                to="/games/advanced/grammar"
+                to="/games/advanced/intro-grammar"
                 className="buttonCompleted-basic"
               >
                 Try again
               </Link>
             ) : (
               <Link
-                to="/games/advanced/match"
+                to="/games/advanced/intro-match"
                 className="buttonCompleted-basic"
               >
                 Next Game
