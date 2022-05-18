@@ -93,17 +93,17 @@ app.post("/login", function (request, response) {
 
 //-----------------------UPLOAD USER----------------------------------
 
-app.post("/upload", (request, response) => {
+app.put("/upload/:id", (request, response) => {
   conectar();
   let myBody = request.body;
   let name = myBody.name;
   let surname = myBody.surname;
   let age = myBody.age;
-  let password = myBody.password;
   let id = myBody.id;
 
   connection.query(
-    `UPDATE users SET name="${name}, "surname="${surname}", age="${age}", password="${password}" WHERE id = "${id}"`,
+    `UPDATE users SET name="${name}", surname="${surname}", age=${age} WHERE id = ${id}`,
+    // `UPDATE users SET name='${name}', surname='${surname}', age=${age}, WHERE id = ${id}`,
     function (err, rows, fields) {
       if (err) throw err;
       response.json(rows);

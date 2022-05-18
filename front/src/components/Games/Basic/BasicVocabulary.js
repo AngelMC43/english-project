@@ -5,6 +5,9 @@ import { useLoginContext } from "../../../context/LoginContext";
 import correcto from "../../../visual/main/correcto.mp3";
 import incorrecto from "../../../visual/main/incorrecto.mp3";
 
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
+
 export default function BasicVocabulary() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
@@ -52,12 +55,34 @@ export default function BasicVocabulary() {
   function handleJoined(e) {
     handleCount();
     handleJump();
-    setSound(correcto);
+    Swal.fire({
+      position: "center",
+      width: 400,
+      title: "Yes!",
+      color: "rgb(175, 255, 14)",
+      icon: "success",
+      background: "rgb(137, 24, 124)",
+      iconColor: "rgb(175, 255, 14);",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   const handleJump = (e) => {
     setJump(jump + 1);
-    setSound(incorrecto);
+    Swal.fire({
+      position: "center",
+      title: "Oh no!",
+      width: 400,
+      height: 400,
+      icon: "error",
+      background: "rgb(175, 255, 14)",
+      iconColor: "rgb(137, 24, 124)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   const random = Math.floor(Math.random() * 2);
@@ -106,6 +131,7 @@ export default function BasicVocabulary() {
               >
                 {questions.length > 0 ? questions[jump].incorrect_a : ""}
                 {/* <audio
+                  onClick={handleJump}
                   src={incorrecto}
                   className="visually-hidden"
                   controls

@@ -116,24 +116,25 @@ border:1
  }
 
  .button-left-advancedGrammar {
-    background-color: transparent;
-    border: transparent;
+    background-image: url("../../../visual/advanced/fondoMorSo.jpg");
     position: absolute;
     margin-top: 42vh;
     margin-left: -43vh;
-     width: 30vh;
-     height: 14vh;
-     font-family: 'Comic Neue', cursive;     
-     font-size: 5vh;
+    width: 30vh;
+    border-radius: 8vh;
+    height: 14vh;
+    font-family: 'Comic Neue', cursive;
+    font-size: 5vh;
 }
 
 .button-rigth-advancedGrammar {
-    background-color: transparent;
+    background-image: url("../../../visual/advanced/fondoMorSo.jpg");
     position: absolute;
-    border: transparent;
     margin-top: 42vh;
      margin-left:13vh ;
      width: 30vh;
+     border-radius: 8vh;
+
      height: 14vh;
      font-family: 'Comic Neue', cursive;     
      font-size: 5vh;
@@ -179,7 +180,7 @@ border:1
 
 
  .button-left-advancedVerbs {
-    background-color: transparent;
+    background-image: url("../../../visual/advanced/fondoVerOs.jpg");
     border: transparent;
     position: absolute;
     margin-top: 43.5vh;
@@ -192,7 +193,7 @@ border:1
 }
 
 .button-rigth-advancedVerbs {
-    background-color: transparent;
+    background-image: url("../../../visual/advanced/fondoVerOs.jpg");
     position: absolute;
     border: transparent;
     margin-top: 43.5vh;

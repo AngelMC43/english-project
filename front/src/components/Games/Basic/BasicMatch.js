@@ -3,6 +3,9 @@ import "./basic.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
+
 export default function BasicMatch() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
@@ -46,10 +49,35 @@ export default function BasicMatch() {
   function handleJoined(e) {
     handleCount();
     handleJump();
+    Swal.fire({
+      position: "center",
+      width: 400,
+      title: "Yes!",
+      color: "rgb(103, 231, 220)",
+      icon: "success",
+      background: "rgb(137, 24, 124)",
+      iconColor: "rgb(103, 231, 220);",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   const handleJump = (e) => {
     setJump(jump + 1);
+    Swal.fire({
+      position: "center",
+      title: "Oh no!",
+      width: 400,
+      height: 400,
+      icon: "error",
+      color: "rgb(137, 24, 124)",
+      background: "rgb(103, 231, 220)",
+      iconColor: "rgb(137, 24, 124)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   console.log("count", count);

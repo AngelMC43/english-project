@@ -52,9 +52,6 @@ export default function Profile() {
             <b>Edad: </b>
             {userLogged.age}
           </p>
-          <p>eliminar perfil</p>
-          <p>puntuacion sobre tus juegos</p>
-          <p>puntuacion global por niveles y/o tipos</p>
         </div>
       </div>
     </div>

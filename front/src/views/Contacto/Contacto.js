@@ -20,7 +20,7 @@ export default function About() {
           <div className="p-contact">
             <p>Teléfono: </p>
             <p>
-              <a href="tlf:605587458">605587458</a>
+              <a href="tel:605587458">605587458</a>
             </p>
             <p>
               Lunes a viernes de 9:00 a 20:00h Sábados y domingos de 9:00 a

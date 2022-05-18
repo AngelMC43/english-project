@@ -9,9 +9,9 @@ export default function IntroAdvancedMatch() {
       <Link to="/games/advanced/match">
         <img
           src={start}
-          className="imageIntro-choose animate__animated animate__backInLeft animate__delay-3s"
+          className="imageIntro-choose animate__animated animate__backInLeft animate__delay-4s"
         />{" "}
-        <h4 className="titleIntro-choose animate__animated animate__backInLeft animate__delay-3s">
+        <h4 className="titleIntro-choose animate__animated animate__backInLeft animate__delay-4s">
           Start
         </h4>
         <video autoPlay muted className="videoIntro-choose">

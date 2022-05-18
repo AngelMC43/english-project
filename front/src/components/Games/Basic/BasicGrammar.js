@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
-
 import "./basic.css";
+
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
 
 export default function BasicGrammar() {
   const [questions, setQuestions] = useState([]);
@@ -50,10 +52,34 @@ export default function BasicGrammar() {
   function handleJoined(e) {
     handleCount();
     handleJump();
+    Swal.fire({
+      position: "center",
+      width: 400,
+      title: "Yes!",
+      color: "rgb(175, 255, 14)",
+      icon: "success",
+      background: "rgb(137, 24, 124)",
+      iconColor: "rgb(175, 255, 14);",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   const handleJump = (e) => {
     setJump(jump + 1);
+    Swal.fire({
+      position: "center",
+      title: "Oh no!",
+      width: 400,
+      height: 400,
+      icon: "error",
+      background: "rgb(175, 255, 14)",
+      iconColor: "rgb(137, 24, 124)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   const random = Math.floor(Math.random() * 2);

@@ -118,3 +118,12 @@
     position: absolute;
 
 }
+
+.titleIntro-grammarIntermedite {
+    font-family: 'Atma', cursive;
+    position: absolute;
+    font-size: 13vh;
+    margin-top: 26vh;
+    color: black;
+    margin-left: 35vh;
+}

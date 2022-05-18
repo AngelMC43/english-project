@@ -1,10 +1,12 @@
 import { useLoginContext } from "../../context/LoginContext";
 import "./uploadUser.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function Profile() {
   const { userLogged, setUserLogged, logout } = useLoginContext();
   const navigate = useNavigate();
+  const [data, setData] = useState({ name: "", surname: "", age: "" });
 
   function handleDelete(id) {
     fetch(`http://localhost:3001/delete/${id}`, {
@@ -14,14 +16,36 @@ export default function Profile() {
     logout();
   }
 
-  function handleUpload() {
-    fetch(`http://localhost:3001/upload`, {
-      mode: "cors",
-      method: "post",
+  const handleChange = (event) => {
+    event.preventDefault(); //evento que evita recargar la pagina
+    setData({
+      ...data,
+      [event.target.name]: event.target.value,
     });
-    navigate("/profile");
-  }
+  };
 
+  const handleSubmit = (id, event) => {
+    event.preventDefault();
+
+    async function fetchData() {
+      const response = await fetch(`http://localhost:3001/upload/${id}`, {
+        mode: "cors",
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          surname: data.surname,
+          age: data.age,
+        }),
+      });
+      let json = await response.json();
+      setData(json);
+      navigate("/login");
+    }
+    fetchData();
+  };
   return (
     <div className="mainContainer-profile">
       <h3 className="title ">
@@ -53,7 +77,7 @@ export default function Profile() {
         </div>
         <div className="insideText-profile">
           <p className="mt-5 "></p>
-          <form className="row center-align">
+          <form onSubmit={(e) => handleSubmit(e)} className="row center-align">
             <div className="box-up col-12">
               Nombre
               <input
@@ -61,6 +85,7 @@ export default function Profile() {
                 className="form-control"
                 id="name"
                 name="name"
+                onChange={(e) => handleChange(e)}
               />
             </div>
             <div className="box-up col-12">
@@ -70,16 +95,22 @@ export default function Profile() {
                 className="form-control"
                 id="surname"
                 name="surname"
+                onChange={(e) => handleChange(e)}
               />
             </div>{" "}
             <div className="box-up col-12 ">
               Edad
-              <input type="text" className="form-control" id="age" name="age" />
+              <input
+                type="text"
+                className="form-control"
+                id="age"
+                name="age"
+                onChange={(e) => handleChange(e)}
+              />
             </div>
             <div className="box-up col-12 "></div>
             <div className="d-flex">
               <button
-                onClick={handleUpload}
                 type="submit"
                 className="button-signup btn z-depth-3 lime accent-4 text-capitalize"
               >

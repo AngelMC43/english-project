@@ -113,7 +113,6 @@ export default function SignUp() {
                 onChange={handleChange}
               />
             </div>
-            {/* <div>{ser.avatar}</div> */}
             <button
               type="submit"
               className="buttonBig-signup btn z-depth-3 lime accent-4 text-capitalize"

@@ -9,9 +9,9 @@ export default function IntroAdvancedVocabulary() {
       <Link to="/games/advanced/vocabulary">
         <img
           src={start}
-          className="imageIntro-choose animate__animated animate__backInLeft animate__delay-3s"
+          className="imageIntro-choose animate__animated animate__backInLeft animate__delay-2s"
         />{" "}
-        <h4 className="titleIntro-choose animate__animated animate__backInLeft animate__delay-3s">
+        <h4 className="titleIntro-choose animate__animated animate__backInLeft animate__delay-2s">
           Start
         </h4>
         <video autoPlay muted className="videoIntro-choose">

@@ -134,6 +134,8 @@
 }
 
 .button-intermediateGrammar {
+    background-image: url("../../../visual/main/fondobotonnn.jpg");
+
     width: 30vh;
     height: 6vh;
     margin-top: -3vh;
@@ -175,51 +177,56 @@
 }
 
 .button-first-intermediateVerbs {
-    background-color: transparent;
+    background-image: url("../../../visual/main/fondoMor.png");
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 19vh;
-    margin-left: -64vh;
-    width: 31vh;
+    margin-left: -63vh;
+    width: 29vh;
+    border-radius: 13vh;
     position: absolute;
     height: 19vh;
 }
 
 .button-second-intermediateVerbs {
-    background-color: transparent;
+    background-image: url("../../../visual/main/fondoVer.png");
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 20vh;
-    margin-left: -31vh;
+    margin-left: -29vh;
     position: absolute;
-    width: 31vh;
+    width: 28vh;
+    border-radius: 7vh;
     height: 19vh;
 
 }
 
 .button-third-intermediateVerbs {
-    background-color: transparent;
+    background-image: url("../../../visual/main/fondoMor.png");
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 19vh;
-    margin-left: 2vh;
+    margin-left: 3vh;
     position: absolute;
-    width: 31vh;
+    width: 29vh;
+    border-radius: 13vh;
+
     height: 19vh;
 }
 
 .button-forth-intermediateVerbs {
-    background-color: transparent;
+    background-image: url("../../../visual/main/fondoVer.png");
     border: none;
     font-size: 6vh;
     font-family: 'Comic Neue', cursive;
     margin-top: 20vh;
-    margin-left: 34vh;
+    margin-left: 37vh;
     position: absolute;
-    width: 31vh;
+    border-radius: 9vh;
+    width: 27vh;
     height: 19vh;
     }
 /*-------------------------------------------MATCH-----------------------------------------------*/
@@ -380,6 +387,7 @@
     position: absolute;
     margin-top: -60vh;
     margin-left: -30vh;
+    font-size: 1vh;
 }
 
 .pass-intermediate {
@@ -387,6 +395,8 @@
     width: 40vh;
     margin-top: -30vh;
     margin-left: 40vh;
+    font-size: 1vh;
+
 }
 
 .failed-intermediate {
@@ -395,20 +405,29 @@
     width: 28vh;
     margin-left: -70vh;
     margin-top: 18vh;
+    font-size: 1vh;
+
 
 }
 
-.wasted-intermediate {
+.fail-intermediate {
     position: absolute;
     width: 40vh;
-    margin-top: -10vh;
+    margin-top: -26vh;
     margin-left: 29vh;
+    font-size: 1vh;
+
 }
 
 .mission-intermediate {
     position: absolute;
     width: 40vh;
-    margin-top: 0vh;
-    margin-left: 29vh;
+    margin-top: 29vh;
+    margin-left: -66vh;
+    font-size: 1vh;
+
 }
 
+.font-fix {
+    font-size: 2vh;
+}

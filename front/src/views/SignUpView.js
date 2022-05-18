@@ -5,9 +5,6 @@ export default function SignUpView() {
   return (
     <>
       <SignUp />
-      <Link to="/index-menu" className="btn btn-outline-info">
-        Menu
-      </Link>
     </>
   );
 }

@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 import arrow from "../../../visual/main/arrow.png";
 
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
+
 const initialAnswerValue = {
   correct: "",
 };
@@ -68,12 +71,37 @@ export default function AdvancedVocabulary() {
     handleCount();
     setJump(jump + 1);
     setAnswer(initialAnswerValue);
+    Swal.fire({
+      position: "center",
+      width: 400,
+      title: "Yes!",
+      color: "rgb(233, 169, 236)",
+      icon: "success",
+      background: "rgb(136, 13, 142)",
+      iconColor: "rgb(233, 169, 236)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   function handleJump(e) {
     e.preventDefault();
     setJump(jump + 1);
     setAnswer(initialAnswerValue);
+    Swal.fire({
+      position: "center",
+      title: "Oh no!",
+      width: 400,
+      height: 400,
+      icon: "error",
+      color: "rgb(136, 13, 142)",
+      background: "rgb(233, 169, 236)",
+      iconColor: "rgb(136, 13, 142)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   console.log("Esto es jump", jump);
@@ -152,31 +180,31 @@ export default function AdvancedVocabulary() {
               {count > 4 ? (
                 <div>
                   <img
-                    src={questions.length > 0 ? questions[10].pic_correct : ""}
+                    src={questions.length > 0 ? questions[10].order : ""}
+                    className="pass-intermediate animate__animated animate__backInDown animate__delay-2s "
+                  />
+                  <img
+                    src={questions.length > 0 ? questions[10].decoration : ""}
                     className="confeti-basic animate__animated animate__bounceIn"
                   />
                   <img
-                    src={
-                      questions.length > 0 ? questions[10].pic_incorrect : ""
-                    }
-                    className="pass-basic animate__animated animate__fadeInUpBig animate__delay-2s"
-                  />
-                  <img
-                    src={questions.length > 0 ? questions[10].correct : ""}
-                    className="wellDone-basic animate__animated animate__lightSpeedInLeft animate__delay-1s"
+                    src={questions.length > 0 ? questions[10].decoration_ : ""}
+                    className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1st"
                   />
                 </div>
               ) : (
                 <div>
                   <img
-                    src={questions.length > 0 ? questions[11].pic_correct : ""}
-                    className="fail-basic animate__animated animate__fadeInRightBig animate__delay-1s"
+                    src={questions.length > 0 ? questions[11].order : ""}
+                    className="fail-intermediate animate__animated animate__fadeIn animate__delay-2s"
                   />
                   <img
-                    src={
-                      questions.length > 0 ? questions[11].pic_incorrect : ""
-                    }
-                    className="loser-basic animate__animated animate__jackInTheBox"
+                    src={questions.length > 0 ? questions[11].decoration : ""}
+                    className="mission-intermediate animate__animated animate__fadeIn animate__delay-1s"
+                  />
+                  <img
+                    src={questions.length > 0 ? questions[11].decoration_ : ""}
+                    className="failed-intermediate animate__animated animate__fadeIn animate__delay-3s"
                   />
                 </div>
               )}

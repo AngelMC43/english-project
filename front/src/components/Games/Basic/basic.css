@@ -54,6 +54,15 @@
     height: 69.2vh;
 }
 
+.titleBG-choose {
+    background-color: white;
+    border-radius: 5vh;
+    border: solid black 0.5vh;
+    width: 45vh;
+    margin-left: 44vh;
+    padding-top: 1vh;
+}
+
 .button-vocabulary {
     width: 37vh;
 }

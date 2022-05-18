@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./intermediate.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
 
 export default function IntermediateVocabulary() {
   const [questions, setQuestions] = useState([]);
@@ -49,10 +51,34 @@ export default function IntermediateVocabulary() {
   function handleJoined(e) {
     handleCount();
     handleJump();
+    Swal.fire({
+      position: "center",
+      width: 400,
+      title: "Yes!",
+      color: "rgb(175, 255, 14)",
+      icon: "success",
+      background: "rgb(137, 24, 124)",
+      iconColor: "rgb(175, 255, 14);",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   const handleJump = (e) => {
     setJump(jump + 1);
+    Swal.fire({
+      position: "center",
+      title: "Oh no!",
+      width: 400,
+      height: 400,
+      icon: "error",
+      background: "rgb(175, 255, 14)",
+      iconColor: "rgb(137, 24, 124)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   const random = Math.floor(Math.random() * 3);
@@ -190,26 +216,30 @@ export default function IntermediateVocabulary() {
             {count > 4 ? (
               <div>
                 <img
-                  src={questions.length > 0 ? questions[10].pic_correct : ""}
-                  className="confeti-intermediate"
+                  src={questions.length > 0 ? questions[10].order : ""}
+                  className="pass-intermediate animate__animated animate__backInDown animate__delay-2s "
                 />
                 <img
-                  src={questions.length > 0 ? questions[10].pic_incorrect : ""}
-                  className="pass-intermediate"
+                  src={questions.length > 0 ? questions[10].decoration : ""}
+                  className="confeti-basic animate__animated animate__bounceIn"
+                />
+                <img
+                  src={questions.length > 0 ? questions[10].decoration_ : ""}
+                  className="goodJob-basic animate__animated animate__lightSpeedInLeft animate__delay-1st"
                 />
               </div>
             ) : (
               <div>
                 <img
-                  src={questions.length > 0 ? questions[11].correct : ""}
-                  className="wasted-intermediate animate__animated animate__fadeIn animate__delay-1s"
+                  src={questions.length > 0 ? questions[11].order : ""}
+                  className="fail-intermediate animate__animated animate__fadeIn animate__delay-2s"
                 />
                 <img
-                  src={questions.length > 0 ? questions[11].incorrect_a : ""}
-                  className="mission-intermediate animate__animated animate__fadeIn animate__delay-2s"
+                  src={questions.length > 0 ? questions[11].decoration : ""}
+                  className="mission-intermediate animate__animated animate__fadeIn animate__delay-1s"
                 />
                 <img
-                  src={questions.length > 0 ? questions[11].incorrect_b : ""}
+                  src={questions.length > 0 ? questions[11].decoration_ : ""}
                   className="failed-intermediate animate__animated animate__fadeIn animate__delay-3s"
                 />
               </div>

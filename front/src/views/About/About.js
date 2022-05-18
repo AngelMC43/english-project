@@ -63,9 +63,9 @@ export default function About() {
             Nuestro equipo está formado en idiomas, al pasar ya por este
             aprendizaje han sadido llevar a cabo esta app con las mismas
             inquietudes que en su momento se encontraban. <br />
-            Dirigido por Don Ángel Muñoz Caballero, y unido a su equipo técnico
-            de desarrollo formado por: Back-end: Ángel Muñoz, Front-end: Ángel
-            Caballero, Testing: Angelito.
+            Dirigido por Don Ángel Muñoz Caballero, realizado con: Base de
+            datos: MySQL. Back-end: Node- express, Front-end: React, Bootstrap,
+            Materialize.
           </p>
         </div>
       </div>

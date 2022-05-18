@@ -23,7 +23,7 @@ export default function About() {
               casillas de respuesta que figurarán debajo de el título o
               pregunta. Debes pulsar el que creas que es la opción correcta, si
               pulsas en el correcto se te sumará un punto en tu cuenta final y
-              saltará a la siguiente pregunta, sino, saltará a la siguiente
+              saltará a la siguiente pregunta, si no, saltará a la siguiente
               pregunta sin sumar puntos.
             </p>
           </div>

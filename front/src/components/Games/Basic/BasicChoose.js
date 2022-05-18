@@ -3,6 +3,9 @@ import "./basic.css";
 import { Link } from "react-router-dom";
 import { useLoginContext } from "../../../context/LoginContext";
 
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/src/sweetalert2.scss";
+
 export default function BasicChoose() {
   const [questions, setQuestions] = useState([]);
   const [jump, setJump] = useState(0);
@@ -44,12 +47,37 @@ export default function BasicChoose() {
   };
 
   function handleJoined(e) {
-    handleJump();
     handleCount();
+    handleJump();
+    Swal.fire({
+      position: "center",
+      width: 400,
+      title: "Yes!",
+      icon: "success",
+      color: "rgb(249, 252, 7)",
+      background: "rgb(33, 202, 6)",
+      iconColor: "rgb(249, 252, 7)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   }
 
   const handleJump = (e) => {
     setJump(jump + 1);
+    Swal.fire({
+      position: "center",
+      title: "Oh no!",
+      width: 400,
+      height: 400,
+      icon: "error",
+      color: "rgb(33, 202, 6)",
+      background: "rgb(249, 252, 7)",
+      iconColor: "rgb(33, 202, 6)",
+      borderRadius: "30%",
+      showConfirmButton: false,
+      timer: 1000,
+    });
   };
 
   const random = Math.floor(Math.random() * 2);
@@ -58,7 +86,7 @@ export default function BasicChoose() {
     <div>
       <div className="main-choose">
         <div className="inside-container-choose">
-          <h1 className="">
+          <h1 className="titleBG-choose">
             {questions.length > 0 ? questions[jump].question : ""}
           </h1>
 
