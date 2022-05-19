@@ -62,6 +62,7 @@ import IntroAdvancedVocabulary from "./components/Games/Advanced/IntroAdvancedVo
 import IntroAdvancedGrammar from "./components/Games/Advanced/IntroAdvancedGrammar";
 import IntroAdvancedVerbs from "./components/Games/Advanced/IntroAdvancedVerbs";
 import IntroAdvancedMatch from "./components/Games/Advanced/IntroAdvancedMatch";
+import NextCompleted from "./components/Games/Advanced/NextCompleted";
 
 import ScoreAdvVocabulary from "./components/Punctuation/ScoreAdvVocabulary";
 import ScoreAdvVerbs from "./components/Punctuation/ScoreAdvVerbs";
@@ -211,6 +212,7 @@ root.render(
             path="games/advanced/intro-match"
             element={<IntroAdvancedMatch />}
           />
+          <Route path="completed" element={<NextCompleted />} />
 
           {/* ------------------------SCORE ADVANCED-------------------------------------------- */}
           <Route

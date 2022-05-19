@@ -126,3 +126,27 @@
     margin-left: 97vh;
     margin-top: 5vh;
 }
+
+
+.nextFirst-completed{
+    color: rgb(124, 21, 102);
+    width: 86vh;
+    margin-left: 26vh;
+    font-size: 11vh;
+    margin-top: 41vh;
+    height: 22vh;
+    position: absolute;
+}
+
+.nextSecond-completed{
+    color: rgb(241, 6, 73);
+    margin-top: 54vh;
+    font-size: 14vh;
+    margin-left: 3vh;
+    position: absolute;
+    border: 1vh solid black;
+    background-color: white;
+    border-radius: 8vh;
+    width: 127vh;
+
+}

@@ -75,7 +75,6 @@ export default function BasicMatch() {
       height: 400,
       icon: "error",
       color: "rgb(49, 250, 0)",
-
       background: "black",
       iconColor: "rgb(49, 250, 0)",
       borderRadius: "30%",
@@ -287,7 +286,7 @@ export default function BasicMatch() {
                 Try again
               </Link>
             ) : (
-              <Link to="/" className="buttonCompleted-basicRed">
+              <Link to="/completed" className="buttonCompleted-basicRed">
                 Congratulations!!!
               </Link>
             )}

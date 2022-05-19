@@ -142,6 +142,23 @@ app.get("/showscore/uno", function (request, response) {
   desconectar();
 });
 
+// //------------------------SCORE ID------------------------------
+// app.get("/showscore/my-score", function (request, response) {
+//   conectar();
+//   let id = request.body.id;
+
+//   connection.query(
+//     `    SELECT name, surname, level, type, score FROM users u JOIN punctuation p ON u.id = p.idUser WHERE id= "${id}" limit 10
+
+//     `,
+//     function (err, rows, fields) {
+//       if (err) throw err;
+//       response.json(rows);
+//     }
+//   );
+//   desconectar();
+// });
+
 //------------------------SCORE INTERMEDIATE VOCABULARIO------------------------------
 app.get("/showscore/intermediate-vocabulary", function (request, response) {
   conectar();
