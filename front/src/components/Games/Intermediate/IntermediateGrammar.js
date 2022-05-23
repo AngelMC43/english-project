@@ -61,7 +61,7 @@ export default function IntermediateGrammar() {
       color: "black",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -78,7 +78,7 @@ export default function IntermediateGrammar() {
       iconColor: "rgb(114, 255, 17)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 
@@ -195,7 +195,7 @@ export default function IntermediateGrammar() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-intermediate">
+            <Link to="/showscore/intermediate-grammar" className="buttonCompleted-intermediate">
               Ranking
             </Link>
             <br />

@@ -19,9 +19,9 @@ export default function About() {
               Encontraremos tres niveles de juegos con cuatro juegos diferentes
               en cada uno. Explicaremos la forma de jugar y el contenido de cada
               juego. Todos los juegos en todos los niveles están compuestos por
-              diez preguntas en cada uno, las cuales debes responder según los
-              casillas de respuesta que figurarán debajo de el título o
-              pregunta. Debes pulsar el que creas que es la opción correcta, si
+              diez preguntas en cada uno, las cuales debes responder según las
+              casillas de respuesta que figurarán debajo del título o
+              pregunta. Debes pulsar el que creas que es la opción correcta,. Si
               pulsas en el correcto se te sumará un punto en tu cuenta final y
               saltará a la siguiente pregunta, si no, saltará a la siguiente
               pregunta sin sumar puntos.
@@ -113,7 +113,7 @@ export default function About() {
                 <br />
                 Al igual que en el nivel básico aquí tenemos una imagen fija
                 donde hay diez elementos escondidos entre la imagen. Debemos
-                pulsarlos en relación a la pregunta sugerida, pero aquí en lugar
+                pulsarlos en relación a la pregunta sugerida, pero aquí, en lugar
                 de decir que es, te pregunta por lo que puede ser.
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function About() {
             <p className="font-paragraph">
               <span className="font-subtitlesGuide">Vocabulary</span> <br />
               En primer lugar, nos encontramos con un ejercicio de escritura
-              sobre vocabulario. Te harán una pregunta y debajo de esta tienes
+              sobre vocabulario. Te hará una pregunta y debajo de esta tienes
               diez opciones de respuesta, debes seleccionar la que pienses que
               es correcta y escribirla en el recuadro de mas abajo y pulsar en
               la flecha para saltar a la siguiente pregunta.
@@ -158,7 +158,7 @@ export default function About() {
               fija donde el método a seguir es el mismo. Trás la pregunta
               deberás pulsar en las imagenes unidas a la principal. Aquí no
               tendrás cursor de opción de respuesta y habrá más posibles
-              respuestas falsas.
+              respuestas incorrectas.
             </p>
           </div>
         </div>

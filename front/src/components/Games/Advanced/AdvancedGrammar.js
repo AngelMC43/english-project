@@ -62,7 +62,7 @@ export default function AdvancedGrammar() {
       iconColor: "rgb(175, 255, 14);",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -78,7 +78,7 @@ export default function AdvancedGrammar() {
       iconColor: "rgb(137, 24, 124)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 
@@ -195,7 +195,7 @@ export default function AdvancedGrammar() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-advanced">
+            <Link to="/showscore/advanced-grammar" className="buttonCompleted-advanced">
               Ranking
             </Link>
             <br />

@@ -59,7 +59,7 @@ export default function BasicMatch() {
       iconColor: "rgb(103, 231, 220);",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -76,7 +76,7 @@ export default function BasicMatch() {
       iconColor: "rgb(137, 24, 124)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 

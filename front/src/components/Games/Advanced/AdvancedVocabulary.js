@@ -81,7 +81,7 @@ export default function AdvancedVocabulary() {
       iconColor: "rgb(233, 169, 236)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -100,7 +100,7 @@ export default function AdvancedVocabulary() {
       iconColor: "rgb(136, 13, 142)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -224,7 +224,7 @@ export default function AdvancedVocabulary() {
                 </Link>
               )}
               <br />
-              <Link to="/showscore" className="buttonCompleted-advanced">
+              <Link to="/showscore/advanced-vocabulary" className="buttonCompleted-advanced">
                 Ranking
               </Link>
               <br />

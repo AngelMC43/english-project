@@ -27,7 +27,7 @@ export default function MapaIdeas() {
         {" "}
         <img src={arbol5} className="fourthPic" />
       </div>
-      <div
+      {/* <div
         id="carouselExampleDark"
         className="carousel carousel-dark slide"
         data-bs-ride="carousel"
@@ -107,7 +107,7 @@ export default function MapaIdeas() {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

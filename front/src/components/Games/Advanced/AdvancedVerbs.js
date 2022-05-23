@@ -63,7 +63,7 @@ export default function AdvancedVerbs() {
       iconColor: "rgb(175, 255, 14);",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -79,7 +79,7 @@ export default function AdvancedVerbs() {
       iconColor: "rgb(137, 24, 124)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 
@@ -195,7 +195,7 @@ export default function AdvancedVerbs() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-advanced">
+            <Link to="/showscore/advanced-verbs" className="buttonCompleted-advanced">
               Ranking
             </Link>
             <br />

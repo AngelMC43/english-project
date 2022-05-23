@@ -61,7 +61,7 @@ export default function IntermediateVerbs() {
       iconColor: "rgb(18, 200, 192)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -78,7 +78,7 @@ export default function IntermediateVerbs() {
       iconColor: "rgb(137, 24, 124)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 
@@ -262,7 +262,7 @@ export default function IntermediateVerbs() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-intermediate">
+            <Link to="/showscore/intermediate-verbs" className="buttonCompleted-intermediate">
               Ranking
             </Link>
             <br />

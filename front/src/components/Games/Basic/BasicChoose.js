@@ -59,7 +59,7 @@ export default function BasicChoose() {
       iconColor: "rgb(249, 252, 7)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -76,7 +76,7 @@ export default function BasicChoose() {
       iconColor: "rgb(33, 202, 6)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 

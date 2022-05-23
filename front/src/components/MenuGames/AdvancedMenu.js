@@ -67,7 +67,7 @@ export default function AdvancedMenu() {
                     How to play<i className="material-icons right">close</i>
                   </span>
                   <p>
-                    We are goint to learn phrasal verbs. You must push on top of
+                    We are goint to practice phrasal verbs. You must push on top of
                     the box to select one and earn points.
                   </p>
                 </div>

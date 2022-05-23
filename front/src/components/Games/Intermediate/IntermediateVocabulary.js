@@ -61,7 +61,7 @@ export default function IntermediateVocabulary() {
       iconColor: "rgb(175, 255, 14);",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -77,7 +77,7 @@ export default function IntermediateVocabulary() {
       iconColor: "rgb(137, 24, 124)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 
@@ -260,7 +260,10 @@ export default function IntermediateVocabulary() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-intermediate">
+            <Link
+              to="/showscore/intermediate-vocabulary"
+              className="buttonCompleted-intermediate"
+            >
               Ranking
             </Link>
             <br />

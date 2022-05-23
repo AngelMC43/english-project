@@ -62,7 +62,7 @@ export default function BasicMatch() {
       iconColor: "black",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -79,7 +79,7 @@ export default function BasicMatch() {
       iconColor: "rgb(49, 250, 0)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
   console.log("count", count);
@@ -291,7 +291,7 @@ export default function BasicMatch() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-advanced">
+            <Link to="/showscore/advanced-match" className="buttonCompleted-advanced">
               Ranking
             </Link>
             <br />

@@ -61,7 +61,7 @@ export default function IntermediateMatch() {
       iconColor: "rgb(175, 255, 14);",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   }
 
@@ -77,7 +77,7 @@ export default function IntermediateMatch() {
       iconColor: "rgb(137, 24, 124)",
       borderRadius: "30%",
       showConfirmButton: false,
-      timer: 1000,
+      timer: 800,
     });
   };
 
@@ -296,7 +296,7 @@ export default function IntermediateMatch() {
               </Link>
             )}
             <br />
-            <Link to="/showscore" className="buttonCompleted-intermediate">
+            <Link to="/showscore/intermediate-match" className="buttonCompleted-intermediate">
               Ranking
             </Link>
             <br />

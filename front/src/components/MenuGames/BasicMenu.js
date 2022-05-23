@@ -106,7 +106,7 @@ export default function BasicMenu() {
                   </span>
                   <p>
                     We are going to learn "to be" verb. Choose the correct
-                    option pushing the correct box to earn points.
+                    option pushing on the correct box to earn points.
                   </p>
                 </div>
               </div>
