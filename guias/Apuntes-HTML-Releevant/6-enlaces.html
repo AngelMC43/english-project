@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Links o enlaces HTML</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">HTML</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Links o enlaces HTML</h1>
+            <p>Un hiperenlace, hipervínculo, vínculo, no es más que un enlace, que al hacer click nos lleva de una página o archivo.</p>
+            <p>A través del atributo href se especifica la página a la que está asociado el enlace, la página que se visualizará cuando el usuario haga clic en el enlace.</p>
+            
+            <code>
+                &lt;a href="pagina2.html" rel="next" target="_blank">Ir a página 2&lt;/a&gt;
+            </code>
+            <br/>
+            <br/>
+            <a href="pagina2.html"  target="_blank">Ir a página 2</a>
+            
+            <h3>Tipos de referencia</h3>
+            
+            <ul>
+                <li>
+                    <h4>Referencia absoluta</h4>
+                    <p>Conduce a una ubicación externa al sitio. La referencia debe de empezar con http:// o https://</p>
+                    <code>
+                        &lt;a href="http://www.google.com">Ir a google&lt;/a&gt;
+                    </code>
+                    <br/><br/>
+                    <a href="http://www.google.com">Ir a google</a>
+                </li>
+                <li>
+                    <h4>Referencia relativa al sitio</h4>
+                    <p>
+                        Enlaza un documento dentro de nuestro sitio web. Nuestro sitio web estará formado por diferentes carpetas y archivos que se relacionan entre sí
+                        que se encuentran todos dentro de una misma <strong>carpeta raíz</strong>.
+                    </p>
+                    <code>
+                        &lt;a href="/paginas/contacto.html">Contactar&lt;/a&gt;
+                    </code>
+                    <br/><br/>
+                    <a href="/paginas/contacto.html">Contactar</a>
+                </li>
+                
+                <li>
+                    <h4>Referencia relativa al documento</h4>
+                    <p>
+                        Conduce a un documento situado dentro del mismo sitio que el documento actual, pero partiendo del directorio en el que se encuentra el actual.
+                    </p>
+                    
+                    <code>
+                        &lt;a href="servicio-tecnico.html">Servicio técnico&lt;/a&gt;
+                    </code>
+                    <br/><br/>
+                    <a href="servicio-tecnico.html">Servicio técnico</a>
+                    
+                    <p>Si partimos de la carpeta /contacto/</p>
+
+                </li>
+                <li>
+                    <h4>Punto de fijación</h4>
+                    <p>
+                        Enlaza a un punto dentro de un documento, ya sea dentro del actual o de otro diferente
+                    </p>
+                </li>
+            </ul>
+            <h3>Otros tipos de enlaces</h3>
+
+
+            <ul>
+                <li>
+                    <h4>Correo electrónico</h4>
+                    <code>
+                        &lt;a href="mailto:juan@miempresa.com?subject=Prueba"&gt;juan@miempresa.com&lt;/a&gt;
+                    </code><br><br>
+                    <a href="mailto:juan@miempresa.com?subject=Prueba">juan@miempresa.com</a>
+                </li>
+                <li>
+                    <h4>A ficheros</h4>
+                    <code>
+                        &lt;a href="fichero.pdf"&gt;Descargar pdf&lt;/a&gt;
+                    </code><br/><br/>
+                    <a href="fichero.pdf">Descargar pdf</a>
+                </li>
+                <li>
+                    <h4>Teléfono</h4>
+                    <code>
+                        &lt;a href="tel:654567891"&gt;Llamar&lt;/a&gt;
+                    </code><br><br>
+                    <a href="tel:654567891">Llamar</a>
+                    
+                
+
+                </li>
+                <li>
+                    <h4>Aplicación externa</h4>
+                </li>
+            </ul>
+            
+            <h3>Destino del enlace</h3>
+            <p>
+                El destino del enlace determina en qué ventana va a ser abierta la página vinculada, se especifica a través del atributo target al que se le puede asignar los siguientes valores:
+            </p>
+            <ul>
+                <li>
+                    <h4>_blank:</h4> Abre el documento vinculado en una ventana nueva del navegador.
+                </li>
+                <li>
+                    <h4>_parent:</h4> Abre el documento vinculado en la ventana del marco que contiene el vínculo o en el conjunto de marcos padre.
+                </li>
+                <li>
+                    <h4>_self:</h4> Es la opción predeterminada. Abre el documento vinculado en el mismo marco o ventana que el vínculo.
+                </li>
+                <li>
+                    <h4>_top:</h4> Abre el documento vinculado en la ventana completa del navegador.
+                </li>
+            </ul>
+            
+            <h3>Atributo rel de un enlace</h3>
+            
+            <code>
+                &lt;a href="ayuda.html" rel="help">Ir a la ayuda&lt;/a&gt;
+            </code>
+            <br/><br/>
+            <a href=”ayuda.html” rel=”help”>Ir a la ayuda</a>
+            <p>
+                rel →  alternate | author | bookmark | external | help | license | next | nofollow | noreferrer | noopener | prev | search | tag
+            </p>
+
+
+            <div id="navegacion">
+                <div class="left">
+                    <a href="5-textos-asociados-al-tipo-de-informacion.html" id="nav_anterior">&lt;&lt; Anterior</a>
+                </div>
+                <div class="right">
+
+                    <a href="7-images.html" id="nav_siguiente">Siguiente &gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>
+</html>

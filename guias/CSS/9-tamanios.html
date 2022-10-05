@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Tamaños CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Tamaños CSS</h1>
+            <ul>
+                <li><h4>width</h4>
+                    ancho del elemento
+                </li>
+                <li><h4>height</h4>
+                    Alto del elemento
+                </li>
+            </ul>
+            
+            <h3>Unidades de medida</h3>
+            
+            <ul>
+                <li>
+                    <h4>px</h4>
+                    Pixeles. Fijo
+                </li>
+                
+                <li>
+                    <h4>%</h4>
+                    Porcentaje. Heredable
+                </li>
+                
+                <li>
+                    <h4>em</h4>
+                    Tamaño por defecto de la fuente según el dispositivo (16px desktop). Heredable
+                </li>
+                
+                <li>
+                    <h4>rem</h4>
+                    Mismo valor que em pero no heredable
+                </li>
+            </ul>
+            
+            <h3>Ejemplos</h3>
+            
+            <code>
+                <pre>
+                
+                .contenedor1 {
+                    border:2px solid red;
+                    padding:10px 20px 10px 20px;
+                    margin: 15px 0px 30px 10px;
+                    width:300px;
+                    height: 300px;
+                    background-color: #fff;
+                    color:#000;
+                    font-size: 2em;
+                }
+
+                .contenedor1 p {
+                    font-size:0.5em;
+                }
+                
+                </pre>
+            
+            </code>
+
+            <div style="border:2px solid red;
+                        padding:10px 20px 10px 20px;
+                        margin: 15px 0px 30px 10px;
+                        width:300px;
+                        height: 300px;
+                        background-color: #fff;
+                        color:#000;
+                        font-size: 2em;">
+                elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                <p style="font-size:0.5em;">
+                    elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                </p>
+            </div>
+            
+            <code>
+                <pre>
+                
+                .contenedor2 {
+                    border:2px solid yellow;
+                    padding:10px 20px 10px 20px;
+                    margin: 15px 0px 10px 10px;
+                    width:300px;
+                    height: 100px;
+                    background-color: #fff;
+                    color:#000;
+                    font-size: 12px;
+                }
+
+                .contenedor2 p {
+                    font-size:16px;
+                }
+                
+                </pre>
+            </code>
+            
+            <div style="border:2px solid yellow;
+                        padding:10px 20px 10px 20px;
+                        margin: 15px 0px 10px 10px;
+                        width:300px;
+                        height: 100px;
+                        background-color: #fff;
+                        color:#000;
+                        font-size: 12px;">
+                <span>elit quo varias quibusdam id culpa irure veniam excepteur dolore</span>
+                <p style="font-size:16px;">
+                    elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                </p>
+            </div>
+            
+            <code>
+                <pre>
+                
+                .contenedor3 {
+                    border:2px solid blue;
+                    padding:10px 20px 10px 20px;
+                    margin: 15px 0px 10px 10px;
+                    width:300px;
+                    height: 360px;
+                    background-color: #fff;
+                    color:#000;
+                    font-size: 100%;
+                }
+
+                .contenedor3 p {
+                    font-size:200%;
+                    background-color: aqua;
+                    padding: 1em;
+                }
+                
+                </pre>
+            </code>
+            
+            <div style="border:2px solid blue;
+                        padding:10px 20px 10px 20px;
+                        margin: 15px 0px 10px 10px;
+                        width:300px;
+                        height: 360px;
+                        background-color: #fff;
+                        color:#000;
+                        font-size: 100%;">
+                elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                <p style="font-size:200%;
+                          background-color: aqua;
+                          padding: 1em;">
+                    elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                </p>
+            </div>
+            
+            <code>
+                <pre>
+                
+                .contenedor4 {
+                    border:2px solid green;
+                    padding:10px 20px 10px 20px;
+                    margin: 15px 0px 10px 10px;
+                    width:300px;
+                    height: 300px;
+                    background-color: #fff;
+                    color:#000;
+                    font-size: 1.9rem;
+                }
+
+                .contenedor4 p {
+                    font-size:1rem;
+                }
+
+                </pre>
+            </code>
+            
+            <div style="border:2px solid green;
+                        padding:10px 20px 10px 20px;
+                        margin: 15px 0px 10px 10px;
+                        width:300px;
+                        height: 300px;
+                        background-color: #fff;
+                        color:#000;
+                        font-size: 1.9rem;">
+                elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                <p style="font-size:1rem;">
+                    elit quo varias quibusdam id culpa irure veniam excepteur dolore
+                </p>
+            </div>            
+        </div>
+
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>  
+</html>

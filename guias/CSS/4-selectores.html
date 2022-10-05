@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Tipos de Selectores CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Tipos de Selectores CSS</h1>
+            <ul>
+                <li>
+                    <h4>Selector de tipo elemento</h4>
+                    <code>
+                    <pre>
+                    
+            p {
+                color:red;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>Selector de tipo clases</h4>
+                    <code>
+                    <pre>
+                    
+            .color-verde {
+                color:green;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>Selector de tipo id</h4>
+                    <code>
+                    <pre>
+                    
+            #sidebar {
+                width:30%;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>Selectores específicos</h4>
+                    <code>
+                    <pre>
+                    
+            h2.color-azul {
+                color:blue;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>Selectores de tipo descendentes o selectores compuestos</h4>
+                    <code>
+                    <pre>
+                    
+            div p span {
+                font-size:20px;
+                color:#ccc;
+                text-decoration: underline;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>Selectores agrupados</h4>
+                    <code>
+                    <pre>
+                    
+            h4, h5 {
+                font-size:18px;
+                color:#bbb;
+                font-weight: normal;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+            </ul>
+            
+            <h3>Ejemplos</h3>
+            
+            <code>
+                <pre>
+                
+            p {
+                color:red;
+            }
+
+                </pre>
+            </code>
+
+            <p style="color:red;">Fore labore relinqueret ea velit vidisse quo tractavissent si probant</p>
+            
+            <p style="color:red;">Quae doctrina exquisitaque minim irure minim in illustriora qui imitarentur iis 
+                quis quid hic vidisse duis in in deserunt exquisitaque</p>
+            
+            <p style="color:red;">Varias dolor sed culpa se labore relinqueret nostrud fabulas ipsum de aliquip 
+                distinguantur hic relinqueret offendit graviterque nisi
+            </p>
+            <code>
+                <pre>
+                
+            .color-verde {
+                color:green;
+            }
+                </pre>
+            </code>
+            <p style="color:green;">
+                Sint domesticarum cernantur sed quorum eram lorem culpa et familiaritatem 
+                excepteur quorum despicationes arbitror culpa sint arbitror iis enim litteris 
+                nam admodum duis illum sed malis possumus sed malis magna
+            </p>
+            <code>
+                <pre>
+                
+            #sidebar {
+                width:30%;
+            }
+                </pre>
+            </code>
+            <div style="width: 30%;">
+                <p>Laboris enim relinqueret velit domesticarum ab quis de quamquam quorum de est 
+                    malis deserunt dolore laboris sint graviterque culpa consectetur ne vidisse 
+                    senserit imitarentur quis vidisse graviterque deserunt transferrem veniam ipsum 
+                    fugiat minim consequat distinguantur consequat a velit nescius expetendis 
+                    imitarentur iudicem transferrem exercitation sempiternum singulis praesentibus 
+                    ne labore voluptate</p>
+            </div>
+            
+            <h2 >Sin color</h2>
+            
+            <code>
+                <pre>
+                
+            h2.color-azul {
+                color:blue;
+            }
+                </pre>
+            </code>
+            <h2 style="color:blue;">Color azul</h2>
+            <p>Solo aplica el color azul a <code>&lt;h2&gt;</code></p>
+            
+            <code>
+                <pre>
+                
+            div p span {
+                font-size:20px;
+                color:#ccc;
+                text-decoration: underline;
+            }
+                </pre>
+            </code>
+            <div>
+                <p>fugiat minim consequat distinguantur consequat a velit nescius expetendis 
+                    <span style="font-size:20px; color:#ccc; text-decoration: underline;">color gris</span>
+                    imitarentur iudicem transferrem exercitation sempiternum singulis
+                </p>
+            </div>
+            <code>
+                <pre>
+                
+            h2, h5 {
+                font-size:18px;
+                color:#bbb;
+                font-weight: normal;
+            }
+                </pre>
+            </code>
+            
+            <h2 style="font-size:18px; color:#bbb; font-weight: normal;">Selector agrupado h2</h2>
+            <h5 style="font-size:18px; color:#bbb; font-weight: normal;">Selector agrupado h5</h5>
+    
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>
+</html>

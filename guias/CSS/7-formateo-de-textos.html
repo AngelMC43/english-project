@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Formateo de Textos CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+        <style>
+            p.ejemplo {
+                font-family: arial; /*Tipo de fuente*/
+                font-size: 1em; /*tamaño de la fuente*/
+                font-weight: bold; /* Peso de la fuente*/
+                font-style: normal;
+                /*font-variant: small-caps;*/
+                text-transform: uppercase; /*transforma la fuente*/
+                text-align: left; /*alineación del texto*/
+                text-indent: 1em; /*esplaza la primera línea*/
+                letter-spacing: 0.1em; /* Espacio entre caracteres*/
+                line-height: 1.2em; /* espacio entre líneas*/
+                color: #cccccc; /*color del texto (Código Hexadecimal)*/
+                /*font: xxx xxx xxx xxx xxx xxx (investigar)*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Formateo de Textos CSS</h1>
+            
+            <ul>
+                <li>
+                    <h4>font-family</h4>
+                    Tipo de fuente
+                    <code>
+                    <pre>
+                    
+            p {
+                font-family:Arial;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>font-size</h4>
+                    Tamaño de la fuente
+                    <code>
+                    <pre>
+                    
+            p {
+                font-size:1.4em; /* Unidades de tamaño en %,px,em,rem*/
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>font-weight</h4>
+                    Peso de la fuente
+                    <code>
+                    <pre>
+                    
+            p {
+                font-weight:bold; /* normal, light, bold o número especifico*/
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>font-style</h4>
+                    Estilo de la fuente
+                    <code>
+                    <pre>
+                    
+            p {
+                font-style:normal; /* normal, italic, oblique, inherit */
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>font-variant</h4>
+                    Todas las letras minúsculas se convierten a letras mayúsculas. Sin embargo, las letras mayúsculas convertidas aparecen en un tamaño de letra más pequeño que las letras mayúsculas originales en el text
+                    <code>
+                    <pre>
+                    
+            p {
+                font-variant: small-caps;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>text-transform</h4>
+                    Transforma la fuente
+                    <code>
+                    <pre>
+                    
+            p {
+                text-transform: uppercase;
+            }
+                    </pre>
+                    </code>
+                </li>
+                <li>
+                    <h4>text-align</h4>
+                    Alineación del texto
+                    <code>
+                    <pre>
+                    
+            p {
+                text-align: center;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>text-indent</h4>
+                    Desplaza la primera línea
+                    <code>
+                    <pre>
+                    
+            p {
+                text-indent: 1em;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>letter-spacing</h4>
+                    Espacio entre caracteres
+                    <code>
+                    <pre>
+                    
+            p {
+                letter-spacing: 1em;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>line-height</h4>
+                    Espacio entre líneas
+                    <code>
+                    <pre>
+                    
+            p {
+                line-height: 1em;
+            }
+                    </pre>
+                    </code>
+                </li>
+                
+                <li>
+                    <h4>color</h4>
+                    color del texto (Código Hexadecimal)
+                    <code>
+                    <pre>
+                    
+            p {
+                color: #cccccc;
+            }
+                    </pre>
+                    </code>
+                </li>
+            </ul>
+            
+            <h3>Ejercicio de investigación</h3>
+            
+            <p>Averigua todo lo que puedas sobre la propiedad <code>font:</code> y sus distintos valores posibles</p>
+        
+            <h3>Ejemplo</h3>
+            
+            <code>
+            <pre>
+            
+            p.ejemplo {
+                font-family: arial;
+                font-size: 1em; 
+                font-weight: bold; 
+                font-style: normal;
+                text-transform: uppercase; 
+                text-align: left;
+                text-indent: 1em; 
+                letter-spacing: 0.1em; 
+                line-height: 1.2em; 
+                color: #cccccc; 
+            }
+            </pre>
+            </code>
+            
+            <p class="ejemplo">
+                Ea velit qui fore mentitum transferrem pariatur iis o amet sed incididunt 
+                consequat aliqua ne fore quae ita eiusmod proident domesticarum doctrina sed eu 
+                o magna tamen efflorescere sunt malis cillum arbitror quem eiusmod quibusdam 
+                fore tamen esse admodum quae lorem quamquam sempiternum esse commodo sunt 
+                exercitation graviterque exquisitaque concursionibus o laboris familiaritatem 
+                offendit duis varias est iudicem arbitrantur coniunctione ipsum imitarentur 
+                exercitation aliqua quae nulla singulis arbitror cohaerescant fugiat et 
+                praesentibus transferrem nisi irure instituendarum exercitation senserit tempor 
+                minim senserit vidisse fore ab aliquip vidisse veniam irure si philosophari
+            </p>
+        </div>
+
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>   
+</html>

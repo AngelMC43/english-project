@@ -1,0 +1,16 @@
+
+/******************** -- CASCACA Y HERENCIA CSS -- *******************/
+
+.contenedor-cascada p {
+    color:black;
+    
+}
+
+.contenedor-cascada p {
+     color:skyblue;
+}
+
+.contenedor {
+    font-size: 1.2em;
+    color: #ddd;
+}

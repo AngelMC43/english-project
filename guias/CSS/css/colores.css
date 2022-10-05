@@ -1,0 +1,9 @@
+
+/******************** -- COLORES -- *******************/
+ .rojo {background-color: #ff0000;}   /* rojo */
+.verde {background-color: #00ff00;}   /* verde */
+.azul {background-color: #0000ff;}   /* azul */
+
+.rojorgb {background-color: rgb(255, 0, 0);}   /* rojo */
+.verdergb {background-color: rgb(0, 255, 0);}   /* verde */
+.azulrgb {background-color: rgb(0, 0, 255);}   /* azul */

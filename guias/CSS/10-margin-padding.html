@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Margin y padding CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Margin y padding CSS</h1>
+            
+            <h3>Margin</h3>
+
+            <code>
+                
+                <pre>
+                
+                margin: 10px 10px 10px 10px; /*  top  left bottom right */
+                margin: 20px 30px; /* top y bottom left y right */
+                margin-top: 10px; /* top */
+                margin-left: 20px; /* left */
+                margin-right: 35px; /* right */
+                margin-bottom: 12px; /* bottom */
+                margin: 0px; /* todos */
+                </pre>
+            
+            </code>
+            
+            <h3>Padding</h3>
+
+            <code>
+                
+                <pre>
+                
+                padding: 10px 10px 10px 10px; /*  top  left bottom right */
+                padding: 20px 30px; /* top y bottom left y right */
+                padding-top: 10px; /* top */
+                padding-left: 20px; /* left */
+                padding-right: 35px; /* right */
+                padding-bottom: 12px; /* bottom */
+                padding: 0px; /* todos */
+                </pre>
+            
+            </code>
+            
+            <h3>Margin auto</h3>
+            <p>Estable un margin automático horizonal. Se utiliza para centrar contenidos dentro de un contenedor</p>
+            <code>
+            
+                <pre>
+                
+                    margin:0px auto;
+                    margin:10px auto 15px auto;
+                </pre>
+            </code>
+            
+            <h3>Ejemplos</h3>
+            
+            <code>
+                <pre>
+                
+                .contenedor-cajas {
+                    width: 100%;
+                    margin:0 auto;
+                    text-align: center;
+                }
+
+                .caja1, .caja2, .caja3 {
+                    width: 100px;
+                    /*float: left;*/
+                    height: 100px;
+                    margin:2px;
+                    font-size: 0.8em;
+                    display: inline-block;
+                }
+
+                .caja1 {
+                    background-color: antiquewhite; 
+                    padding:10px;
+                }
+
+                .caja2 {
+                    background-color: azure; 
+                    padding:10px;
+                }
+
+                .caja3 {
+                    background-color: beige; 
+                    padding:10px;
+                    /*margin-bottom: 55px;*/
+                }
+
+                .caja4 {
+                    background-color: red; 
+                /*  clear: both;*/
+                    margin:0px auto;
+                    height: 200px;
+                    width: 200px;
+                }
+                
+                </pre>
+            </code>
+            
+            <div style="width: 100%;
+                        margin:0 auto;
+                        text-align: center;">
+
+                <div style="width: 100px;
+                            /*float: left;*/
+                            height: 100px;
+                            margin:2px;
+                            font-size: 0.8em;
+                            display: inline-block;
+                            background-color: lightslategray; 
+                            padding:10px;">
+
+                </div>
+
+                <div style="width: 100px;
+                            /*float: left;*/
+                            height: 100px;
+                            margin:2px;
+                            font-size: 0.8em;
+                            display: inline-block;
+                            background-color: lightgrey; 
+                            padding:10px;">
+
+                </div>
+
+                <div style="width: 100px;
+                            /*float: left;*/
+                            height: 100px;
+                            margin:2px;
+                            font-size: 0.8em;
+                            display: inline-block;
+                            background-color: grey; 
+                            padding:10px; 
+                            /*margin-bottom: 55px;*/">
+
+                </div>
+            
+            </div>
+
+            <div style="background-color: aqua; 
+                        /*clear: both;*/
+                        margin:0px auto;
+                        height: 200px;
+                        width: 200px;">
+                <p style="text-align: center">
+                    <img src="images/imagen1.jpg" alt="AAAA" width="50px"><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>  
+</html>

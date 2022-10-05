@@ -1,0 +1,95 @@
+
+/******************** --  POSITION, Z-INDEZ, FLOAT, CLEAR Y DISPLAY -- *******************/
+
+/* RELATIVE Y STATIC */
+.capa1, .capa2, .capa3, .capa4 {
+	position:relative;
+	width:100px; /* Solo aplica para display: block, inline-block y no para inline*/
+	height:100px; /* Solo aplica para display: block, inline-block y no para inline*/
+	margin-bottom:20px;
+    /*overflow: auto;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+        
+}
+.capa1 p {
+    font-size: 0.7em;
+    /*text-align: justify;*/
+    padding: 2px 4px 2px 4px;
+    color:#000;
+    width: 300px;
+}
+
+.capa1 {
+	background-color:red;
+    /* TODO investigar si tieene que ver con la position*/
+}
+
+.capa2 {
+	background-color:yellow;
+	top:-100px;
+	left :90px;
+   
+    
+}
+
+.capa3 {
+	background-color:blue;
+	top:-180px;
+    left: 30px;
+}
+
+
+.capa4 {
+	background-color:green;
+	top:-330px;
+	left:130px;
+  
+}
+
+/* Ejemplo de static, no se le pueden aplicar top, right, bottom ni right
+.capa4 {
+	background-color:green;
+	top:-330px;
+	left:130px;
+	position:static; 
+}*/
+
+/* ABSOLUTE */
+
+.capa5 {
+	position:absolute;
+	background-color:black;
+	top:20px;
+	left:500px;
+	width:100px;
+	height:100px;
+}
+	
+/* FIXED */
+.capa6 {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 8px 4px;
+    color:#ccc;
+    font-size: 0.8em;
+    background-color: red;
+  }
+
+.capa5 h3 {
+	text-align:center;
+	color:#FFF;
+	padding:25% 0%;
+}
+
+#contendor-absolute {
+    /*position: relative;*/
+}
+
+
+/** Display 
+
+    El width y el height no aplica para display:inline
+**/

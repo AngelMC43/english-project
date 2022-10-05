@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Position, z-index, float, clear y display</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Position, z-index, float, clear y display</h1>
+            
+            <h3>Position</h3>
+            
+            <ul>
+                <li>
+                    Static: Es el valor que toma un elemento por defecto para posicionarse. Con este valor, el elemento respetará el flujo normal 
+                    de la página, es decir, se posicionará en el lugar que le corresponde y no tendrá en cuenta los valores para las propiedades 
+                    top, left, right y bottom. 
+                </li>
+                <li>
+                    Relative: Mediante este valor podemos posicionar un elemento respecto al flujo normal de la página. Se podría decir que estamos 
+                    posicionando un elemento tomando como referencia el flujo normal (la posición por defecto) de dicho elemento. Podremos usar top,
+                    left, right y bottom para posicionar nuestro elemento tomando como referencia la posición por defecto del elemento. 
+                </li>
+                <li>
+                    Absolute: Este valor también aceptará los valores top, left, right y bottom. El elemento con position: absolute no estará dentro 
+                    del flujo normal de la página y tomará como referencia la ventana del navegador o el elemento posicionado (que tenga cualquier 
+                    valor de position excepto static) más cercano si es padre del elemento que queremos posicionar.
+                </li>
+                <li>Fixed: Los elementos a los cuales se les posiciona con position: fixed también están fuera del flujo normal de la página. Sin 
+                    embargo, no se debe de confundir con los elementos que están posicionados con position: absolute. A diferencia de estos últimos,
+                     los elementos con position: fixed toman como referencia la ventana del navegador y no respetan el tener un contenedor padre que
+                      esté posicionado. Además, al hacer scroll en la página, el elemento que esté posicionado como position: fixed seguirá en la misma
+                       posición respecto a la ventana del navegador aunque el scroll haya desplazado la página hacia abajo.
+                </li>
+            </ul>
+
+            
+            <h3>z-index</h3>
+            
+            <p>Especifica el orden de visualizaciòn de un elemento</p>
+            <p>
+            z-index solo funciona en elementos con las posiciones absolute, relative y fixed y no con static</p>
+            
+            <h3>Float y clear</h3>
+                
+                <p><b>float</b>:  none | left | right | initial | inherit;</p>
+            <p>La propiedad float especifica cómo debe flotar un elemento.</p>
+            
+            <p><b>clear</b>: none | left | right | both | initial | inherit;</p>
+            <p>La propiedad clear especifica qué elementos pueden flotar al lado del elemento y de qué lado</p>
+
+            <h3>Display</h3>
+            <ul>
+                <li>inline</li>
+                <li>block</li>
+                <li>inline-block</li>
+                <li>none</li>
+                <li><a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">otros valores</a></li>
+            </ul>        
+
+            
+            <div id="main">
+                <div class="capa1"></div>
+                <div class="capa2"></div>
+                <div class="capa3"></div>
+                <div class="capa4"></div>
+
+                <div id="contendor-absolute">
+                    <div class="capa5">
+                        <h3>Absolute</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>
+</html>

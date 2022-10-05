@@ -1,0 +1,18 @@
+
+/******************** -- TIPOGRAFÍAS CSS -- *******************/
+
+.tipo-arial {
+    font-family: Arial;
+}
+
+.tipo-times {
+    font-family: Times;
+}
+
+.tipo-verdana {
+    font-family: Verdana;
+}
+
+.tipo-courier-new {
+    font-family: "Courier New"; /* Nombre con espacios entre comillar*/
+}

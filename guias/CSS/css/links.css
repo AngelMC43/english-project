@@ -1,0 +1,125 @@
+/******************** -- SELECTORES CSS -- *******************/
+
+p {
+    color:rojo;
+}
+/*
+/******************** -- LINKS -- *******************/
+
+/* En el momento que es click */
+a:link {
+	color:#000;
+	text-decoration:none;
+    font-size: 20px;
+}
+
+/* Visitado */
+a:visited {
+	color:#000;
+	text-decoration:none;
+}
+
+/* Mouse over */
+a:hover {
+	color:#bbb;
+	text-decoration:underline;
+}
+
+/* Activo */
+a:active {
+	color:#000;
+	text-decoration:none;
+   /* font-size: 20px;*/
+}
+
+/** Agrupar estilo enlaces **/
+
+a:link, a:visited, a:active {
+	/*color:#000;
+	text-decoration:none;*/
+}
+
+a:hover {
+	color:#000;
+	text-decoration:underline;
+}
+
+/** Otros selectores para aplicar estilos a enlaces */
+
+.menu:link,  .menu:visited, .menu:active {
+	color:#000;
+	text-decoration:none;
+}
+
+
+
+.menu2:link,  .menu2:visited, .menu2:active {
+	color:#000;
+	text-decoration:none;
+    font-size: 80px;
+}
+
+
+#main-content #header #nav ul li {
+    font-size: 1.1em;
+    float:left;
+   list-style: none;
+    
+}
+
+#main-content #header {
+    background-color: antiquewhite;
+    height: 40px;
+    padding:0;
+}
+#main-content #header #nav ul li a {
+    padding:10px 13px;
+    display: block;
+    text-transform: uppercase;
+    font-family: Verdana
+        
+}
+
+
+#main-content #header #nav .menuprincipal:link, 
+#main-content #header #nav .menuprincipal:visited, 
+#main-content #header #nav .menuprincipal:active {
+	color:red;
+	text-decoration:none;
+}
+
+#main .menuprincipal:link,
+#main .menuprincipal:active,
+#main .menuprincipal:visited {
+    color:yellow;
+	text-decoration:underline;
+}
+
+#main-content #footer {
+	text-align:center;
+	background-color: #ccc;
+	padding:8px;
+    height: auto;
+    background-image: none;
+}
+
+#main-content #footer ul {
+	list-style:none;
+}
+
+#main-content #footer ul li {
+	display:inline;
+}
+#main-content #footer a:link, 
+#main-content #footer a:visited, 
+#main-content #footer a:active {
+	color:red;
+	text-decoration:none;
+	font-size:0.9rem
+}
+
+#main-content #footer a:hover {
+	color:#bbb;
+	text-decoration:underline;
+	
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Cascada y Herencia CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Cascada y Herencia CSS</h1>
+            <h3>Cascada</h3>
+            
+            <p>
+                Los estilos se aplican en cascada, es decir si tenemos un mismo estilo definido para una etiqueta o una clase siempre se aplicará el último.
+            </p>
+            
+            <code>
+            <pre>
+            
+            .contenedor-cascada p {
+                color:black;
+
+            }
+
+            .contenedor-cascada p {
+                color:skyblue;
+            }
+            </pre>
+            
+            </code>
+            
+            <div class="contenedor-cascada">
+            
+                <p style="color:skyblue">distinguantur minim fore expetendis hic legam non deserunt nam expetendis 
+                    aliquip cupidatat philosophari non quo varias enim aut imitarentur singulis ne 
+                    despicationes concursionibus concursionibus enim a id senserit id cernantur amet 
+                    fabulas hic minim philosophari</p>
+            </div>
+            
+            
+            
+            <h3>Herencia</h3>
+            
+            <p>Exiten elementos HTML que herendan propiedades de sus elementos padres y otros no.</p>
+            
+            <p>Por ejemplo la propiedad color y font-size son propiedades heredables por los elementos hijos. Margin padding, border y background no.</p>
+            
+            <p>Hay que tener el claro el concepto de herencia para conocer que estilos se aplican a cada elemento</p>
+            
+            <code>
+                <pre>
+                
+                .contenedor {
+                    font-size: 1.2em;
+                    color: #ddd;
+                }        
+                
+                </pre>
+            </code>
+            <div style="font-size: 1.2em; color: #ddd;">
+                <p>efflorescere esse duis eu aliquip ubi incididunt singulis efflorescere admodum 
+                    malis voluptate expetendis fabulas adipisicing coniunctione commodo cernantur 
+                    excepteur comprehenderit noster litteris hic exercitation consectetur expetendis 
+                    ita admodum enim ab</p>
+                
+                <p>ut illustriora varias nam nulla voluptate expetendis deserunt quo enim 
+                    comprehenderit sint coniunctione laboris qui e labore se sed nulla
+                
+                </p>
+            </div>
+    
+    
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>       
+</html>

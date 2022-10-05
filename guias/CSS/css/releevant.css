@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+#header {
+    background-color:#fff;   
+    color:#d85081;
+    height: 130px;
+    padding:20px;
+}
+
+#header .logo {
+    float:left;
+    width: 15%;
+}
+
+#header .titulo {   
+    height: 100px;
+    float:left;
+    width: 59%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#header .right {
+    
+    height: 100px;
+    float:right;
+    text-align: right;
+    padding-top:18px;
+    width: 25%;
+
+}
+
+#header .code {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 0px;
+    display: block;
+}
+
+#header .instructor {
+   font-size: 0.9em;
+}
+
+#footer {
+    position: absolute;
+    width: 100%; 
+    left: 0;
+    background-color: #2a60a9;
+    color: white;
+    text-align: center;
+    background-image: url(../images/favicon-releevant.png);
+    background-position: center 0px;
+    background-size: 110px;
+    min-height: 170px;
+    background-repeat: no-repeat;
+}
+
+#footer .juan {
+    padding-top:90px;
+    text-align: center;
+    font-size: 0.80em;
+}
+
+#footer .info {
+   
+    text-align: center;
+    font-size: 0.72em;
+}
+
+#footer-div {
+    background-color: grey;
+    color:#fff;
+    background-position: center 14px;
+    height: 170px;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    clear:both;
+    margin-top:20px;
+}
+
+#address {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+html {
+    background: #fff;
+	margin:0;
+    padding:0;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding:0;
+	margin:0;
+    background: #fff;
+    color:#333;
+}
+
+#main-content {
+    padding: 0px 20px;
+    min-height: 45vh;
+    margin-bottom: 20px;
+}
+
+#main-content code {
+    color:#d85081;
+}
+
+#main-content pre {
+    background-color: #333;
+    padding: 20px;
+}
+
+
+#main-content #navegacion {
+    margin: 50px 0px 20px;
+    clear:both;
+    overflow: auto;
+}
+
+#main-content #navegacion .left {
+    float:left;
+    height: 50px;
+}
+
+#main-content #navegacion .right {
+    float:right;
+    height: 50px;
+    text-align: right;
+}
+
+@media print {
+
+	#footer {
+		display:none;
+	}
+}

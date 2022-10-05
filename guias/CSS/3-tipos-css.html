@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Tipos de CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Tipos de CSS</h1>
+        
+            <ol>
+                <li>
+                    <h3>Inline</h3>
+                    <p>Atributo style de una etiqueta html</p>
+                
+                    <code>
+                        <pre>
+                        
+            &lt;p style="color:rgb(255, 0, 0)"&gt;Color rojo&lt;/p&gt;
+                        </pre>
+                    </code>
+                    <p style="color:rgb(255, 0, 0)">Color rojo</p>
+                </li>
+                
+                <li>
+                    <h3>Interno</h3>
+                    <p>Embebido en el propio html</p>
+                    <code>
+                        <pre>                        
+            &lt;style&gt;
+                #ejemplo p {
+                    color:greenyellow;
+                }
+            &lt;/style&gt;
+                        </pre>
+                    </code>
+                    <div id="ejemplo">
+                        <p style="color: greenyellow;">Corlor verde</p>
+                    </div>
+                </li>                
+                <li>
+                    <h3>Fichero externo</h3>                    
+                    <code>
+                        <pre>                        
+            &lt;link href="css/main.css" rel="stylesheet" type="text/css"&gt;
+                        </pre>
+                    </code>
+                    <div id="ejemplo-externo">
+                        <p style="color: orange;">Otro color</p>
+                    </div>
+                </li>
+                
+            </ol>   
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>
+</html>

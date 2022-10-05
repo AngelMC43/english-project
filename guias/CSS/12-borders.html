@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Border CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Border CSS</h1>
+            
+            <p>Existen tres propiedades de un border que podemos definir:</p>
+            <ol>
+                <li>El grosor</li>
+                <li>El tipo</li>
+                <li>El color</li>
+            </ol>
+            <p>Podemos establecer el estilo del borde de cada lado del elemento html de forma inpendiente</p>
+            
+            <code>
+            <pre>
+            
+            border-top-width: 1px;
+            border-top-color: #ccc;
+            border-top-style: solid;
+            
+            border-right-width: 1px;
+            border-right-color: #ccc;
+            border-right-style: solid;
+            
+            border-bottom-width: 1px;
+            border-bottom-color: #ccc;
+            border-bottom-style: solid;
+            
+            border-left-width: 1px;
+            border-left-color: #ccc;
+            border-left-style: solid;
+            
+            border-top: 1px #ccc solid;
+            border-right: 1px #ccc solid;
+            border-bottom: 1px #ccc solid;
+            border-left: 1px #ccc solid;
+            
+            border: 1px solid #ccc;
+            </pre>
+            
+            </code>
+            
+            <h3>Ejemplos</h3>
+            
+            <code>
+            
+            <pre>
+            
+            .caja1, .caja2, .caja3 {
+                width: 100px;
+                height: 100px;
+                margin:2px;
+                font-size: 0.8em;
+                margin-bottom: 10px;
+
+            }
+
+            .caja1 {
+                background-color: antiquewhite; 
+                padding:10px;
+                border-top:solid 4px red;
+                border-bottom:dotted 3px blue;
+            }
+
+            .caja2 {
+                background-color: azure; 
+                padding:10px;
+                border: 5px solid blue;
+            }
+
+            .caja3 {
+                background-color: beige; 
+                padding:10px;
+                border-right-width: 10px;
+                border-right-color: #ccc;
+                border-right-style: solid;
+            }
+
+            .caja4 {
+                background-color: red; 
+                height: 200px;
+                width: 200px;
+                border-top: 4px #ccc solid;
+                border-right: 2px #ccc solid;
+                border-bottom: 4px #ccc solid;
+                border-left: 2px #ccc solid;
+            }
+            </pre>
+            </code>
+            
+            <div>
+
+                <div style="width: 100px;
+                            height: 100px;
+                            margin:2px;
+                            font-size: 0.8em;
+                            margin-bottom: 10px;
+                            background-color: antiquewhite; 
+                            padding:10px;
+                            border-top:solid 4px red;
+                            border-bottom:dotted 3px blue;">
+
+                </div>
+
+                <div style="width: 100px;
+                            height: 100px;
+                            margin:2px;
+                            font-size: 0.8em;
+                            margin-bottom: 10px;
+                            background-color: azure; 
+                            padding:10px;
+                            border: 5px solid blue;">
+
+                </div>
+
+                <div style="width: 100px;
+                            height: 100px;
+                            margin:2px;
+                            font-size: 0.8em;
+                            margin-bottom: 10px;
+                            background-color: beige; 
+                            padding:10px;
+                            border-right-width: 10px;
+                            border-right-color: #ccc;
+                            border-right-style: solid;">
+
+                </div>
+            
+            </div>
+
+            <div style="margin:2px;
+                        font-size: 0.8em;
+                        margin-bottom: 10px;
+                        background-color: red; 
+                        height: 200px;
+                        width: 200px;
+                        border-top: 4px #ccc solid;
+                        border-right: 2px #ccc solid;
+                        border-bottom: 4px #ccc solid;
+                        border-left: 2px #ccc solid;">
+        </div>
+    
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com
+            </p>
+        </div>
+    </body>    
+</html>

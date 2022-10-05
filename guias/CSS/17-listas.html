@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Listas CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Listas CSS</h1>
+            <ul>
+                <li><b>list-style-type</b>: <a href="https://www.w3schools.com/cssref/pr_list-style-type.asp" target="_blank">https://www.w3schools.com/cssref/pr_list-style-type.asp</a></li>
+                <li><b>list-style-position</b>: inside | outside</li>
+                <li><b>list-style-image</b>: ulr(imagen.jpg)</li>
+            </ul>
+            
+            <h3>Ejemplos</h3>
+            
+            
+            <code>
+            <pre>
+            
+            .ejemplo1 {
+                margin:0;
+                padding: 0;
+                list-style: none;
+            }
+            </pre>
+            
+            </code>
+            
+            <ul style=" margin:0;
+                        padding: 0;
+                        list-style: none;">
+            
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+            </ul>
+            
+            <code>
+            <pre>
+            
+            .ejemplo2 {
+                margin:0;
+                padding: 0;
+                list-style-type:none;
+            }
+
+            .ejemplo2 li {
+                display: inline-block;
+                margin:0;
+                padding: 5px;
+                list-style: none;
+                background-color: antiquewhite;
+                color:#000;
+            }
+            </pre>
+            
+            </code>
+            
+            <ul style=" margin:0;
+                        padding: 0;
+                        list-style-type:none;">
+            
+                <li style=" display: inline-block;
+                            margin:0;
+                            padding: 5px;
+                            list-style: none;
+                            background-color: antiquewhite;
+                            color:#000;">Elemento 1</li>
+                <li style=" display: inline-block;
+                            margin:0;
+                            padding: 5px;
+                            list-style: none;
+                            background-color: antiquewhite;
+                            color:#000;">Elemento 2</li>
+                <li style=" display: inline-block;
+                            margin:0;
+                            padding: 5px;
+                            list-style: none;
+                            background-color: antiquewhite;
+                            color:#000;">Elemento 3</li>
+                <li style=" display: inline-block;
+                            margin:0;
+                            padding: 5px;
+                            list-style: none;
+                            background-color: antiquewhite;
+                            color:#000;">Elemento 4</li>
+            </ul>
+            
+            <code>
+            <pre>
+            
+            .ejemplo3 li {
+                list-style-position: outside;
+                list-style-image: url(../images/check.png);
+                font-size: 1.2em;
+            }    
+            </pre>
+            
+            </code>
+            
+            <ul class="ejemplo3">
+                <li style=" list-style-position: outside;
+                            list-style-image: url(images/check.png);
+                            font-size: 1.2em;">Elemento 1</li>
+                <li style=" list-style-position: outside;
+                            list-style-image: url(images/check.png);
+                            font-size: 1.2em;">Elemento 2</li>
+                <li style=" list-style-position: outside;
+                            list-style-image: url(images/check.png);
+                            font-size: 1.2em;">Elemento 3</li>
+                <li style=" list-style-position: outside;
+                            list-style-image: url(images/check.png);
+                            font-size: 1.2em;">Elemento 4</li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Introducción a CSS</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">CSS</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+    
+            <h1>Introducción a CSS</h1>
+            <h3>¿Qué es CSS?</h3>
+            
+            <p>
+                Lenguaje de hojas de estilos para controlar la presentación de documentos de lenguaje de marcados como el HTML.
+            </p>
+            
+            <p> Con HTML construiremos la estructura de nuestro sitio web y con CSS los acabados de estilos (capa de presentación 
+                que se puede cambiar sin tocar la estructura.
+            </p>
+            
+            <p>
+                Las hojas de estilos son una colección de reglas de formato, están contenidos generalmente en archivos externos con 
+                extensión .css aunque es posible trabajar con estilos incluidos directamente en archivos HTML o a través de la 
+                etiqueta style.
+            </p>
+            <p> Podremos crear una hoja de estilo css que se le pueda aplicar a todos nuestros archivos HTML de nuestro sitio web, haciendo el mantenimiento
+                muy fácil y rápido. Imagínense que quieren cambiar el tamaño de fuente de todos los encabezados de mi sitio web. Con una sola línea de código            
+            </p>
+            <code>
+                <pre>                
+                    h1 {
+                        font-size: 2em;
+                    }
+                </pre>
+            </code>
+            <h3>Estilos por defecto de los navegadores</h3>
+            <p>
+                Por defecto cada navegador posee una hoja de estilos, es por eso que cuando abrimos una página web que no tiene ninguna hoja de estilo definida, 
+                se ve de la forma que se ve. Los títulos tienen un tamaño en concreto, los vínculos también. Existen unas reglas css implícitas por el navegador 
+                que son las que se utilizan. Cuando aplicamos nuestros CSS lo que hacemos es sobreescribir los que ya existen por defecto.
+            </p>
+            
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Referencia_CSS" target="_blank">Referencia CSS</a>
+   
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com</p>
+        </div>
+    </body>
+</html>

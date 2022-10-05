@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Formularios HTML</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">HTML</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Formularios HTML</h1>
+            <p>A través de los formularios en HTML podremos enviar información al servidor que posteriormente éste procesará ya sea insertandola en una base de datos, enviando un email o cualquier otro proceso que el sistema requiera.</p>
+        
+            <h3>Etiqueta form</h3>
+            <code>
+                <pre>
+                    &lt;form&gt;
+                    &lt;!-- elementos del formulario --&gt;
+                    &lt;/form&gt;
+                </pre>
+            </code>
+            <h3>Atributos de un formulario</h3>
+            
+            <table cellspacing="0">
+                <tr>
+                    <td>name</td>
+                    <td>nombre del formulario</td>
+                </tr>
+                <tr>
+                    <td>action</td>
+                    <td>url a la que queremos enviar la información del formulario</td>
+                </tr>
+                <tr>
+                    <td>method</td>
+                    <td>get | post (cómo se enviarán los datos)</td> 
+                </tr>
+                <tr>
+                    <td>target</td>
+                    <td>similar al de un enlace</td>  
+                </tr>
+
+            </table>
+            
+            <code>
+                <pre>                
+                    &lt;form name="contacto" action="contactar.php" method="post" target="_blank" &gt;
+                    &lt;!-- elementos del formulario --&gt;
+                    &lt;/form&gt;
+                </pre>
+            </code>
+            
+            <h3>Elementos de un formulario</h3>
+            
+            <p>Inputs, select, textarea y botones</p>
+            
+            <h4>inputs</h4>
+            
+            <p>Todos tienen que tener un name que es nombre del parámetro y un id único (no obligatorio)</p>
+                
+            <table cellspacing="0">
+                <tr>
+                    <td>Text input </td>
+                    <td><input type="text" name="nombre"><br><br>
+                        <code>
+                        &lt;input type="text" name="nombre"&gt;
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Input Password </td>
+                    <td><input type="password" name="pass">
+                        <br><br>
+                        <code>
+                        &lt;input type="password" name="pass"&gt;
+                        </code>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Input file</td>
+                    <td><input type="file" name="archivo">
+                    
+                    <br><br>
+                    <code>
+                    &lt;input type="file" name="archivo"&gt;
+                    </code>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>Input hidden</td>
+                    <td><input type="hidden" name="oculto">
+                    <code>
+                    &lt;input type="hidden" name="oculto"&gt;
+                    </code>
+                    </td>  
+                </tr>
+                
+                <tr>
+                    <td>Radio button input</td>
+                    <td>
+                        
+                        <input type="radio" name="genero" id="masculino" value="masculino" checked> 
+
+                        <label for="masculino">Masculino</label>
+                    
+                        <input type="radio" name="genero" value="femenino" id="femenino"> 
+
+                        <label for="femenino">Femenino</label>
+
+                    
+                        <input type="radio" name="genero" value="otro"> Otro
+
+
+                        <br><br>
+                    <code>
+                        &lt;input type="radio" name="genero" id="masculino" value="masculino" checked&gt;
+                        &lt;label for="masculino"&gt;Masculino&lt;/label&gt;
+                        &lt;input type="radio" name="genero" value="femenino"&gt; Femenino
+                    &lt;input type="radio" name="genero" value="otro"&gt; Otro
+                    </code>
+                    
+                    
+                    </td>  
+                </tr>
+                
+                <tr>
+                    <td>Input Type Checkbox</td>
+                    <td>
+
+                        <input type="checkbox" name="vehiculo1" value="bicicleta" id="vehiculo1" checked> 
+
+                        <label for="vehiculo1">Bicicleta</label>
+                        
+
+
+
+                        <br>
+                    
+
+                    <input type="checkbox" name="vehiculo2" value="Coche"> Coche
+
+                    <br><br>
+                    <code>
+                    &lt;input type="checkbox" name="vehiculo1" value="bicicleta" checked&gt; Bicicleta&lt;br&gt;
+                    &lt;input type="checkbox" name="vehiculo2" value="Coche"&gt; Coche
+                    </code>
+                    
+                    </td>  
+                </tr>
+
+            </table>
+                
+            <h4>select</h4>
+            <p>Menús desplegables</p>
+                
+            <select name="pais" id="pais">
+                <option value="">- Elije tu país - </option>
+                <optgroup label="Europa">
+                    <option value="0" >España</option>
+                    <option value="1">Francia</option>
+                </optgroup>
+                <optgroup label="América">
+                    <option value="AR" selected>Argentina</option>
+                </optgroup>
+            </select>
+
+            <br/><br/>
+            <code>
+                <pre>
+                    &lt;select name="pais" id="pais"&gt;
+                        &lt;optgroup label="Europa"&gt;
+                            &lt;option value="ES" selected&gt;España&lt;/option&gt;
+                            &lt;option value="FR"&gt;Francia&lt;/option&gt;
+                        &lt;/optgroup&gt;
+                        &lt;optgroup label="América"&gt;
+                            &lt;option value="AR" &gt;Argentina&lt;/option&gt;
+                        &lt;/optgroup&gt;
+                    &lt;/select&gt;
+                </pre>
+            </code>
+            <ul>
+                <li>La etiqueta <b>optgroup</b> agrupa elementos dentro del desplegables (opcional)
+                </li>
+                <li>La propiedad <b>selected</b> del option establece la opción seleccionada por defecto
+                </li>
+                <li>La propiedad <b>multiple</b> que permite realizar selección múltiple
+                </li>
+            </ul>
+                
+                
+                
+            <h4>textarea</h4>
+            <p>Atributos adicionales rows, cols y wrap</p>
+                
+            <textarea  name="observaciones" id="observaciones" rows="20" cols="20">Texto del textarea</textarea>
+            <code>
+                <pre>
+                    &lt;textarea  name="observaciones" id="observaciones" rows="8" cols="50"&gt;Texto del textarea&lt;/textarea&gt;
+                </pre>
+            </code>
+
+            <h4>botones</h4>
+            
+            <table cellspacing="0">
+                <tr>
+                    <td>Botón submit. Envia el formulario</td>
+                    <td><input type="submit" value="Enviar"><br><br>
+                        <code>
+                        &lt;input type="submit" value="Enviar"&gt;
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Input reset. Resetea el formulario</td>
+                    <td><input type="reset" value="Restablecer">
+                        <br><br>
+                        <code>
+                        &lt;input type="reset" value="Restablecer"&gt;
+                        </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Botón button. Programación javascript</td>
+                    <td><input type="button" value="Contactar"> 
+                    <br><br>
+                    <code>
+                    &lt;input type="button" value="Contactar"&gt;
+                    </code>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>Etiqueta button</td>
+                    <td><button type"submit">Enviar</button>
+                    <code>
+                        <br><br>
+                    &lt;button type"submit"&gt;Enviar&lt;/button&gt;
+                    </code>
+                    </td>  
+                </tr>
+            </table>
+            
+            <h3>Fieldset</h3>
+            <p>Agrupación de campos</p>
+                
+            <fieldset>
+                <legend>Datos personales</legend>
+                <input type="text" name="nombre" placeholder="Nombre" style="margin-bottom: 8px;margin-top:10px"><br>
+                <input type="text" name="apellidos" placeholder="Apellidos">
+            </fieldset>
+
+            <code>
+                <pre>
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Datos personales&lt;/legend&gt;
+                    &lt;input type="text" name="nombre" placeholder="Nombre" style="margin-bottom: 8px;margin-top:10px"&gt;&lt;br&gt;
+                    &lt;input type="text" name="apellidos" placeholder="Apellidos"&gt;
+                &lt;/fieldset&gt;
+                </pre>
+            </code>
+
+            <div id="navegacion">
+                <div class="left">
+                    <a href="10-div.html" id="nav_anterior">&lt;&lt; Anterior </a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com
+            </p>
+        </div>     
+    </body>
+</html>

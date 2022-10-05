@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Tablas HTML</title>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/releevant.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+            <img class="logo" src="images/logo-releevant.png" alt="logo-releevant">
+            <div class="titulo">Introducción al desarrollo web</div>
+            <div class="right">
+                <span class="code">HTML</span> 
+                <span class="instructor">Juan Landín</span>
+            </div>
+        </div>
+        <div id="main-content">
+            <h1>Tablas HTML</h1>
+            <code>
+            
+                <pre>
+                
+                &lt;table&gt; &lt;!-- Define la tabla --&gt;
+                    
+                    &lt;tr&gt;  &lt;!-- Define una fila de la tabla --&gt; 
+                        &lt;td>&lt;/td&gt; &lt;!-- Define una columna de la fila --&gt;
+                    &lt;/tr&gt;
+
+                &lt;/table&gt;
+
+                
+                </pre>
+            </code>
+            
+            <h3>Atributos de una tabla</h3>
+            <table cellspacing="0">
+                <tr>
+                    <td>border</td>
+                    <td>tamaño del borde</td>
+                        
+                </tr>
+                <tr>
+                    <td>cellspacing</td>
+                    <td>espacio entre celdas</td>
+                        
+                </tr>
+                <tr>
+                    <td>cellpadding</td>
+                    <td>espacio entre el contenido de las celdas y el borde</td>
+                        
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td>ancho de la tabla</td>
+                        
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td>altura de la tabla</td>
+                        
+                </tr>
+                <tr>
+                    <td>align</td>
+                    <td>alineación de la tabla dentro de la página</td>
+                        
+                </tr>
+                <tr>
+                    <td>bgcolor</td>
+                    <td>color de fondo</td>
+                        
+                </tr>
+                <tr>
+                    <td>background</td>
+                    <td>imagen de fondo</td>
+                        
+                </tr>
+                <tr>
+                    <td>bordercolor</td>
+                    <td>color del borde</td>
+                        
+                </tr>                
+            </table>
+            
+            <h3>Filas y columnas de una tabla</h3>
+            <code>
+            
+                <pre>
+                    &lt;tr&gt;, &lt;th&gt; y &lt;td&gt;
+                </pre>
+            </code>
+            
+            <h3>Atributos de una celda  &lt;td&gt;</h3>
+            <table cellspacing="0">
+                <tr>
+                    <td>width</td>
+                    <td>anchura de celda recomendada</td>
+                        
+                </tr>
+                <tr>
+                    <td>valign</td>
+                    <td>alineación vertical del texto</td>
+                        
+                </tr>
+                <tr>
+                    <td>align</td>
+                    <td>posición horizontal del contenido de la celda</td>
+                        
+                </tr>
+                <tr>
+                    <td>colspan</td>
+                    <td>Este atributo contiene un valor entero no negativo que indica a cuántas columnas columnas se extiende la celda. 
+                        Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la sección de la tabla
+                    </td>
+                        
+                </tr>
+                <tr>
+                    <td>rowspan</td>
+                    <td>Este atributo contiene un valor entero no negativo que indica a cuántas filas se extiende la celda. Su valor por
+                        defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la sección de la tabla
+                    </td>
+                        
+                </tr>
+                <tr>
+                    <td>bgcolor</td>
+                    <td>color de fondo</td>
+                        
+                </tr>                
+            </table>
+            
+            <h3>Ejemplo de tabla</h3>
+            <table 
+                bordercolor="red"
+                cellspacing="10"
+                cellpadding="10"
+                border="1"
+                align="center"
+                style="border:10px red solid;width:190px;background-color: black;color:white">
+                
+                <tr>
+                    <th colpans="2">Fotografía</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th style="color:firebrick" colspan="4">Notas</th>
+                </tr>
+            
+                <tr>
+                    <td>
+                        <img src="images/natalia.jpg" width="80px">
+                    </td>
+                    
+                    <td> Natalia</td>
+                    
+                    <td>Lara</td>
+                    
+                    <td style="background-color: aqua;color:black;text-decoration: underline">
+                        10
+                    </td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>8</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <img src="images/roberto.jpg" width="80px">
+                    </td>                    
+                    <td>Roberto </td>                    
+                    <td>Garzón</td>                    
+                    <td style="background-color: aqua;color:black;text-decoration: underline">
+                        10
+                    </td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>8</td>
+                </tr>
+                
+                
+            </table>
+            
+            <code>
+                <pre>    
+                    &lt;table bordercolor="red"
+                    cellspacing="10"
+                    cellpadding="10"
+                    border="1"
+                    align="center"
+                    style="border:10px red solid;width:190px;background-color: black;color:white"
+                    &gt;
+                
+                    &lt;tr&gt;
+                    &lt;th colpans="2"&gt;Fotografía&lt;/th&gt;
+                    &lt;th&gt;Nombre&lt;/th&gt;
+                    &lt;th&gt;Apellidos&lt;/th&gt;
+                    &lt;th style="color:firebrick"
+                            colspan="4"
+                            &gt;Notas&lt;/th&gt;
+                    &lt;/tr&gt;
+                
+                    &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;img src="images/natalia.jpg" width="80px"&gt;
+                    &lt;/td&gt;
+
+                    &lt;td&gt;
+                        Natalia 
+                    &lt;/td&gt;
+
+                    &lt;td&gt;
+                            Lara
+                    &lt;/td&gt;
+
+                    &lt;td style="background-color: aqua;color:black;text-decoration: underline"&gt;
+                            10
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        9
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                            9           &lt;/td&gt;
+                    &lt;td&gt;
+                        8
+                    &lt;/td&gt;
+                    &lt;/tr&gt;
+
+                    &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;img src="images/roberto.jpg" width="80px"&gt;
+                    &lt;/td&gt;
+
+                    &lt;td&gt;
+                        Roberto 
+                    &lt;/td&gt;
+
+                    &lt;td&gt;
+                            Garzón
+                    &lt;/td&gt;
+
+                    &lt;td style="background-color: aqua;color:black;text-decoration: underline"&gt;
+                            10
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        9
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                            9           &lt;/td&gt;
+                    &lt;td&gt;
+                        8
+                    &lt;/td&gt;
+                    &lt;/tr&gt;
+                    
+                    
+                    &lt;/table&gt;            
+                </pre>            
+            </code>
+
+            <div id="navegacion">
+                <div class="left">
+                    <a href="7-images.html" id="nav_anterior">&lt;&lt; Anterior </a>
+                </div>
+                <div class="right">
+
+                    <a href="9-listas.html" id="nav_siguiente">Siguiente &gt;&gt;</a>
+                </div>
+            </div>       
+        </div>
+        <div id="footer">
+            <p class="juan">
+                Introducción al desarrollo web<br/> Juan Landín
+            </p>
+            <p class="info">
+                Av. de Sor Teresa Prat, 15, 29003 Málaga | +34 695 30 40 40 | www.releevant.com
+            </p>
+        </div>        
+    </body>
+</html>

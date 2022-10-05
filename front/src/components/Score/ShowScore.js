@@ -58,7 +58,7 @@ export default function ShowScore() {
           </div>
         </div>
         <div>
-          <h2 className="h2Choose-score">Choose one categorie</h2>
+          <h2 className="h2Choose-score">Choose one category</h2>
         </div>
       </div>
     </div>

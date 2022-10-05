@@ -1,0 +1,44 @@
+
+/******************** -- BORDERS -- *******************/
+
+
+
+.caja1, .caja2, .caja3 {
+    width: 100px;
+    height: 100px;
+    margin:2px;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  
+}
+
+.caja1 {
+    background-color: antiquewhite; 
+    padding:10px;
+    border-top:solid 4px red;
+    border-bottom:dotted 3px blue;
+}
+
+.caja2 {
+    background-color: azure; 
+    padding:10px;
+    border: 5px solid blue;
+}
+
+.caja3 {
+    background-color: beige; 
+    padding:10px;
+    border-right-width: 10px;
+    border-right-color: #ccc;
+    border-right-style: solid;
+}
+
+.caja4 {
+    background-color: red; 
+    height: 200px;
+    width: 200px;
+    border-top: 4px #ccc solid;
+    border-right: 2px #ccc solid;
+    border-bottom: 4px #ccc solid;
+    border-left: 2px #ccc solid;
+}

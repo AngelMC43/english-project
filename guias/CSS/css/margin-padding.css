@@ -1,0 +1,41 @@
+
+/******************** -- MARGIN PADDIN -- *******************/
+
+.contenedor-cajas {
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.caja1, .caja2, .caja3 {
+    width: 100px;
+    /*float: left;*/
+    height: 100px;
+    margin:2px;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.caja1 {
+    background-color: antiquewhite; 
+    padding:10px;
+}
+
+.caja2 {
+    background-color: azure; 
+    padding:10px;
+}
+
+.caja3 {
+    background-color: beige; 
+    padding:10px;
+    /*margin-bottom: 55px;*/
+}
+
+.caja4 {
+    background-color: red; 
+  /*  clear: both;*/
+    margin:0px auto;
+    height: 200px;
+    width: 200px;
+}
